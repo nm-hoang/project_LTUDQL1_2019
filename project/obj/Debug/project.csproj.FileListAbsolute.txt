@@ -1,0 +1,17 @@
+C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\bin\Debug\project.exe.config
+C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\bin\Debug\project.exe
+C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\bin\Debug\project.pdb
+C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\bin\Debug\Animator.dll
+C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\bin\Debug\Bunifu_UI_v1.52.dll
+C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\bin\Debug\CircularProgressBar.dll
+C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\bin\Debug\Excel.dll
+C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\bin\Debug\WinFormAnimation.dll
+C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\bin\Debug\CircularProgressBar.xml
+C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\bin\Debug\WinFormAnimation.xml
+C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.csprojResolveAssemblyReference.cache
+C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.frmLogin.resources
+C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.Properties.Resources.resources
+C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.csproj.GenerateResource.Cache
+C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.exe
+C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.pdb
+C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.frmRegister.resources
