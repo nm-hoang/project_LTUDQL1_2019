@@ -37,6 +37,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnRegister = new System.Windows.Forms.Button();
+            this.lblName = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cbMaHS
@@ -46,12 +47,13 @@
             this.cbMaHS.Name = "cbMaHS";
             this.cbMaHS.Size = new System.Drawing.Size(121, 21);
             this.cbMaHS.TabIndex = 0;
+            this.cbMaHS.SelectedIndexChanged += new System.EventHandler(this.cbMaHS_SelectedIndexChanged);
             // 
             // txtUserName
             // 
             this.txtUserName.Location = new System.Drawing.Point(133, 91);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(100, 20);
+            this.txtUserName.Size = new System.Drawing.Size(121, 20);
             this.txtUserName.TabIndex = 1;
             // 
             // txtPass
@@ -59,7 +61,7 @@
             this.txtPass.Location = new System.Drawing.Point(133, 148);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
-            this.txtPass.Size = new System.Drawing.Size(100, 20);
+            this.txtPass.Size = new System.Drawing.Size(121, 20);
             this.txtPass.TabIndex = 2;
             // 
             // txtRePass
@@ -67,7 +69,7 @@
             this.txtRePass.Location = new System.Drawing.Point(133, 199);
             this.txtRePass.Name = "txtRePass";
             this.txtRePass.PasswordChar = '*';
-            this.txtRePass.Size = new System.Drawing.Size(100, 20);
+            this.txtRePass.Size = new System.Drawing.Size(121, 20);
             this.txtRePass.TabIndex = 3;
             // 
             // label1
@@ -114,12 +116,22 @@
             this.btnRegister.TabIndex = 8;
             this.btnRegister.Text = "Đăng kí";
             this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(260, 47);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(0, 13);
+            this.lblName.TabIndex = 9;
             // 
             // frmRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(450, 311);
+            this.Controls.Add(this.lblName);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -130,7 +142,9 @@
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.cbMaHS);
             this.Name = "frmRegister";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng kí";
+            this.Load += new System.EventHandler(this.frmRegister_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -147,5 +161,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnRegister;
+        private System.Windows.Forms.Label lblName;
     }
 }

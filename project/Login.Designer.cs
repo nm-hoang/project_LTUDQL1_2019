@@ -74,6 +74,7 @@
             // 
             this.txtPass.Location = new System.Drawing.Point(183, 129);
             this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(155, 20);
             this.txtPass.TabIndex = 4;
             // 
@@ -86,6 +87,7 @@
             this.linkLabel1.TabIndex = 5;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Bạn chưa có tài khoản";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // frmLogin
             // 
@@ -99,6 +101,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lí thi trắc nghiệm";
             this.Load += new System.EventHandler(this.frmLogin_Load);
             this.ResumeLayout(false);

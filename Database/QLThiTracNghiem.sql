@@ -196,3 +196,7 @@ SELECT @sql += N'ALTER TABLE ' + obj + ' WITH CHECK CHECK CONSTRAINT ALL;
 ' FROM x;
 
 EXEC sp_executesql @sql;
+select * from TaiKhoan
+select * from HocSinh
+select * from GiaoVien
+delete from TaiKhoan

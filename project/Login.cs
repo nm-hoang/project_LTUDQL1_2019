@@ -19,7 +19,16 @@ namespace project
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-
+            
+        }
+        public string LayPhanQuyen(string ID_Account)
+        {
+            return string;
+        }
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmRegister frmRegister = new frmRegister();
+            frmRegister.Show();
         }
     }
 }
