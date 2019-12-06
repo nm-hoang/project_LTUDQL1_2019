@@ -36,7 +36,7 @@ namespace project
             if (!re.IsMatch(StrInput))
             {
                 MessageBox.Show("Password a-z, 0-9 và tối thiểu 3 kí tự", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtRePass.Clear();
+                txtRePass.ResetText();
                 txtRePass.Focus();
             }
         }
@@ -50,7 +50,7 @@ namespace project
             if (!re.IsMatch(StrInput))
             {
                 MessageBox.Show("Password a-z, 0-9 và tối thiểu 3 kí tự","Lỗi",MessageBoxButtons.OK,MessageBoxIcon.Warning);
-                txtPass.Clear();
+                txtPass.ResetText();
                 txtPass.Focus();
             }
 
@@ -65,7 +65,7 @@ namespace project
             if(!re.IsMatch(StrInput))
             {
                 MessageBox.Show("Không nhập kí tự hoa, khoảng trắng và kí tự đặc biệt","Lỗi",MessageBoxButtons.OK,MessageBoxIcon.Warning);
-                txtUserName.Clear();
+                txtUserName.ResetText();
                 txtUserName.Focus();
             }
         }
@@ -84,7 +84,7 @@ namespace project
         {
             var result =  from hs in db.HocSinhs
 		                   select hs.MaHS;
-            cbMaHS.DataSource = result;
+            cbMaHS.DataSource= result;
         }
         public bool KiemTraUser(string MaHS)
         {
@@ -125,46 +125,58 @@ namespace project
             LoadDSHS();
         }
 
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            string  MaHS = cbMaHS.SelectedItem.ToString();
-            string UserName = txtUserName.Text;
-            string Pass = txtPass.Text;
-            //Mã hóa Pass
-            var sha1 = new SHA1CryptoServiceProvider();
-            var arrBytePass = ASCIIEncoding.ASCII.GetBytes(Pass);
-            var strTimeNow = DateTime.Now.Millisecond.ToString();
-            var arrTimeNow = ASCIIEncoding.ASCII.GetBytes(strTimeNow);
-            var arrPassSalt = new byte[arrBytePass.Length + arrTimeNow.Length];
-            Array.Copy(arrBytePass, arrPassSalt, arrBytePass.Length);
-            Array.Copy(arrTimeNow, 0, arrPassSalt, arrBytePass.Length, arrTimeNow.Length);
+            try
+            {
+                string MaHS = cbMaHS.SelectedItem.ToString();
+                string UserName = txtUserName.Text;
+                string Pass = txtPass.Text;
+                //Mã hóa Pass
+                var sha1 = new SHA1CryptoServiceProvider();
+                var arrBytePass = ASCIIEncoding.ASCII.GetBytes(Pass);
+                var strTimeNow = DateTime.Now.Millisecond.ToString();
+                var arrTimeNow = ASCIIEncoding.ASCII.GetBytes(strTimeNow);
+                var arrPassSalt = new byte[arrBytePass.Length + arrTimeNow.Length];
+                Array.Copy(arrBytePass, arrPassSalt, arrBytePass.Length);
+                Array.Copy(arrTimeNow, 0, arrPassSalt, arrBytePass.Length, arrTimeNow.Length);
 
-            var arrPassHash = sha1.ComputeHash(arrPassSalt);
-            var arrPassSaltHash = new byte[arrPassHash.Length + arrTimeNow.Length];
-            Array.Copy(arrPassHash, arrPassSaltHash, arrPassHash.Length);
-            Array.Copy(arrTimeNow, 0, arrPassSaltHash, arrPassHash.Length, arrTimeNow.Length);
-            var strPassHash = BitConverter.ToString(arrPassSaltHash).Replace("-", "");
-            //
-            string RePass = txtRePass.Text;
-            string Type = "HocSinh";
-            if(Pass !=  RePass)
-            {
-                MessageBox.Show("Mật khẩu không khớp", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else if(KiemTraUser(MaHS) == true)
-            {
-                MessageBox.Show("Tài khoản đã tồn tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-
-                if (DangKy(UserName, strPassHash, Type, MaHS) == 1)
+                var arrPassHash = sha1.ComputeHash(arrPassSalt);
+                var arrPassSaltHash = new byte[arrPassHash.Length + arrTimeNow.Length];
+                Array.Copy(arrPassHash, arrPassSaltHash, arrPassHash.Length);
+                Array.Copy(arrTimeNow, 0, arrPassSaltHash, arrPassHash.Length, arrTimeNow.Length);
+                var strPassHash = BitConverter.ToString(arrPassSaltHash).Replace("-", "");
+                //
+                string RePass = txtRePass.Text;
+                string Type = "HocSinh";
+                if (Pass != RePass)
                 {
-                    MessageBox.Show("Đăng kí thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Mật khẩu không khớp", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (KiemTraUser(MaHS) == true)
+                {
+                    MessageBox.Show("Tài khoản đã tồn tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
-                    MessageBox.Show("Đăng kí thất bại. Tài khoản đã có người đăng kí", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                this.Close();
+                {
+
+                    if (DangKy(UserName, strPassHash, Type, MaHS) == 1)
+                    {
+                        MessageBox.Show("Đăng kí thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                        MessageBox.Show("Đăng kí thất bại. Tài khoản đã có người đăng kí", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    this.Close();
+                }
+            }
+            catch
+            {
+
             }
         }
     }

@@ -52,26 +52,36 @@ namespace project
             try
             {
                 db.SubmitChanges();
-                MessageBox.Show("Sửa thành công");
+                MessageBox.Show("Sửa thông tin thành công","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
             catch
             {
-                MessageBox.Show("Thất bại");
+                MessageBox.Show("Sửa thông tin thất bại","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
-        }
-        private void btnSua_Click(object sender, EventArgs e)
-        {
-
-            SuaThongTin();
-            Visible = false;
-            frmHS_ThongTinSinhVien frm = new frmHS_ThongTinSinhVien(username);
-            frm.Activate();
-            frm.ShowDialog();
         }
 
         private void frmHS_SuaThongTin_Load(object sender, EventArgs e)
         {
             ThongTin();
+        }
+
+        private void bunifuMetroTextbox1_OnValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            SuaThongTin();
+            Visible = false;
+            frmHS_ThongTinSinhVien frm = new frmHS_ThongTinSinhVien(username);
+            frm.Activate();
+            frm.ShowDialog();
         }
     }
 }

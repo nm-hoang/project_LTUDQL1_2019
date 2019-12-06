@@ -43,6 +43,10 @@ namespace project
         {
             ThongTin();
         }
+        private void frm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Show();
+        }
 
         private void btnSuaThongTin_Click(object sender, EventArgs e)
         {
@@ -50,14 +54,22 @@ namespace project
             MaLop = lblLop.Text;
             MaKhoi = lblKhoi.Text;
 
-            frmHS_SuaThongTin frm = new frmHS_SuaThongTin(username,MaLop,MaKhoi);
+            frmHS_SuaThongTin frm = new frmHS_SuaThongTin(username, MaLop, MaKhoi);
             frm.FormClosed += new FormClosedEventHandler(frm_FormClosed);
             frm.ShowDialog();
         }
 
-        private void frm_FormClosed(object sender, FormClosedEventArgs e)
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
-            this.Show();
+            this.Close();
+        }
+
+        private void btnKetQua_Click(object sender, EventArgs e)
+        {
+
+            frmHS_KetQua frm = new frmHS_KetQua(username);
+            frm.FormClosed += new FormClosedEventHandler(frm_FormClosed);
+            frm.ShowDialog();
         }
     }
 }

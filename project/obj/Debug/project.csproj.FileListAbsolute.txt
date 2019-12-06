@@ -18,3 +18,4 @@ C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.frmRegiste
 C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.frmHocSinh.resources
 C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.frmHS_ThongTinSinhVien.resources
 C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.frmHS_SuaThongTin.resources
+C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.frmHS_KetQua.resources

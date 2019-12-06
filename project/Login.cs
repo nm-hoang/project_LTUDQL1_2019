@@ -27,7 +27,7 @@ namespace project
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-            
+
         }
         public string LayPhanQuyen(string UserName) //Lấy phân quyền dựa vào IDUser
         {
@@ -94,8 +94,24 @@ namespace project
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            
+           
+        }
+        //Load form hiện tại của sự kiện đó
+        private void frm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Show();
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnLogins_Click(object sender, EventArgs e)
+        {
             string UserName = txtUserName.Text;
-            if(LayPhanQuyen(txtUserName.Text) == "HocSinh")
+            if (LayPhanQuyen(txtUserName.Text) == "HocSinh")
             {
                 string Pass = MaHoaPass(txtPass.Text, LayPass(UserName));
                 if (Pass != LayPass(UserName))
@@ -104,10 +120,10 @@ namespace project
                 }
                 else
                 {
-                       // MessageBox.Show("Hoc sinh đăng nhập");
-                        frmHocSinh frm = new frmHocSinh(UserName);
-                        frm.FormClosed += new FormClosedEventHandler(frm_FormClosed);
-                        frm.ShowDialog();
+                    // MessageBox.Show("Hoc sinh đăng nhập");
+                    frmHocSinh frm = new frmHocSinh(UserName);
+                    frm.FormClosed += new FormClosedEventHandler(frm_FormClosed);
+                    frm.ShowDialog();
                 }
             }
             else if (KiemTraTaiKhoan(UserName) == false)
@@ -116,17 +132,17 @@ namespace project
             }
             else if (LayPhanQuyen(UserName) == "GiaoVien")
             {
-                if(LayPass(UserName) != txtPass.Text)
+                if (LayPass(UserName) != txtPass.Text)
                 {
                     MessageBox.Show("Mat khau bị sai");
                 }
                 else
                 {
-                   // MessageBox.Show("GiaoVien dang nhap");
-                   
+                    // MessageBox.Show("GiaoVien dang nhap");
+
                 }
             }
-            else if(LayPhanQuyen(UserName)=="Admin")
+            else if (LayPhanQuyen(UserName) == "Admin")
             {
                 if (LayPass(UserName) != txtPass.Text)
                 {
@@ -137,12 +153,26 @@ namespace project
                     //MessageBox.Show("Admin dang nhap");
                 }
             }
-           
         }
-        //Load form hiện tại của sự kiện đó
-        private void frm_FormClosed(object sender, FormClosedEventArgs e)
+
+        private void label1_Click(object sender, EventArgs e)
         {
-            this.Show();
+
+        }
+
+        private void txtUserName_OnValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPass_OnValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
