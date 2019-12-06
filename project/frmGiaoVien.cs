@@ -12,9 +12,23 @@ namespace project
 {
     public partial class frmGiaoVien : Form
     {
-        public frmGiaoVien()
+        public string username;
+        public frmGiaoVien(string Username)
         {
             InitializeComponent();
+            username = Username;
+        }
+
+
+        private void frmGiaoVien_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnQLCauHoi_Click(object sender, EventArgs e)
+        {
+            GV_QLCauHoi frm = new GV_QLCauHoi();
+            frm.Show();
         }
     }
 }

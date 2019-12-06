@@ -15,3 +15,21 @@ C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.csproj.Gen
 C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.exe
 C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.pdb
 C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.frmRegister.resources
+D:\for learn\Nam 3\LT Ung dung QL\FinalProject\project\bin\Debug\project.exe.config
+D:\for learn\Nam 3\LT Ung dung QL\FinalProject\project\obj\Debug\project.exe
+D:\for learn\Nam 3\LT Ung dung QL\FinalProject\project\obj\Debug\project.pdb
+D:\for learn\Nam 3\LT Ung dung QL\FinalProject\project\bin\Debug\project.exe
+D:\for learn\Nam 3\LT Ung dung QL\FinalProject\project\bin\Debug\project.pdb
+D:\for learn\Nam 3\LT Ung dung QL\FinalProject\project\bin\Debug\CircularProgressBar.dll
+D:\for learn\Nam 3\LT Ung dung QL\FinalProject\project\bin\Debug\Excel.dll
+D:\for learn\Nam 3\LT Ung dung QL\FinalProject\project\bin\Debug\WinFormAnimation.dll
+D:\for learn\Nam 3\LT Ung dung QL\FinalProject\project\bin\Debug\CircularProgressBar.xml
+D:\for learn\Nam 3\LT Ung dung QL\FinalProject\project\bin\Debug\WinFormAnimation.xml
+D:\for learn\Nam 3\LT Ung dung QL\FinalProject\project\obj\Debug\project.csprojResolveAssemblyReference.cache
+D:\for learn\Nam 3\LT Ung dung QL\FinalProject\project\obj\Debug\project.frmGiaoVien.resources
+D:\for learn\Nam 3\LT Ung dung QL\FinalProject\project\obj\Debug\project.frmHocSinh.resources
+D:\for learn\Nam 3\LT Ung dung QL\FinalProject\project\obj\Debug\project.GV_QLCauHoi.resources
+D:\for learn\Nam 3\LT Ung dung QL\FinalProject\project\obj\Debug\project.frmLogin.resources
+D:\for learn\Nam 3\LT Ung dung QL\FinalProject\project\obj\Debug\project.Properties.Resources.resources
+D:\for learn\Nam 3\LT Ung dung QL\FinalProject\project\obj\Debug\project.frmRegister.resources
+D:\for learn\Nam 3\LT Ung dung QL\FinalProject\project\obj\Debug\project.csproj.GenerateResource.Cache

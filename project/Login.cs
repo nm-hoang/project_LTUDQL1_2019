@@ -27,7 +27,8 @@ namespace project
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-            
+            txtUserName.Text = "gv01";
+            txtPass.Text = "123";
         }
         public string LayPhanQuyen(string UserName) //Lấy phân quyền dựa vào IDUser
         {
@@ -120,8 +121,12 @@ namespace project
                 else
                 {
                    // MessageBox.Show("GiaoVien dang nhap");
-                    frmHocSinh frm = new frmHocSinh(UserName);
+                    //frmHocSinh frm = new frmHocSinh(UserName);
+                    //frm.FormClosed += new FormClosedEventHandler(frm_FormClosed);
+
+                    frmGiaoVien frm = new frmGiaoVien(UserName);
                     frm.FormClosed += new FormClosedEventHandler(frm_FormClosed);
+                    frm.Show();
                 }
             }
             else if(LayPhanQuyen(UserName)=="Admin")
