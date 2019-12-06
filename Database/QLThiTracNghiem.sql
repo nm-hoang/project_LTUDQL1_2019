@@ -1,4 +1,4 @@
-Create database QLThiTracNghiem
+﻿Create database QLThiTracNghiem
 use QLThiTracNghiem
 Go 
 Create table KhoiLop
@@ -168,6 +168,24 @@ Alter table KetQuaThi add constraint FK_KQT_DSHS foreign key(KyThi,MaHS) referen
 --DanhSachCauHoi(ID)-CauHoi(ID)
 Alter table DanhSachCauHoi add constraint FK_DSCH_CH foreign key(ID_Cauhoi) references CauHoi(ID)
 
+
+Insert into HocSinh values('HS01',N'Nuyễn Văn A','30/09/1999','10A1',10,'0969452985')
+Insert into HocSinh values('HS02',N'Nuyễn Văn B','30/09/1999','10A2',10,'0969452985')
+Insert into HocSinh values('HS03',N'Nuyễn Văn C','30/09/1999','11B1',11,'0969452985')
+Insert into HocSinh values('HS04',N'Nuyễn Văn D','30/09/1999','11B2',11,'0969452985')
+Insert into HocSinh values('HS05',N'Nuyễn Văn E','30/09/1999','12C1',12,'0969452985')
+Insert into HocSinh values('HS06',N'Nuyễn Văn F','30/09/1999','12C2',12,'0969452985')
+
+
+select * from GiaoVien
+Insert into GiaoVien values('GV01',N'Nuyễn Văn GV1','30/09/1999','0969452985')
+Insert into GiaoVien values('GV02',N'Nuyễn Văn GV2','30/09/1999','0969452985')
+Insert into GiaoVien values('GV03',N'Nuyễn Văn GV3','30/09/1999','0969452985')
+Insert into GiaoVien values('GV04',N'Nuyễn Văn GV4','30/09/1999','0969452985')
+Insert into GiaoVien values('GV05',N'Nuyễn Văn GV5','30/09/1999','0969452985')
+Insert into GiaoVien values('GV06',N'Nuyễn Văn GV6','30/09/1999','0969452985')
+
+
 --Nocheck all khoa ngoai
 DECLARE @sql NVARCHAR(MAX) = N'';
 
@@ -196,7 +214,11 @@ SELECT @sql += N'ALTER TABLE ' + obj + ' WITH CHECK CHECK CONSTRAINT ALL;
 ' FROM x;
 
 EXEC sp_executesql @sql;
+use QLThiTracNghiem
 select * from TaiKhoan
 select * from HocSinh
+select * from KetQuaThiThu
+select *from KyThi
+select * from DANHSACHHOCSINH
 select * from GiaoVien
-delete from TaiKhoan
+--delete from TaiKhoan

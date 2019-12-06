@@ -119,7 +119,9 @@ namespace project
                 }
                 else
                 {
-                    MessageBox.Show("GiaoVien dang nhap");
+                   // MessageBox.Show("GiaoVien dang nhap");
+                    frmHocSinh frm = new frmHocSinh(UserName);
+                    frm.FormClosed += new FormClosedEventHandler(frm_FormClosed);
                 }
             }
             else if(LayPhanQuyen(UserName)=="Admin")
@@ -134,6 +136,11 @@ namespace project
                 }
             }
            
+        }
+        //Load form hiện tại của sự kiện đó
+        private void frm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Show();
         }
     }
 }

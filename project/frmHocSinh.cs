@@ -12,7 +12,7 @@ namespace project
 {
     public partial class frmHocSinh : Form
     {
-        public frmHocSinh()
+        public frmHocSinh(string UserName)
         {
             InitializeComponent();
         }
