@@ -70,6 +70,7 @@
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(155, 20);
             this.txtUserName.TabIndex = 3;
+            this.txtUserName.Text = "hs01";
             // 
             // txtPass
             // 
@@ -78,6 +79,7 @@
             this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(155, 20);
             this.txtPass.TabIndex = 4;
+            this.txtPass.Text = "123";
             // 
             // linkLabel1
             // 

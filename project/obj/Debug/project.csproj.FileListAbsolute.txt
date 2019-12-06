@@ -15,3 +15,6 @@ C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.csproj.Gen
 C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.exe
 C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.pdb
 C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.frmRegister.resources
+C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.frmHocSinh.resources
+C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.frmHS_ThongTinSinhVien.resources
+C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.frmHS_SuaThongTin.resources

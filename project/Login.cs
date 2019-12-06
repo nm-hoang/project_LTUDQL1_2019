@@ -104,7 +104,10 @@ namespace project
                 }
                 else
                 {
-                        MessageBox.Show("Hoc sinh đăng nhập");
+                       // MessageBox.Show("Hoc sinh đăng nhập");
+                        frmHocSinh frm = new frmHocSinh(UserName);
+                        frm.FormClosed += new FormClosedEventHandler(frm_FormClosed);
+                        frm.ShowDialog();
                 }
             }
             else if (KiemTraTaiKhoan(UserName) == false)
@@ -120,8 +123,7 @@ namespace project
                 else
                 {
                    // MessageBox.Show("GiaoVien dang nhap");
-                    frmHocSinh frm = new frmHocSinh(UserName);
-                    frm.FormClosed += new FormClosedEventHandler(frm_FormClosed);
+                   
                 }
             }
             else if(LayPhanQuyen(UserName)=="Admin")
@@ -132,7 +134,7 @@ namespace project
                 }
                 else
                 {
-                    MessageBox.Show("Admin dang nhap");
+                    //MessageBox.Show("Admin dang nhap");
                 }
             }
            

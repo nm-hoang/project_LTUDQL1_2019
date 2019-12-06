@@ -215,10 +215,14 @@ SELECT @sql += N'ALTER TABLE ' + obj + ' WITH CHECK CHECK CONSTRAINT ALL;
 
 EXEC sp_executesql @sql;
 use QLThiTracNghiem
+use QuanLiThiTracNghiem
 select * from TaiKhoan
 select * from HocSinh
 select * from KetQuaThiThu
 select *from KyThi
+select *from DSHocSinh
 select * from DANHSACHHOCSINH
 select * from GiaoVien
+select * from KHOILOP
 --delete from TaiKhoan
+
