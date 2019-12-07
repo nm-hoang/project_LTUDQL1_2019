@@ -53,6 +53,7 @@
             this.btnSuaCH.TabIndex = 1;
             this.btnSuaCH.Text = "Sửa câu hỏi";
             this.btnSuaCH.UseVisualStyleBackColor = true;
+            this.btnSuaCH.Click += new System.EventHandler(this.btnSuaCH_Click);
             // 
             // GV_QLCauHoi
             // 

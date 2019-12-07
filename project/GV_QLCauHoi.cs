@@ -29,5 +29,11 @@ namespace project
             dgvCauHoi.Rows.Clear();
             dgvCauHoi.DataSource = (from ch in db.CauHois select ch);
         }
+
+        private void btnSuaCH_Click(object sender, EventArgs e)
+        {
+            GV_SuaCauHoi frm = new GV_SuaCauHoi();
+            frm.Show();
+        }
     }
 }
