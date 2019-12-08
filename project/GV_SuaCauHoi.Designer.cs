@@ -47,13 +47,17 @@
             this.cbDADung = new System.Windows.Forms.ComboBox();
             this.cbKhoi = new System.Windows.Forms.ComboBox();
             this.cbDoKho = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.lbIDCauHoi = new System.Windows.Forms.Label();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(202, 18);
+            this.label1.Location = new System.Drawing.Point(273, 22);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(167, 31);
@@ -217,11 +221,53 @@
             this.cbDoKho.Size = new System.Drawing.Size(110, 24);
             this.cbDoKho.TabIndex = 18;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(78, 61);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(27, 16);
+            this.label11.TabIndex = 19;
+            this.label11.Text = "ID: ";
+            // 
+            // lbIDCauHoi
+            // 
+            this.lbIDCauHoi.AutoSize = true;
+            this.lbIDCauHoi.Location = new System.Drawing.Point(112, 61);
+            this.lbIDCauHoi.Name = "lbIDCauHoi";
+            this.lbIDCauHoi.Size = new System.Drawing.Size(11, 16);
+            this.lbIDCauHoi.TabIndex = 20;
+            this.lbIDCauHoi.Text = ".";
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(564, 232);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(113, 34);
+            this.btnSave.TabIndex = 21;
+            this.btnSave.Text = "Lưu";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(564, 286);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(113, 34);
+            this.btnCancel.TabIndex = 22;
+            this.btnCancel.Text = "Hủy bỏ";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // GV_SuaCauHoi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(678, 324);
+            this.ClientSize = new System.Drawing.Size(716, 335);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.lbIDCauHoi);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.cbDoKho);
             this.Controls.Add(this.cbKhoi);
             this.Controls.Add(this.cbDADung);
@@ -255,7 +301,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtCauHoi;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -264,13 +309,18 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtA;
-        private System.Windows.Forms.TextBox txtB;
-        private System.Windows.Forms.TextBox txtD;
-        private System.Windows.Forms.TextBox txtC;
-        private System.Windows.Forms.ComboBox cbMaMH;
-        private System.Windows.Forms.ComboBox cbDADung;
-        private System.Windows.Forms.ComboBox cbKhoi;
-        private System.Windows.Forms.ComboBox cbDoKho;
+        public System.Windows.Forms.TextBox txtCauHoi;
+        public System.Windows.Forms.TextBox txtA;
+        public System.Windows.Forms.TextBox txtB;
+        public System.Windows.Forms.TextBox txtD;
+        public System.Windows.Forms.TextBox txtC;
+        public System.Windows.Forms.ComboBox cbMaMH;
+        public System.Windows.Forms.ComboBox cbDADung;
+        public System.Windows.Forms.ComboBox cbKhoi;
+        public System.Windows.Forms.ComboBox cbDoKho;
+        private System.Windows.Forms.Label label11;
+        public System.Windows.Forms.Label lbIDCauHoi;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

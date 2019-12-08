@@ -34,3 +34,4 @@ D:\for learn\Nam 3\LT Ung dung QL\FinalProject\project\obj\Debug\project.Propert
 D:\for learn\Nam 3\LT Ung dung QL\FinalProject\project\obj\Debug\project.frmRegister.resources
 D:\for learn\Nam 3\LT Ung dung QL\FinalProject\project\obj\Debug\project.csproj.GenerateResource.Cache
 D:\for learn\Nam 3\LT Ung dung QL\FinalProject\project\obj\Debug\project.GV_SuaCauHoi.resources
+D:\for learn\Nam 3\LT Ung dung QL\FinalProject\project\obj\Debug\project.GV_ChiTietCauHoi.resources

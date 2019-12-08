@@ -81,6 +81,12 @@
     <Compile Include="frmHocSinh.Designer.cs">
       <DependentUpon>frmHocSinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="GV_ChiTietCauHoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GV_ChiTietCauHoi.Designer.cs">
+      <DependentUpon>GV_ChiTietCauHoi.cs</DependentUpon>
+    </Compile>
     <Compile Include="GV_QLCauHoi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmHocSinh.resx">
       <DependentUpon>frmHocSinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GV_ChiTietCauHoi.resx">
+      <DependentUpon>GV_ChiTietCauHoi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GV_QLCauHoi.resx">
       <DependentUpon>GV_QLCauHoi.cs</DependentUpon>
