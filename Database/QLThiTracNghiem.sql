@@ -220,9 +220,14 @@ select * from TaiKhoan
 select * from HocSinh
 select * from KetQuaThiThu
 select *from KyThi
+select * from KETQUATHI
+select * from KETQUATHITHU
 select *from DSHocSinh
 select * from DANHSACHHOCSINH
 select * from GiaoVien
 select * from KHOILOP
 --delete from TaiKhoan
+delete from TAIKHOAN where ID=25
+update HOCSINH set NgaySinh = '30/09/1999' where MaHS='HS01'
+Insert into KETQUATHI values('HS01','10','12','5','30/09/1999','hs01','thithugk')
 

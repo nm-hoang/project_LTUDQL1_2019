@@ -80,7 +80,7 @@ namespace project
             SuaThongTin();
             Visible = false;
             frmHS_ThongTinSinhVien frm = new frmHS_ThongTinSinhVien(username);
-            frm.Activate();
+           // frm.Activate();
             frm.ShowDialog();
         }
     }

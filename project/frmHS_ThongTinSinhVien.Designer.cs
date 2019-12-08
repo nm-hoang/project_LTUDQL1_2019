@@ -76,6 +76,7 @@
             this.gbThongTin.Size = new System.Drawing.Size(722, 306);
             this.gbThongTin.TabIndex = 0;
             this.gbThongTin.TabStop = false;
+            this.gbThongTin.Enter += new System.EventHandler(this.gbThongTin_Enter);
             // 
             // lblKhoi
             // 
@@ -83,9 +84,9 @@
             this.lblKhoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblKhoi.Location = new System.Drawing.Point(434, 106);
             this.lblKhoi.Name = "lblKhoi";
-            this.lblKhoi.Size = new System.Drawing.Size(105, 20);
+            this.lblKhoi.Size = new System.Drawing.Size(68, 20);
             this.lblKhoi.TabIndex = 12;
-            this.lblKhoi.Text = "Mã học sinh";
+            this.lblKhoi.Text = "MaKhoi";
             // 
             // lblLop
             // 
@@ -93,9 +94,9 @@
             this.lblLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLop.Location = new System.Drawing.Point(434, 64);
             this.lblLop.Name = "lblLop";
-            this.lblLop.Size = new System.Drawing.Size(105, 20);
+            this.lblLop.Size = new System.Drawing.Size(39, 20);
             this.lblLop.TabIndex = 11;
-            this.lblLop.Text = "Mã học sinh";
+            this.lblLop.Text = "Lop";
             // 
             // lblSdt
             // 
@@ -103,9 +104,9 @@
             this.lblSdt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSdt.Location = new System.Drawing.Point(144, 210);
             this.lblSdt.Name = "lblSdt";
-            this.lblSdt.Size = new System.Drawing.Size(105, 20);
+            this.lblSdt.Size = new System.Drawing.Size(54, 20);
             this.lblSdt.TabIndex = 10;
-            this.lblSdt.Text = "Mã học sinh";
+            this.lblSdt.Text = "SoDT";
             // 
             // lblNgaySinh
             // 
@@ -113,9 +114,9 @@
             this.lblNgaySinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNgaySinh.Location = new System.Drawing.Point(144, 154);
             this.lblNgaySinh.Name = "lblNgaySinh";
-            this.lblNgaySinh.Size = new System.Drawing.Size(105, 20);
+            this.lblNgaySinh.Size = new System.Drawing.Size(85, 20);
             this.lblNgaySinh.TabIndex = 9;
-            this.lblNgaySinh.Text = "Mã học sinh";
+            this.lblNgaySinh.Text = "NgaySinh";
             // 
             // lblHoTen
             // 
@@ -123,9 +124,9 @@
             this.lblHoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHoTen.Location = new System.Drawing.Point(148, 114);
             this.lblHoTen.Name = "lblHoTen";
-            this.lblHoTen.Size = new System.Drawing.Size(105, 20);
+            this.lblHoTen.Size = new System.Drawing.Size(62, 20);
             this.lblHoTen.TabIndex = 8;
-            this.lblHoTen.Text = "Mã học sinh";
+            this.lblHoTen.Text = "HoTen";
             // 
             // lblMaHS
             // 
@@ -203,9 +204,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(210, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(260, 31);
+            this.label1.Size = new System.Drawing.Size(253, 31);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Thông tin sinh viên";
+            this.label1.Text = "Thông tin học sinh";
             // 
             // header
             // 
@@ -281,6 +282,7 @@
             this.btnLichThi.Size = new System.Drawing.Size(181, 41);
             this.btnLichThi.TabIndex = 24;
             this.btnLichThi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnLichThi.Click += new System.EventHandler(this.btnLichThi_Click);
             // 
             // btnSuaThongTin
             // 

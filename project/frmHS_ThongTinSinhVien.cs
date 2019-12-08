@@ -56,6 +56,7 @@ namespace project
 
             frmHS_SuaThongTin frm = new frmHS_SuaThongTin(username, MaLop, MaKhoi);
             frm.FormClosed += new FormClosedEventHandler(frm_FormClosed);
+            this.Hide();
             frm.ShowDialog();
         }
 
@@ -69,7 +70,21 @@ namespace project
 
             frmHS_KetQua frm = new frmHS_KetQua(username);
             frm.FormClosed += new FormClosedEventHandler(frm_FormClosed);
+            this.Hide();
             frm.ShowDialog();
+        }
+
+        private void btnLichThi_Click(object sender, EventArgs e)
+        {
+            frmHS_LichThi frm = new frmHS_LichThi(username);
+            frm.FormClosed += new FormClosedEventHandler(frm_FormClosed);
+            this.Hide();
+            frm.ShowDialog();
+        }
+
+        private void gbThongTin_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

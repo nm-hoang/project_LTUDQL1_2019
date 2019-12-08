@@ -33,11 +33,12 @@ namespace project
         private void btnTTSV_Click_1(object sender, EventArgs e)
         {
             frmHS_ThongTinSinhVien frmThongTin = new frmHS_ThongTinSinhVien(username);
-            frmThongTin.FormClosed += new FormClosedEventHandler(frmThongTin_FormClosed);
+            frmThongTin.FormClosed += new FormClosedEventHandler(frm_FormClosed);
+            //this.Hide();
             frmThongTin.ShowDialog();
         }
 
-        private void frmThongTin_FormClosed(object sender, FormClosedEventArgs e)
+        private void frm_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Show();
         }
@@ -56,6 +57,7 @@ namespace project
         private void frmHocSinh_Load(object sender, EventArgs e)
         {
             TenHocSinh();
+          
         }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
@@ -66,6 +68,13 @@ namespace project
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnDGop_Click(object sender, EventArgs e)
+        {
+            frmHS_DongGop frm = new frmHS_DongGop(username);
+            frm.FormClosed += new FormClosedEventHandler(frm_FormClosed);
+            frm.ShowDialog();
         }
 
        

@@ -19,3 +19,5 @@ C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.frmHocSinh
 C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.frmHS_ThongTinSinhVien.resources
 C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.frmHS_SuaThongTin.resources
 C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.frmHS_KetQua.resources
+C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.frmHS_LichThi.resources
+C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.frmHS_DongGop.resources

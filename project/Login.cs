@@ -94,7 +94,7 @@ namespace project
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            
+           
            
         }
         //Load form hiện tại của sự kiện đó
@@ -123,6 +123,7 @@ namespace project
                     // MessageBox.Show("Hoc sinh đăng nhập");
                     frmHocSinh frm = new frmHocSinh(UserName);
                     frm.FormClosed += new FormClosedEventHandler(frm_FormClosed);
+                    this.Hide();
                     frm.ShowDialog();
                 }
             }
