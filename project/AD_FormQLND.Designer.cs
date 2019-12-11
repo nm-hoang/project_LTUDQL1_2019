@@ -35,7 +35,7 @@
             // 
             // btnND
             // 
-            this.btnND.Location = new System.Drawing.Point(193, 46);
+            this.btnND.Location = new System.Drawing.Point(201, 46);
             this.btnND.Name = "btnND";
             this.btnND.Size = new System.Drawing.Size(199, 23);
             this.btnND.TabIndex = 0;
@@ -45,7 +45,7 @@
             // 
             // btnHS
             // 
-            this.btnHS.Location = new System.Drawing.Point(193, 123);
+            this.btnHS.Location = new System.Drawing.Point(201, 123);
             this.btnHS.Name = "btnHS";
             this.btnHS.Size = new System.Drawing.Size(199, 23);
             this.btnHS.TabIndex = 0;
@@ -55,7 +55,7 @@
             // 
             // btnGV
             // 
-            this.btnGV.Location = new System.Drawing.Point(193, 206);
+            this.btnGV.Location = new System.Drawing.Point(201, 206);
             this.btnGV.Name = "btnGV";
             this.btnGV.Size = new System.Drawing.Size(199, 23);
             this.btnGV.TabIndex = 0;
@@ -67,7 +67,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(558, 285);
+            this.ClientSize = new System.Drawing.Size(589, 293);
             this.Controls.Add(this.btnGV);
             this.Controls.Add(this.btnHS);
             this.Controls.Add(this.btnND);

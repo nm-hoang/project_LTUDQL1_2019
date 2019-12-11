@@ -21,7 +21,6 @@ D:\LTUDQL1\project_LTUDQL1_2019\project\obj\Debug\project.pdb
 D:\LTUDQL1\project_LTUDQL1_2019\project\bin\Debug\project.exe
 D:\LTUDQL1\project_LTUDQL1_2019\project\bin\Debug\project.pdb
 D:\LTUDQL1\project_LTUDQL1_2019\project\bin\Debug\CircularProgressBar.dll
-D:\LTUDQL1\project_LTUDQL1_2019\project\bin\Debug\Excel.dll
 D:\LTUDQL1\project_LTUDQL1_2019\project\bin\Debug\WinFormAnimation.dll
 D:\LTUDQL1\project_LTUDQL1_2019\project\bin\Debug\CircularProgressBar.xml
 D:\LTUDQL1\project_LTUDQL1_2019\project\bin\Debug\WinFormAnimation.xml
@@ -35,3 +34,7 @@ D:\LTUDQL1\project_LTUDQL1_2019\project\obj\Debug\project.AD_FormQLND.resources
 D:\LTUDQL1\project_LTUDQL1_2019\project\obj\Debug\project.AD_FormND.resources
 D:\LTUDQL1\project_LTUDQL1_2019\project\obj\Debug\project.AD_FormND_Them.resources
 D:\LTUDQL1\project_LTUDQL1_2019\project\obj\Debug\project.AD_FormND_CapNhat.resources
+D:\LTUDQL1\project_LTUDQL1_2019\project\obj\Debug\project.AD_FormHS.resources
+D:\LTUDQL1\project_LTUDQL1_2019\project\obj\Debug\project.AD_FormGV.resources
+D:\LTUDQL1\project_LTUDQL1_2019\project\obj\Debug\project.AD_FormQLHT.resources
+D:\LTUDQL1\project_LTUDQL1_2019\project\obj\Debug\project.AD_FormTL.resources

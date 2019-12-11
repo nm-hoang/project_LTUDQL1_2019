@@ -30,7 +30,6 @@
         {
             this.btnQLND = new System.Windows.Forms.Button();
             this.btnQLHT = new System.Windows.Forms.Button();
-            this.btnLogOut = new System.Windows.Forms.Button();
             this.pnHeader = new System.Windows.Forms.Panel();
             this.pnFooter = new System.Windows.Forms.Panel();
             this.pnHeader.SuspendLayout();
@@ -40,7 +39,7 @@
             // 
             this.btnQLND.Location = new System.Drawing.Point(12, 12);
             this.btnQLND.Name = "btnQLND";
-            this.btnQLND.Size = new System.Drawing.Size(115, 45);
+            this.btnQLND.Size = new System.Drawing.Size(274, 45);
             this.btnQLND.TabIndex = 0;
             this.btnQLND.Text = "Quản lí người dùng";
             this.btnQLND.UseVisualStyleBackColor = true;
@@ -48,29 +47,19 @@
             // 
             // btnQLHT
             // 
-            this.btnQLHT.Location = new System.Drawing.Point(232, 12);
+            this.btnQLHT.Location = new System.Drawing.Point(303, 12);
             this.btnQLHT.Name = "btnQLHT";
-            this.btnQLHT.Size = new System.Drawing.Size(115, 45);
+            this.btnQLHT.Size = new System.Drawing.Size(274, 45);
             this.btnQLHT.TabIndex = 0;
             this.btnQLHT.Text = "Quản lí hệ thống";
             this.btnQLHT.UseVisualStyleBackColor = true;
-            // 
-            // btnLogOut
-            // 
-            this.btnLogOut.Location = new System.Drawing.Point(460, 12);
-            this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(115, 45);
-            this.btnLogOut.TabIndex = 0;
-            this.btnLogOut.Text = "Đăng xuất";
-            this.btnLogOut.UseVisualStyleBackColor = true;
-            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            this.btnQLHT.Click += new System.EventHandler(this.btnQLHT_Click);
             // 
             // pnHeader
             // 
             this.pnHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.pnHeader.Controls.Add(this.btnQLND);
-            this.pnHeader.Controls.Add(this.btnLogOut);
             this.pnHeader.Controls.Add(this.btnQLHT);
+            this.pnHeader.Controls.Add(this.btnQLND);
             this.pnHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnHeader.Location = new System.Drawing.Point(0, 0);
             this.pnHeader.Name = "pnHeader";
@@ -106,7 +95,6 @@
 
         private System.Windows.Forms.Button btnQLND;
         private System.Windows.Forms.Button btnQLHT;
-        private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.Panel pnHeader;
         private System.Windows.Forms.Panel pnFooter;
     }

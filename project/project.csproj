@@ -41,10 +41,11 @@
     <Reference Include="CircularProgressBar">
       <HintPath>..\packages\CircularProgressBar.2.6.6823.24527\lib\net35-client\CircularProgressBar.dll</HintPath>
     </Reference>
-    <Reference Include="Excel">
-      <HintPath>..\packages\Excel.1.0.0\lib\dotnet\Excel.dll</HintPath>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Messaging" />
@@ -62,6 +63,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AD_FormGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AD_FormGV.Designer.cs">
+      <DependentUpon>AD_FormGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AD_FormHS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AD_FormHS.Designer.cs">
+      <DependentUpon>AD_FormHS.cs</DependentUpon>
+    </Compile>
     <Compile Include="AD_FormND.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,12 +93,25 @@
     <Compile Include="AD_FormND_Them.Designer.cs">
       <DependentUpon>AD_FormND_Them.cs</DependentUpon>
     </Compile>
+    <Compile Include="AD_FormQLHT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AD_FormQLHT.Designer.cs">
+      <DependentUpon>AD_FormQLHT.cs</DependentUpon>
+    </Compile>
     <Compile Include="AD_FormQLND.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AD_FormQLND.Designer.cs">
       <DependentUpon>AD_FormQLND.cs</DependentUpon>
     </Compile>
+    <Compile Include="AD_FormTL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AD_FormTL.Designer.cs">
+      <DependentUpon>AD_FormTL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckConnect.cs" />
     <Compile Include="FormAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +137,12 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AD_FormGV.resx">
+      <DependentUpon>AD_FormGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AD_FormHS.resx">
+      <DependentUpon>AD_FormHS.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AD_FormND.resx">
       <DependentUpon>AD_FormND.cs</DependentUpon>
     </EmbeddedResource>
@@ -120,8 +152,14 @@
     <EmbeddedResource Include="AD_FormND_Them.resx">
       <DependentUpon>AD_FormND_Them.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AD_FormQLHT.resx">
+      <DependentUpon>AD_FormQLHT.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AD_FormQLND.resx">
       <DependentUpon>AD_FormQLND.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AD_FormTL.resx">
+      <DependentUpon>AD_FormTL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAdmin.resx">
       <DependentUpon>FormAdmin.cs</DependentUpon>
@@ -164,6 +202,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

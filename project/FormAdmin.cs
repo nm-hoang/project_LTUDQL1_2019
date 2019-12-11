@@ -17,11 +17,6 @@ namespace project
             InitializeComponent();
         }
 
-        private void btnLogOut_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void btnQLND_Click(object sender, EventArgs e)
         {
             AD_FormQLND frmQLND = new AD_FormQLND();
@@ -29,6 +24,15 @@ namespace project
             pnFooter.Controls.Clear();
             pnFooter.Controls.Add(frmQLND);
             frmQLND.Show();
+        }
+
+        private void btnQLHT_Click(object sender, EventArgs e)
+        {
+            AD_FormQLHT frmQLHT = new AD_FormQLHT();
+            frmQLHT.TopLevel = false;
+            pnFooter.Controls.Clear();
+            pnFooter.Controls.Add(frmQLHT);
+            frmQLHT.Show();
         }
     }
 }

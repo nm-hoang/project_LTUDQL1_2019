@@ -20,19 +20,19 @@ namespace project
         private void btnND_Click(object sender, EventArgs e)
         {
             AD_FormND frmQLND = new AD_FormND();
-            frmQLND.Show();
+            frmQLND.ShowDialog();
         }
 
         private void btnHS_Click(object sender, EventArgs e)
         {
-            //AD_FormQLND frmQLND = new AD_FormQLND();
-            //frmQLND.Show();
+            AD_FormHS frmQLHS = new AD_FormHS();
+            frmQLHS.ShowDialog();
         }
 
         private void btnGV_Click(object sender, EventArgs e)
         {
-            //AD_FormQLND frmQLND = new AD_FormQLND();
-            //frmQLND.Show();
+            AD_FormGV frmQLGV = new AD_FormGV();
+            frmQLGV.ShowDialog();
         }
     }
 }

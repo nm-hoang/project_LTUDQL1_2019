@@ -30,7 +30,7 @@ namespace project
                 this.Close();
             }
         }
-         public int CapNhatThongTin()
+        public int CapNhatThongTin()
         {
             int i = 0;
             using (QLThiTracNghiemDataContext db = new QLThiTracNghiemDataContext())
@@ -41,12 +41,12 @@ namespace project
                 {
                     db.SubmitChanges();
                     i = 1;
-                    MessageBox.Show("Cập nhật thành công.");
+                    MessageBox.Show("Cập nhật thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch
                 {
                     i = 0;
-                    MessageBox.Show("Cập nhật thất bại.");
+                    MessageBox.Show("Cập nhật thất bại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             return i;

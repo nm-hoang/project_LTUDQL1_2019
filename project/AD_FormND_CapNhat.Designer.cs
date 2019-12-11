@@ -40,13 +40,15 @@
             this.lbAccount = new System.Windows.Forms.Label();
             this.lbType = new System.Windows.Forms.Label();
             this.lbIDUser = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(141, 34);
+            this.label1.Location = new System.Drawing.Point(75, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(253, 31);
             this.label1.TabIndex = 0;
@@ -55,7 +57,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(110, 111);
+            this.label2.Location = new System.Drawing.Point(20, 40);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(21, 13);
             this.label2.TabIndex = 1;
@@ -64,7 +66,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(110, 140);
+            this.label3.Location = new System.Drawing.Point(20, 69);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 13);
             this.label3.TabIndex = 1;
@@ -73,7 +75,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(110, 171);
+            this.label4.Location = new System.Drawing.Point(20, 100);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 13);
             this.label4.TabIndex = 1;
@@ -82,7 +84,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(110, 201);
+            this.label5.Location = new System.Drawing.Point(20, 130);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(86, 13);
             this.label5.TabIndex = 1;
@@ -91,7 +93,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(110, 234);
+            this.label6.Location = new System.Drawing.Point(20, 163);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(77, 13);
             this.label6.TabIndex = 1;
@@ -99,16 +101,16 @@
             // 
             // txtPassWord
             // 
-            this.txtPassWord.Location = new System.Drawing.Point(232, 168);
+            this.txtPassWord.Location = new System.Drawing.Point(142, 97);
             this.txtPassWord.Name = "txtPassWord";
             this.txtPassWord.Size = new System.Drawing.Size(162, 20);
             this.txtPassWord.TabIndex = 2;
             // 
             // btnCapNhat
             // 
-            this.btnCapNhat.Location = new System.Drawing.Point(158, 290);
+            this.btnCapNhat.Location = new System.Drawing.Point(104, 209);
             this.btnCapNhat.Name = "btnCapNhat";
-            this.btnCapNhat.Size = new System.Drawing.Size(200, 23);
+            this.btnCapNhat.Size = new System.Drawing.Size(129, 42);
             this.btnCapNhat.TabIndex = 3;
             this.btnCapNhat.Text = "Cập nhật";
             this.btnCapNhat.UseVisualStyleBackColor = true;
@@ -117,7 +119,7 @@
             // lbID
             // 
             this.lbID.AutoSize = true;
-            this.lbID.Location = new System.Drawing.Point(229, 111);
+            this.lbID.Location = new System.Drawing.Point(139, 40);
             this.lbID.Name = "lbID";
             this.lbID.Size = new System.Drawing.Size(18, 13);
             this.lbID.TabIndex = 4;
@@ -126,7 +128,7 @@
             // lbAccount
             // 
             this.lbAccount.AutoSize = true;
-            this.lbAccount.Location = new System.Drawing.Point(229, 140);
+            this.lbAccount.Location = new System.Drawing.Point(139, 69);
             this.lbAccount.Name = "lbAccount";
             this.lbAccount.Size = new System.Drawing.Size(55, 13);
             this.lbAccount.TabIndex = 5;
@@ -135,7 +137,7 @@
             // lbType
             // 
             this.lbType.AutoSize = true;
-            this.lbType.Location = new System.Drawing.Point(229, 201);
+            this.lbType.Location = new System.Drawing.Point(139, 130);
             this.lbType.Name = "lbType";
             this.lbType.Size = new System.Drawing.Size(83, 13);
             this.lbType.TabIndex = 5;
@@ -144,31 +146,45 @@
             // lbIDUser
             // 
             this.lbIDUser.AutoSize = true;
-            this.lbIDUser.Location = new System.Drawing.Point(229, 234);
+            this.lbIDUser.Location = new System.Drawing.Point(139, 163);
             this.lbIDUser.Name = "lbIDUser";
             this.lbIDUser.Size = new System.Drawing.Size(74, 13);
             this.lbIDUser.TabIndex = 5;
             this.lbIDUser.Text = "ID người dùng";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txtPassWord);
+            this.groupBox1.Controls.Add(this.lbIDUser);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.lbType);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.lbAccount);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.lbID);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.btnCapNhat);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Location = new System.Drawing.Point(35, 65);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(336, 287);
+            this.groupBox1.TabIndex = 6;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Đổi mật khẩu";
+            // 
             // AD_FormND_CapNhat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(501, 377);
-            this.Controls.Add(this.lbIDUser);
-            this.Controls.Add(this.lbType);
-            this.Controls.Add(this.lbAccount);
-            this.Controls.Add(this.lbID);
-            this.Controls.Add(this.btnCapNhat);
-            this.Controls.Add(this.txtPassWord);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(407, 387);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "AD_FormND_CapNhat";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AD_FormND_CapNhat";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,5 +204,6 @@
         private System.Windows.Forms.Label lbAccount;
         private System.Windows.Forms.Label lbType;
         private System.Windows.Forms.Label lbIDUser;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
