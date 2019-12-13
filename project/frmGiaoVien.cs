@@ -30,5 +30,17 @@ namespace project
             GV_QLCauHoi frm = new GV_QLCauHoi();
             frm.Show();
         }
+
+        private void btnQLDeThi_Click(object sender, EventArgs e)
+        {
+            GV_QLDeThi frm = new GV_QLDeThi();
+            frm.Show();
+        }
+
+        private void btnQLKyThi_Click(object sender, EventArgs e)
+        {
+            GV_QLKyThi frm = new GV_QLKyThi();
+            frm.Show();
+        }
     }
 }

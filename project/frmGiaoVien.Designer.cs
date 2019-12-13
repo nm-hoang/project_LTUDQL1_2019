@@ -57,6 +57,7 @@
             this.btnQLDeThi.TabIndex = 1;
             this.btnQLDeThi.Text = "Quản lý đề thi";
             this.btnQLDeThi.UseVisualStyleBackColor = true;
+            this.btnQLDeThi.Click += new System.EventHandler(this.btnQLDeThi_Click);
             // 
             // btnQLKyThiThu
             // 
@@ -77,6 +78,7 @@
             this.btnQLKyThi.TabIndex = 2;
             this.btnQLKyThi.Text = "Quản lý kỳ thi";
             this.btnQLKyThi.UseVisualStyleBackColor = true;
+            this.btnQLKyThi.Click += new System.EventHandler(this.btnQLKyThi_Click);
             // 
             // btnLogOut
             // 

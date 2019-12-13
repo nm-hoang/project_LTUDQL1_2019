@@ -93,11 +93,47 @@
     <Compile Include="GV_QLCauHoi.Designer.cs">
       <DependentUpon>GV_QLCauHoi.cs</DependentUpon>
     </Compile>
+    <Compile Include="GV_QLDeThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GV_QLDeThi.Designer.cs">
+      <DependentUpon>GV_QLDeThi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GV_QLKyThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GV_QLKyThi.Designer.cs">
+      <DependentUpon>GV_QLKyThi.cs</DependentUpon>
+    </Compile>
     <Compile Include="GV_SuaCauHoi.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GV_SuaCauHoi.Designer.cs">
       <DependentUpon>GV_SuaCauHoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GV_SuaDeThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GV_SuaDeThi.Designer.cs">
+      <DependentUpon>GV_SuaDeThi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GV_SuaKyThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GV_SuaKyThi.Designer.cs">
+      <DependentUpon>GV_SuaKyThi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GV_TaoDeThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GV_TaoDeThi.Designer.cs">
+      <DependentUpon>GV_TaoDeThi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GV_TaoKyThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GV_TaoKyThi.Designer.cs">
+      <DependentUpon>GV_TaoKyThi.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -130,8 +166,26 @@
     <EmbeddedResource Include="GV_QLCauHoi.resx">
       <DependentUpon>GV_QLCauHoi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GV_QLDeThi.resx">
+      <DependentUpon>GV_QLDeThi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GV_QLKyThi.resx">
+      <DependentUpon>GV_QLKyThi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GV_SuaCauHoi.resx">
       <DependentUpon>GV_SuaCauHoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GV_SuaDeThi.resx">
+      <DependentUpon>GV_SuaDeThi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GV_SuaKyThi.resx">
+      <DependentUpon>GV_SuaKyThi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GV_TaoDeThi.resx">
+      <DependentUpon>GV_TaoDeThi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GV_TaoKyThi.resx">
+      <DependentUpon>GV_TaoKyThi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

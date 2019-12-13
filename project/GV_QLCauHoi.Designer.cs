@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.dgvCauHoi = new System.Windows.Forms.DataGridView();
-            this.btnSuaCH = new System.Windows.Forms.Button();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CauHoi1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DapAn_A = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,8 +39,10 @@
             this.Khoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DoKho = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaMH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSuaCH = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnViewDetails = new System.Windows.Forms.Button();
+            this.btnInsert = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCauHoi)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,20 +68,9 @@
             this.dgvCauHoi.Name = "dgvCauHoi";
             this.dgvCauHoi.ReadOnly = true;
             this.dgvCauHoi.RowTemplate.Height = 40;
-            this.dgvCauHoi.Size = new System.Drawing.Size(744, 217);
+            this.dgvCauHoi.Size = new System.Drawing.Size(922, 217);
             this.dgvCauHoi.TabIndex = 0;
             this.dgvCauHoi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCauHoi_CellContentClick);
-            // 
-            // btnSuaCH
-            // 
-            this.btnSuaCH.Location = new System.Drawing.Point(26, 236);
-            this.btnSuaCH.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSuaCH.Name = "btnSuaCH";
-            this.btnSuaCH.Size = new System.Drawing.Size(127, 41);
-            this.btnSuaCH.TabIndex = 1;
-            this.btnSuaCH.Text = "Sửa ";
-            this.btnSuaCH.UseVisualStyleBackColor = true;
-            this.btnSuaCH.Click += new System.EventHandler(this.btnSuaCH_Click);
             // 
             // ID
             // 
@@ -152,6 +142,17 @@
             this.MaMH.Name = "MaMH";
             this.MaMH.ReadOnly = true;
             // 
+            // btnSuaCH
+            // 
+            this.btnSuaCH.Location = new System.Drawing.Point(26, 236);
+            this.btnSuaCH.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSuaCH.Name = "btnSuaCH";
+            this.btnSuaCH.Size = new System.Drawing.Size(127, 41);
+            this.btnSuaCH.TabIndex = 1;
+            this.btnSuaCH.Text = "Sửa ";
+            this.btnSuaCH.UseVisualStyleBackColor = true;
+            this.btnSuaCH.Click += new System.EventHandler(this.btnSuaCH_Click);
+            // 
             // btnDelete
             // 
             this.btnDelete.Location = new System.Drawing.Point(571, 236);
@@ -174,12 +175,24 @@
             this.btnViewDetails.UseVisualStyleBackColor = true;
             this.btnViewDetails.Click += new System.EventHandler(this.btnViewDetails_Click);
             // 
+            // btnInsert
+            // 
+            this.btnInsert.Location = new System.Drawing.Point(436, 236);
+            this.btnInsert.Margin = new System.Windows.Forms.Padding(4);
+            this.btnInsert.Name = "btnInsert";
+            this.btnInsert.Size = new System.Drawing.Size(127, 41);
+            this.btnInsert.TabIndex = 4;
+            this.btnInsert.Text = "Thêm";
+            this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
+            // 
             // GV_QLCauHoi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(744, 332);
+            this.ClientSize = new System.Drawing.Size(922, 375);
+            this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.btnViewDetails);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnSuaCH);
@@ -210,5 +223,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MaMH;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnViewDetails;
+        private System.Windows.Forms.Button btnInsert;
     }
 }

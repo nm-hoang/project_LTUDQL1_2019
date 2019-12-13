@@ -65,5 +65,10 @@ namespace project
             GV_ChiTietCauHoi frm = new GV_ChiTietCauHoi(id);
             frm.Show();
         }
+
+        private void btnInsert_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -35,3 +35,9 @@ D:\for learn\Nam 3\LT Ung dung QL\FinalProject\project\obj\Debug\project.frmRegi
 D:\for learn\Nam 3\LT Ung dung QL\FinalProject\project\obj\Debug\project.csproj.GenerateResource.Cache
 D:\for learn\Nam 3\LT Ung dung QL\FinalProject\project\obj\Debug\project.GV_SuaCauHoi.resources
 D:\for learn\Nam 3\LT Ung dung QL\FinalProject\project\obj\Debug\project.GV_ChiTietCauHoi.resources
+D:\for learn\Nam 3\LT Ung dung QL\FinalProject\project\obj\Debug\project.GV_QLDeThi.resources
+D:\for learn\Nam 3\LT Ung dung QL\FinalProject\project\obj\Debug\project.GV_SuaDeThi.resources
+D:\for learn\Nam 3\LT Ung dung QL\FinalProject\project\obj\Debug\project.GV_TaoDeThi.resources
+D:\for learn\Nam 3\LT Ung dung QL\FinalProject\project\obj\Debug\project.GV_QLKyThi.resources
+D:\for learn\Nam 3\LT Ung dung QL\FinalProject\project\obj\Debug\project.GV_TaoKyThi.resources
+D:\for learn\Nam 3\LT Ung dung QL\FinalProject\project\obj\Debug\project.GV_SuaKyThi.resources

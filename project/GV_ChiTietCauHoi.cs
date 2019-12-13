@@ -31,9 +31,11 @@ namespace project
             var dethi = (from dt in db.DeThis
                          from dsch in db.DanhSachCauHois
                          from ch in db.CauHois
-                         where ch.ID == IDCauHoi && ch.ID == dsch.ID_Cauhoi && dsch.MaDe == dt.ID 
+                         from  mh in db.MonHocs
+                         from kl in db.KhoiLops
+                         where ch.ID == IDCauHoi && ch.ID == dsch.ID_Cauhoi &&  dsch.MaDe == dt.ID && dt.MaMH == mh.MaMH && dt.MaKhoi == kl.MaKhoi 
                          select new{
-                             dt.ID,dt.TenDeThi, dt.MaMH,dt.MaKhoi
+                             dt.ID,dt.TenDeThi,mh.MaMH, mh.TenMH,kl.MaKhoi, kl.TenKhoi
                          });
             dgvDetails.Rows.Clear();
             dgvDetails.DataSource = dethi;          
