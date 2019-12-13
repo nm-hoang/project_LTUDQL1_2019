@@ -57,7 +57,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 99);
+            this.label2.Location = new System.Drawing.Point(35, 68);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 13);
             this.label2.TabIndex = 1;
@@ -66,7 +66,7 @@
             // cbLoaiND
             // 
             this.cbLoaiND.FormattingEnabled = true;
-            this.cbLoaiND.Location = new System.Drawing.Point(117, 96);
+            this.cbLoaiND.Location = new System.Drawing.Point(127, 65);
             this.cbLoaiND.Name = "cbLoaiND";
             this.cbLoaiND.Size = new System.Drawing.Size(121, 21);
             this.cbLoaiND.TabIndex = 2;
@@ -119,7 +119,7 @@
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(24, 189);
+            this.btnThem.Location = new System.Drawing.Point(34, 160);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(104, 46);
             this.btnThem.TabIndex = 4;
@@ -129,7 +129,7 @@
             // 
             // btnCapNhat
             // 
-            this.btnCapNhat.Location = new System.Drawing.Point(134, 189);
+            this.btnCapNhat.Location = new System.Drawing.Point(144, 160);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(104, 46);
             this.btnCapNhat.TabIndex = 4;
@@ -139,7 +139,7 @@
             // 
             // btnLoadDS
             // 
-            this.btnLoadDS.Location = new System.Drawing.Point(24, 137);
+            this.btnLoadDS.Location = new System.Drawing.Point(34, 108);
             this.btnLoadDS.Name = "btnLoadDS";
             this.btnLoadDS.Size = new System.Drawing.Size(214, 46);
             this.btnLoadDS.TabIndex = 5;
@@ -149,7 +149,7 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(24, 241);
+            this.btnXoa.Location = new System.Drawing.Point(34, 212);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(214, 46);
             this.btnXoa.TabIndex = 6;
@@ -161,7 +161,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(976, 366);
+            this.ClientSize = new System.Drawing.Size(971, 328);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnLoadDS);
             this.Controls.Add(this.btnCapNhat);
@@ -170,7 +170,7 @@
             this.Controls.Add(this.cbLoaiND);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "AD_FormND";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

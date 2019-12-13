@@ -105,6 +105,12 @@
     <Compile Include="AD_FormQLND.Designer.cs">
       <DependentUpon>AD_FormQLND.cs</DependentUpon>
     </Compile>
+    <Compile Include="AD_FormSL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AD_FormSL.Designer.cs">
+      <DependentUpon>AD_FormSL.cs</DependentUpon>
+    </Compile>
     <Compile Include="AD_FormTL.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AD_FormQLND.resx">
       <DependentUpon>AD_FormQLND.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AD_FormSL.resx">
+      <DependentUpon>AD_FormSL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AD_FormTL.resx">
       <DependentUpon>AD_FormTL.cs</DependentUpon>

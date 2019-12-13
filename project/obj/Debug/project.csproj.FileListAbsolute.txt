@@ -38,3 +38,4 @@ D:\LTUDQL1\project_LTUDQL1_2019\project\obj\Debug\project.AD_FormHS.resources
 D:\LTUDQL1\project_LTUDQL1_2019\project\obj\Debug\project.AD_FormGV.resources
 D:\LTUDQL1\project_LTUDQL1_2019\project\obj\Debug\project.AD_FormQLHT.resources
 D:\LTUDQL1\project_LTUDQL1_2019\project\obj\Debug\project.AD_FormTL.resources
+D:\LTUDQL1\project_LTUDQL1_2019\project\obj\Debug\project.AD_FormSL.resources

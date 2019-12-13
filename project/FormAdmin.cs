@@ -17,15 +17,6 @@ namespace project
             InitializeComponent();
         }
 
-        private void btnQLND_Click(object sender, EventArgs e)
-        {
-            AD_FormQLND frmQLND = new AD_FormQLND();
-            frmQLND.TopLevel = false;
-            pnFooter.Controls.Clear();
-            pnFooter.Controls.Add(frmQLND);
-            frmQLND.Show();
-        }
-
         private void btnQLHT_Click(object sender, EventArgs e)
         {
             AD_FormQLHT frmQLHT = new AD_FormQLHT();
@@ -33,6 +24,15 @@ namespace project
             pnFooter.Controls.Clear();
             pnFooter.Controls.Add(frmQLHT);
             frmQLHT.Show();
+        }
+
+        private void btnQLND_Click(object sender, EventArgs e)
+        {
+            AD_FormQLND frmQLND = new AD_FormQLND();
+            frmQLND.TopLevel = false;
+            pnFooter.Controls.Clear();
+            pnFooter.Controls.Add(frmQLND);
+            frmQLND.Show();
         }
     }
 }

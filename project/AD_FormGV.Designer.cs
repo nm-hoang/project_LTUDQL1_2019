@@ -92,7 +92,7 @@
             // 
             // btnNhap
             // 
-            this.btnNhap.Location = new System.Drawing.Point(49, 193);
+            this.btnNhap.Location = new System.Drawing.Point(58, 159);
             this.btnNhap.Name = "btnNhap";
             this.btnNhap.Size = new System.Drawing.Size(85, 39);
             this.btnNhap.TabIndex = 2;
@@ -102,7 +102,7 @@
             // 
             // btnXuat
             // 
-            this.btnXuat.Location = new System.Drawing.Point(140, 193);
+            this.btnXuat.Location = new System.Drawing.Point(149, 159);
             this.btnXuat.Name = "btnXuat";
             this.btnXuat.Size = new System.Drawing.Size(85, 39);
             this.btnXuat.TabIndex = 2;
@@ -113,7 +113,7 @@
             // cbMaGV
             // 
             this.cbMaGV.FormattingEnabled = true;
-            this.cbMaGV.Location = new System.Drawing.Point(118, 121);
+            this.cbMaGV.Location = new System.Drawing.Point(127, 68);
             this.cbMaGV.Name = "cbMaGV";
             this.cbMaGV.Size = new System.Drawing.Size(107, 21);
             this.cbMaGV.TabIndex = 5;
@@ -121,7 +121,7 @@
             // 
             // btnLoadDS
             // 
-            this.btnLoadDS.Location = new System.Drawing.Point(49, 148);
+            this.btnLoadDS.Location = new System.Drawing.Point(58, 114);
             this.btnLoadDS.Name = "btnLoadDS";
             this.btnLoadDS.Size = new System.Drawing.Size(176, 39);
             this.btnLoadDS.TabIndex = 6;
@@ -132,7 +132,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(46, 124);
+            this.label2.Location = new System.Drawing.Point(55, 71);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 13);
             this.label2.TabIndex = 7;
@@ -142,7 +142,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(976, 366);
+            this.ClientSize = new System.Drawing.Size(971, 328);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnLoadDS);
             this.Controls.Add(this.cbMaGV);
@@ -150,7 +150,7 @@
             this.Controls.Add(this.btnNhap);
             this.Controls.Add(this.dataGV);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AD_FormGV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AD_FormGV";
