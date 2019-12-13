@@ -43,19 +43,27 @@ namespace project
             var tk = new TaiKhoan();
             tk.ID_Account = txtAccount.Text;
             tk.PassWord = txtPassWord.Text;
-            tk.Type = cbType.SelectedItem.ToString();
-            tk.ID_User = cbIDUser.SelectedItem.ToString();
-            db.TaiKhoans.InsertOnSubmit(tk);
             try
             {
-                db.SubmitChanges();
-                i = 1;
-                MessageBox.Show("Thêm thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tk.Type = cbType.SelectedItem.ToString();
+                tk.ID_User = cbIDUser.SelectedItem.ToString();
+                db.TaiKhoans.InsertOnSubmit(tk);
+                try
+                {
+                    db.SubmitChanges();
+                    i = 1;
+                    MessageBox.Show("Thêm thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception e)
+                {
+                    i = 0;
+                    MessageBox.Show("Thêm thất bại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
-            catch (Exception e)
+            catch(Exception ex)
             {
-                i = 0;
-                MessageBox.Show("Thêm thất bại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Loại người dùng hoặc ID người dùng không tồn tại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                
             }
             return i;
         }
