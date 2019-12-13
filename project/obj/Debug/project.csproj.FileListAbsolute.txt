@@ -41,3 +41,4 @@ D:\for learn\Nam 3\LT Ung dung QL\FinalProject\project\obj\Debug\project.GV_TaoD
 D:\for learn\Nam 3\LT Ung dung QL\FinalProject\project\obj\Debug\project.GV_QLKyThi.resources
 D:\for learn\Nam 3\LT Ung dung QL\FinalProject\project\obj\Debug\project.GV_TaoKyThi.resources
 D:\for learn\Nam 3\LT Ung dung QL\FinalProject\project\obj\Debug\project.GV_SuaKyThi.resources
+D:\for learn\Nam 3\LT Ung dung QL\FinalProject\project\obj\Debug\project.GV_QLKyThiThu.resources

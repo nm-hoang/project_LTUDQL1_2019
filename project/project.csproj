@@ -105,6 +105,12 @@
     <Compile Include="GV_QLKyThi.Designer.cs">
       <DependentUpon>GV_QLKyThi.cs</DependentUpon>
     </Compile>
+    <Compile Include="GV_QLKyThiThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GV_QLKyThiThu.Designer.cs">
+      <DependentUpon>GV_QLKyThiThu.cs</DependentUpon>
+    </Compile>
     <Compile Include="GV_SuaCauHoi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GV_QLKyThi.resx">
       <DependentUpon>GV_QLKyThi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GV_QLKyThiThu.resx">
+      <DependentUpon>GV_QLKyThiThu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GV_SuaCauHoi.resx">
       <DependentUpon>GV_SuaCauHoi.cs</DependentUpon>

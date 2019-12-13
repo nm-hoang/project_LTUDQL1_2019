@@ -68,6 +68,7 @@
             this.btnQLKyThiThu.TabIndex = 3;
             this.btnQLKyThiThu.Text = "Quản lý kỳ thi thử";
             this.btnQLKyThiThu.UseVisualStyleBackColor = true;
+            this.btnQLKyThiThu.Click += new System.EventHandler(this.btnQLKyThiThu_Click);
             // 
             // btnQLKyThi
             // 
@@ -99,6 +100,7 @@
             this.btnQLHocSinh.TabIndex = 4;
             this.btnQLHocSinh.Text = "Quản lý học sinh";
             this.btnQLHocSinh.UseVisualStyleBackColor = true;
+            this.btnQLHocSinh.Click += new System.EventHandler(this.btnQLHocSinh_Click);
             // 
             // label1
             // 
