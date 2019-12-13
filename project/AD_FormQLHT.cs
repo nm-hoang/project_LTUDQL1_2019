@@ -17,26 +17,23 @@ namespace project
             InitializeComponent();
         }
 
-        private void btnThietLap_Click(object sender, EventArgs e)
-        {
-            AD_FormTL frm = new AD_FormTL();
-            frm.TopLevel = false;
-            pnBody.Controls.Clear();
-            pnBody.Controls.Add(frm);
-            frm.Show();
-            //AD_FormTL frm = new AD_FormTL();
-            //frm.ShowDialog();
-        }
-
         private void btnSaoLuu_Click(object sender, EventArgs e)
         {
-            AD_FormSL frm = new AD_FormSL();
-            frm.TopLevel = false;
+            AD_FormSL frmSL = new AD_FormSL();
+            frmSL.TopLevel = false;
             pnBody.Controls.Clear();
-            pnBody.Controls.Add(frm);
-            frm.Show();
-            //AD_FormSL frm = new AD_FormSL();
-            //frm.ShowDialog();
+            pnBody.Controls.Add(frmSL);
+            frmSL.Show();
+        }
+
+        private void btnThietLap_Click(object sender, EventArgs e)
+        {
+
+            AD_FormTL frmTL = new AD_FormTL();
+            frmTL.TopLevel = false;
+            pnBody.Controls.Clear();
+            pnBody.Controls.Add(frmTL);
+            frmTL.Show();
         }
     }
 }

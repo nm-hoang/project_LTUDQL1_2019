@@ -17,15 +17,13 @@ namespace project
             InitializeComponent();
         }
 
-        private void btnND_Click(object sender, EventArgs e)
+        private void btnGV_Click(object sender, EventArgs e)
         {
-            AD_FormND frmQLND = new AD_FormND();
-            frmQLND.TopLevel = false;
+            AD_FormGV frmQLGV = new AD_FormGV();
+            frmQLGV.TopLevel = false;
             pnBody.Controls.Clear();
-            pnBody.Controls.Add(frmQLND);
-            frmQLND.Show();
-            //AD_FormND frmQLND = new AD_FormND();
-            //frmQLND.ShowDialog();
+            pnBody.Controls.Add(frmQLGV);
+            frmQLGV.Show();
         }
 
         private void btnHS_Click(object sender, EventArgs e)
@@ -35,19 +33,15 @@ namespace project
             pnBody.Controls.Clear();
             pnBody.Controls.Add(frmQLHS);
             frmQLHS.Show();
-            //AD_FormHS frmQLHS = new AD_FormHS();
-            //frmQLHS.ShowDialog();
         }
 
-        private void btnGV_Click(object sender, EventArgs e)
+        private void btnND_Click(object sender, EventArgs e)
         {
-            AD_FormGV frmQLGV = new AD_FormGV();
-            frmQLGV.TopLevel = false;
+            AD_FormND frmQLND = new AD_FormND();
+            frmQLND.TopLevel = false;
             pnBody.Controls.Clear();
-            pnBody.Controls.Add(frmQLGV);
-            frmQLGV.Show();
-            //AD_FormGV frmQLGV = new AD_FormGV();
-            //frmQLGV.ShowDialog();
+            pnBody.Controls.Add(frmQLND);
+            frmQLND.Show();
         }
     }
 }
