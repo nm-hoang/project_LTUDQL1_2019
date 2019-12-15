@@ -45,7 +45,8 @@ namespace project
 
         private void btnQLKyThiThu_Click(object sender, EventArgs e)
         {
-
+            GV_QLKyThiThu frm = new GV_QLKyThiThu();
+            frm.Show();
         }
 
         private void btnQLHocSinh_Click(object sender, EventArgs e)

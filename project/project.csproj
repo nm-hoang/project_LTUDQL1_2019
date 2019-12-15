@@ -99,6 +99,12 @@
     <Compile Include="GV_QLDeThi.Designer.cs">
       <DependentUpon>GV_QLDeThi.cs</DependentUpon>
     </Compile>
+    <Compile Include="GV_QLHocSinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GV_QLHocSinh.Designer.cs">
+      <DependentUpon>GV_QLHocSinh.cs</DependentUpon>
+    </Compile>
     <Compile Include="GV_QLKyThi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,12 @@
     <Compile Include="GV_SuaKyThi.Designer.cs">
       <DependentUpon>GV_SuaKyThi.cs</DependentUpon>
     </Compile>
+    <Compile Include="GV_SuaKyThiThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GV_SuaKyThiThu.Designer.cs">
+      <DependentUpon>GV_SuaKyThiThu.cs</DependentUpon>
+    </Compile>
     <Compile Include="GV_TaoDeThi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +152,12 @@
     </Compile>
     <Compile Include="GV_TaoKyThi.Designer.cs">
       <DependentUpon>GV_TaoKyThi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GV_TaoKyThiThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GV_TaoKyThiThu.Designer.cs">
+      <DependentUpon>GV_TaoKyThiThu.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -175,6 +193,9 @@
     <EmbeddedResource Include="GV_QLDeThi.resx">
       <DependentUpon>GV_QLDeThi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GV_QLHocSinh.resx">
+      <DependentUpon>GV_QLHocSinh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GV_QLKyThi.resx">
       <DependentUpon>GV_QLKyThi.cs</DependentUpon>
     </EmbeddedResource>
@@ -190,11 +211,17 @@
     <EmbeddedResource Include="GV_SuaKyThi.resx">
       <DependentUpon>GV_SuaKyThi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GV_SuaKyThiThu.resx">
+      <DependentUpon>GV_SuaKyThiThu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GV_TaoDeThi.resx">
       <DependentUpon>GV_TaoDeThi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GV_TaoKyThi.resx">
       <DependentUpon>GV_TaoKyThi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GV_TaoKyThiThu.resx">
+      <DependentUpon>GV_TaoKyThiThu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -234,6 +261,35 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

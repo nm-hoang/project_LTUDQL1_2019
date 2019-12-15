@@ -38,18 +38,18 @@
             this.cbMaDe = new System.Windows.Forms.ComboBox();
             this.btnCreate = new System.Windows.Forms.Button();
             this.dgvKyThi = new System.Windows.Forms.DataGridView();
+            this.MaKiThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaHS2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblDS = new System.Windows.Forms.Label();
             this.dgvHocSinh = new System.Windows.Forms.DataGridView();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.lblName = new System.Windows.Forms.Label();
             this.MaHS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaKhoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.lblName = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.MaKiThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaHS2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKyThi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHocSinh)).BeginInit();
             this.SuspendLayout();
@@ -138,6 +138,18 @@
             this.dgvKyThi.Size = new System.Drawing.Size(373, 256);
             this.dgvKyThi.TabIndex = 9;
             // 
+            // MaKiThi
+            // 
+            this.MaKiThi.DataPropertyName = "MaKiThi";
+            this.MaKiThi.HeaderText = "Mã kỳ thi";
+            this.MaKiThi.Name = "MaKiThi";
+            // 
+            // MaHS2
+            // 
+            this.MaHS2.DataPropertyName = "MaHS";
+            this.MaHS2.HeaderText = "Mã học sinh";
+            this.MaHS2.Name = "MaHS2";
+            // 
             // lblDS
             // 
             this.lblDS.AutoSize = true;
@@ -161,26 +173,6 @@
             this.dgvHocSinh.Name = "dgvHocSinh";
             this.dgvHocSinh.Size = new System.Drawing.Size(431, 256);
             this.dgvHocSinh.TabIndex = 11;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(463, 210);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 45);
-            this.btnAdd.TabIndex = 12;
-            this.btnAdd.Text = "Thêm >>";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(174, 132);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(24, 18);
-            this.lblName.TabIndex = 13;
-            this.lblName.Text = "__";
             // 
             // MaHS
             // 
@@ -206,6 +198,26 @@
             this.MaKhoi.HeaderText = "Mã khối";
             this.MaKhoi.Name = "MaKhoi";
             // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(463, 210);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 45);
+            this.btnAdd.TabIndex = 12;
+            this.btnAdd.Text = "Thêm >>";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(174, 132);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(24, 18);
+            this.lblName.TabIndex = 13;
+            this.lblName.Text = "__";
+            // 
             // btnDelete
             // 
             this.btnDelete.Location = new System.Drawing.Point(695, 468);
@@ -225,18 +237,6 @@
             this.btnSave.Text = "Lưu";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // MaKiThi
-            // 
-            this.MaKiThi.DataPropertyName = "MaKiThi";
-            this.MaKiThi.HeaderText = "Mã kỳ thi";
-            this.MaKiThi.Name = "MaKiThi";
-            // 
-            // MaHS2
-            // 
-            this.MaHS2.DataPropertyName = "MaHS";
-            this.MaHS2.HeaderText = "Mã học sinh";
-            this.MaHS2.Name = "MaHS2";
             // 
             // GV_TaoKyThi
             // 

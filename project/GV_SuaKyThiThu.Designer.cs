@@ -1,6 +1,6 @@
 ﻿namespace project
 {
-    partial class GV_SuaKyThi
+    partial class GV_SuaKyThiThu
     {
         /// <summary>
         /// Required designer variable.
@@ -54,20 +54,20 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(459, 369);
+            this.btnSave.Location = new System.Drawing.Point(457, 351);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(95, 38);
-            this.btnSave.TabIndex = 30;
+            this.btnSave.TabIndex = 44;
             this.btnSave.Text = "Lưu";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(692, 468);
+            this.btnDelete.Location = new System.Drawing.Point(690, 450);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(95, 38);
-            this.btnDelete.TabIndex = 29;
+            this.btnDelete.TabIndex = 43;
             this.btnDelete.Text = "Xóa HS";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -76,18 +76,18 @@
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(171, 132);
+            this.lblName.Location = new System.Drawing.Point(169, 114);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(24, 18);
-            this.lblName.TabIndex = 28;
+            this.lblName.TabIndex = 42;
             this.lblName.Text = "__";
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(460, 268);
+            this.btnAdd.Location = new System.Drawing.Point(458, 250);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 45);
-            this.btnAdd.TabIndex = 27;
+            this.btnAdd.TabIndex = 41;
             this.btnAdd.Text = "Thêm >>";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -101,10 +101,10 @@
             this.HoTen,
             this.MaLop,
             this.MaKhoi});
-            this.dgvHocSinh.Location = new System.Drawing.Point(12, 196);
+            this.dgvHocSinh.Location = new System.Drawing.Point(10, 178);
             this.dgvHocSinh.Name = "dgvHocSinh";
             this.dgvHocSinh.Size = new System.Drawing.Size(431, 256);
-            this.dgvHocSinh.TabIndex = 26;
+            this.dgvHocSinh.TabIndex = 40;
             // 
             // MaHS
             // 
@@ -134,10 +134,10 @@
             // 
             this.lblDS.AutoSize = true;
             this.lblDS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDS.Location = new System.Drawing.Point(745, 159);
+            this.lblDS.Location = new System.Drawing.Point(743, 141);
             this.lblDS.Name = "lblDS";
             this.lblDS.Size = new System.Drawing.Size(140, 20);
-            this.lblDS.TabIndex = 25;
+            this.lblDS.TabIndex = 39;
             this.lblDS.Text = "Danh sách thí sinh";
             // 
             // dgvKyThi
@@ -147,10 +147,10 @@
             this.dgvKyThi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaKiThi,
             this.MaHS2});
-            this.dgvKyThi.Location = new System.Drawing.Point(560, 196);
+            this.dgvKyThi.Location = new System.Drawing.Point(558, 178);
             this.dgvKyThi.Name = "dgvKyThi";
             this.dgvKyThi.Size = new System.Drawing.Size(382, 256);
-            this.dgvKyThi.TabIndex = 24;
+            this.dgvKyThi.TabIndex = 38;
             // 
             // MaKiThi
             // 
@@ -167,70 +167,70 @@
             // cbMaDe
             // 
             this.cbMaDe.FormattingEnabled = true;
-            this.cbMaDe.Location = new System.Drawing.Point(87, 126);
+            this.cbMaDe.Location = new System.Drawing.Point(85, 108);
             this.cbMaDe.Name = "cbMaDe";
             this.cbMaDe.Size = new System.Drawing.Size(71, 21);
-            this.cbMaDe.TabIndex = 22;
+            this.cbMaDe.TabIndex = 37;
             this.cbMaDe.SelectedIndexChanged += new System.EventHandler(this.cbMaDe_SelectedIndexChanged);
             // 
             // dtpDate
             // 
             this.dtpDate.CustomFormat = "dd/MM/yyyy";
             this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDate.Location = new System.Drawing.Point(87, 91);
+            this.dtpDate.Location = new System.Drawing.Point(85, 73);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(219, 20);
-            this.dtpDate.TabIndex = 21;
+            this.dtpDate.TabIndex = 36;
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(87, 60);
+            this.txtID.Location = new System.Drawing.Point(85, 42);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(100, 20);
-            this.txtID.TabIndex = 20;
+            this.txtID.TabIndex = 35;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(20, 134);
+            this.label4.Location = new System.Drawing.Point(18, 116);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 13);
-            this.label4.TabIndex = 19;
+            this.label4.TabIndex = 34;
             this.label4.Text = "Mã đề:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 97);
+            this.label3.Location = new System.Drawing.Point(10, 79);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 13);
-            this.label3.TabIndex = 18;
+            this.label3.TabIndex = 33;
             this.label3.Text = "Ngày thi:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(392, 27);
+            this.label2.Location = new System.Drawing.Point(390, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(143, 31);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "Sửa kỳ thi";
+            this.label2.Size = new System.Drawing.Size(296, 31);
+            this.label2.TabIndex = 32;
+            this.label2.Text = "Sửa kỳ thi thử/ Ôn tập";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(45, 63);
+            this.label1.Location = new System.Drawing.Point(43, 45);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(21, 13);
-            this.label1.TabIndex = 16;
+            this.label1.TabIndex = 31;
             this.label1.Text = "ID:";
             // 
-            // GV_SuaKyThi
+            // GV_SuaKyThiThu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(986, 512);
+            this.ClientSize = new System.Drawing.Size(967, 497);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.lblName);
@@ -245,9 +245,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "GV_SuaKyThi";
-            this.Text = "GV_SuaKyThi";
-            this.Load += new System.EventHandler(this.GV_SuaKyThi_Load);
+            this.Name = "GV_SuaKyThiThu";
+            this.Text = "GV_SuaKyThiThu";
+            this.Load += new System.EventHandler(this.GV_SuaKyThiThu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHocSinh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKyThi)).EndInit();
             this.ResumeLayout(false);
@@ -259,6 +259,7 @@
 
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnDelete;
+        public System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.DataGridView dgvHocSinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaHS;
@@ -269,14 +270,12 @@
         private System.Windows.Forms.DataGridView dgvKyThi;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaKiThi;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaHS2;
+        public System.Windows.Forms.ComboBox cbMaDe;
+        public System.Windows.Forms.DateTimePicker dtpDate;
+        public System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        public System.Windows.Forms.Label lblName;
-        public System.Windows.Forms.ComboBox cbMaDe;
-        public System.Windows.Forms.DateTimePicker dtpDate;
-        public System.Windows.Forms.TextBox txtID;
-
     }
 }

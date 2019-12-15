@@ -10,19 +10,18 @@ using System.Windows.Forms;
 
 namespace project
 {
-    public partial class GV_TaoKyThi : Form
+    public partial class GV_TaoKyThiThu : Form
     {
         public QLThiTracNghiemDataContext db = new QLThiTracNghiemDataContext();
-        public GV_TaoKyThi()
+        public GV_TaoKyThiThu()
         {
             InitializeComponent();
+            cbMaDe.DataSource = (from d in db.DeThis select d.ID);
         }
 
-        private void GV_TaoKyThi_Load(object sender, EventArgs e)
+        private void GV_TaoKyThiThu_Load(object sender, EventArgs e)
         {
             HideInsert();
-            cbMaDe.DataSource = (from d in db.DeThis select d.ID );
-
         }
         private void HideInsert()
         {
@@ -33,7 +32,6 @@ namespace project
             btnDelete.Hide();
             btnSave.Hide();
         }
-
         private void ShowInsertStudent()
         {
             dgvHocSinh.Show();
@@ -50,51 +48,68 @@ namespace project
                                          hs.MaLop,
                                          hs.MaKhoi
                                      });
-            
-        }
 
+        }
         private void DisableInfo()
         {
             txtID.Enabled = false;
             dtpDate.Enabled = false;
             cbMaDe.Enabled = false;
         }
-        //private void Convert
         private void btnCreate_Click(object sender, EventArgs e)
         {
             string id = txtID.Text;
 
-            var check = (from kt in db.KyThis
+            var check = (from kt in db.KyThiThus
                          where kt.ID == id
                          select kt).SingleOrDefault();
-            if(check == null)
+            if (check == null)
             {
-                KyThi kt = new KyThi();
+                KyThiThu kt = new KyThiThu();
                 kt.ID = id;
                 kt.NgayThi = dtpDate.Text.ToString();
                 kt.MaDe = int.Parse(cbMaDe.SelectedValue.ToString());
                 kt.SuDung = false;
 
-                db.KyThis.InsertOnSubmit(kt);
+                db.KyThiThus.InsertOnSubmit(kt);
 
                 try
                 {
                     db.SubmitChanges();
                     ShowInsertStudent();
-                    MessageBox.Show("Thêm kỳ thi thành công");
+                    MessageBox.Show("Thêm kỳ thi thử thành công");
                     DisableInfo();
                 }
                 catch
                 {
-                    MessageBox.Show("Lỗi thêm kỳ thi vào database");
+                    MessageBox.Show("Lỗi thêm kỳ thi thử vào database");
                 }
-                    
+
             }
             else
             {
-                MessageBox.Show("Đã tồn tại id kỳ thi trong database");
+                MessageBox.Show("Đã tồn tại id kỳ thi thử trong database");
             }
         }
+
+        
+
+     
+
+        private void ReloadKyThi()
+        {
+            dgvKyThi.DataSource = (from ds in db.DSHocSinhs
+                                   where ds.MaKiThi == txtID.Text
+                                   select new
+                                   {
+                                       ds.MaKiThi,
+                                       ds.MaHS
+                                   });
+        }
+
+       
+
+        
 
         private void cbMaDe_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -105,6 +120,69 @@ namespace project
             db.SubmitChanges();
         }
 
+        private void btnCreate_Click_1(object sender, EventArgs e)
+        {
+            string id = txtID.Text;
+
+            var check = (from kt in db.KyThiThus
+                         where kt.ID == id
+                         select kt).SingleOrDefault();
+            if (check == null)
+            {
+                KyThiThu kt = new KyThiThu();
+                kt.ID = id;
+                kt.NgayThi = dtpDate.Text.ToString();
+                kt.MaDe = int.Parse(cbMaDe.SelectedValue.ToString());
+                kt.SuDung = false;
+
+                db.KyThiThus.InsertOnSubmit(kt);
+
+                try
+                {
+                    db.SubmitChanges();
+                    ShowInsertStudent();
+                    MessageBox.Show("Thêm kỳ thi thử thành công");
+                    DisableInfo();
+                }
+                catch
+                {
+                    MessageBox.Show("Lỗi thêm kỳ thi thử vào database");
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Đã tồn tại id kỳ thi thử trong database");
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            string maKT = txtID.Text;
+
+            DSHocSinh hs = (from h in db.DSHocSinhs
+                            where h.MaKiThi == dgvKyThi.CurrentRow.Cells["MaKiThi"].Value.ToString()
+                                && h.MaHS == dgvKyThi.CurrentRow.Cells["MaHS2"].Value.ToString()
+                            select h).SingleOrDefault();
+            db.DSHocSinhs.DeleteOnSubmit(hs);
+            try
+            {
+                db.SubmitChanges();
+                ReloadKyThi();
+
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi xóa thí sinh");
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            MessageBox.Show("Lưu thành công");
+        }
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
             string maHS = dgvHocSinh.CurrentRow.Cells["MaHS"].Value.ToString();
@@ -112,7 +190,7 @@ namespace project
             var check = (from hs in db.DSHocSinhs
                          where hs.MaHS == maHS && hs.MaKiThi == maKythi
                          select hs).SingleOrDefault();
-            if(check == null)
+            if (check == null)
             {
                 DSHocSinh hs = new DSHocSinh();
                 hs.MaHS = maHS;
@@ -134,45 +212,6 @@ namespace project
             {
                 MessageBox.Show("Đã tồn tại thí sinh trong kỳ thi");
             }
-        }
-
-        private void ReloadKyThi()
-        {
-            dgvKyThi.DataSource = (from ds in db.DSHocSinhs
-                                   where ds.MaKiThi == txtID.Text
-                                   select new
-                                   {
-                                       ds.MaKiThi,
-                                       ds.MaHS
-                                   });
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-           
-            string maKT = txtID.Text;
-
-            DSHocSinh hs = (from h in db.DSHocSinhs
-                            where h.MaKiThi == dgvKyThi.CurrentRow.Cells["MaKiThi"].Value.ToString()
-                                && h.MaHS == dgvKyThi.CurrentRow.Cells["MaHS2"].Value.ToString()
-                            select h).SingleOrDefault();
-            db.DSHocSinhs.DeleteOnSubmit(hs);
-            try
-            {
-                db.SubmitChanges();
-                ReloadKyThi();
-
-            }
-            catch
-            {
-                MessageBox.Show("Lỗi xóa thí sinh");
-            }
-         }
-
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            MessageBox.Show("Lưu thành công");
         }
     }
 }

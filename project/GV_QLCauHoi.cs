@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Excel = Microsoft.Office.Interop.Excel;
 namespace project
 {
     public partial class GV_QLCauHoi : Form
@@ -68,7 +68,75 @@ namespace project
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
+            OpenFileDialog open = new OpenFileDialog();
+            open.ShowDialog();
 
+            if (open.FileName != "")
+            {
+
+                string path = open.FileName;
+                Microsoft.Office.Interop.Excel.Application ap = new Microsoft.Office.Interop.Excel.Application();
+                Microsoft.Office.Interop.Excel.Workbook wb = ap.Workbooks.Open(open.FileName);
+
+                //
+                try
+                {
+                    Microsoft.Office.Interop.Excel.Worksheet sheet = wb.Sheets[1];
+                    Microsoft.Office.Interop.Excel.Range range = sheet.UsedRange;
+
+                    int row, col;
+                    row = range.Rows.Count;
+                    col = range.Rows.Count;
+                    List<int> errorQuestion = new List<int>();
+                    int countQS = 0;
+                    for (int i = 1; i <= row; i++)
+                    {
+                        CauHoi ch = new CauHoi();
+                        ch.CauHoi1 = range.Cells[i, 1].Value.ToString();
+                        ch.DapAn_A = range.Cells[i, 2].Value.ToString();
+                        ch.DapAn_B = range.Cells[i, 3].Value.ToString();
+                        ch.DapAn_C = range.Cells[i, 4].Value.ToString();
+                        ch.DapAn_D = range.Cells[i, 5].Value.ToString();
+                        ch.DapAnDung = char.Parse(range.Cells[i, 6].Value.ToString());
+                        ch.Khoi = int.Parse(range.Cells[i, 7].Value.ToString());
+                        ch.DoKho = range.Cells[i, 8].Value.ToString();
+                        ch.MaMH = range.Cells[i, 9].Value.ToString();
+                        db.CauHois.InsertOnSubmit(ch);
+
+                        try
+                        {
+                            db.SubmitChanges();
+                            countQS++;
+                        }
+                        catch
+                        {
+                            //Lưu lại thứ tự câu hỏi bị lỗi
+                            errorQuestion.Add(i);
+                        }
+                    }
+
+                }
+                catch
+                {
+
+                }
+                    MessageBox.Show("Thêm thành công : " + countQS + " câu");
+                    if (errorQuestion.Count() > 0)
+                    {
+                        StringBuilder build = new StringBuilder();
+                        foreach (int i in errorQuestion)
+                        {
+                            build.Append(i.ToString()).AppendLine();
+                        }
+
+                        MessageBox.Show("Lỗi thêm câu hỏi ở câu " + build.ToString());
+
+                    }
+            }
+            else
+            {
+                MessageBox.Show("Lỗi chọn tập tin", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

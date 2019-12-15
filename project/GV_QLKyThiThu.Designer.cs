@@ -52,51 +52,55 @@
             // 
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.Black;
-            this.btnDelete.Location = new System.Drawing.Point(306, 394);
+            this.btnDelete.Location = new System.Drawing.Point(305, 408);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(85, 35);
             this.btnDelete.TabIndex = 17;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
             this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.Color.Black;
-            this.btnEdit.Location = new System.Drawing.Point(204, 394);
+            this.btnEdit.Location = new System.Drawing.Point(203, 408);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(85, 35);
             this.btnEdit.TabIndex = 16;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnRefresh
             // 
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.ForeColor = System.Drawing.Color.Teal;
-            this.btnRefresh.Location = new System.Drawing.Point(72, 31);
+            this.btnRefresh.Location = new System.Drawing.Point(66, 31);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(87, 35);
             this.btnRefresh.TabIndex = 15;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // btnCreate
             // 
             this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreate.ForeColor = System.Drawing.Color.Black;
-            this.btnCreate.Location = new System.Drawing.Point(110, 394);
+            this.btnCreate.Location = new System.Drawing.Point(109, 408);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(76, 35);
             this.btnCreate.TabIndex = 14;
             this.btnCreate.Text = "Tạo kỳ thi";
             this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(698, 73);
+            this.label3.Location = new System.Drawing.Point(697, 87);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(115, 16);
             this.label3.TabIndex = 13;
@@ -106,7 +110,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(81, 73);
+            this.label2.Location = new System.Drawing.Point(80, 87);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(105, 16);
             this.label2.TabIndex = 12;
@@ -116,11 +120,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(390, 24);
+            this.label1.Location = new System.Drawing.Point(310, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 37);
+            this.label1.Size = new System.Drawing.Size(283, 37);
             this.label1.TabIndex = 11;
-            this.label1.Text = "Kỳ thi thử";
+            this.label1.Text = "Kỳ thi thử/ Ôn tập";
             // 
             // dgvThiSinh
             // 
@@ -131,7 +135,7 @@
             this.MaHS,
             this.ID_Account});
             this.dgvThiSinh.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
-            this.dgvThiSinh.Location = new System.Drawing.Point(458, 92);
+            this.dgvThiSinh.Location = new System.Drawing.Point(457, 106);
             this.dgvThiSinh.Name = "dgvThiSinh";
             this.dgvThiSinh.Size = new System.Drawing.Size(381, 279);
             this.dgvThiSinh.TabIndex = 10;
@@ -164,10 +168,11 @@
             this.MaDe,
             this.SuDung});
             this.dgvKyThi.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
-            this.dgvKyThi.Location = new System.Drawing.Point(52, 92);
+            this.dgvKyThi.Location = new System.Drawing.Point(51, 106);
             this.dgvKyThi.Name = "dgvKyThi";
             this.dgvKyThi.Size = new System.Drawing.Size(400, 279);
             this.dgvKyThi.TabIndex = 9;
+            this.dgvKyThi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKyThi_CellClick);
             // 
             // ID
             // 

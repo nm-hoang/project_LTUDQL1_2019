@@ -43,6 +43,7 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnViewDetails = new System.Windows.Forms.Button();
             this.btnInsert = new System.Windows.Forms.Button();
+            this.btnExport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCauHoi)).BeginInit();
             this.SuspendLayout();
             // 
@@ -144,7 +145,7 @@
             // 
             // btnSuaCH
             // 
-            this.btnSuaCH.Location = new System.Drawing.Point(26, 236);
+            this.btnSuaCH.Location = new System.Drawing.Point(76, 236);
             this.btnSuaCH.Margin = new System.Windows.Forms.Padding(4);
             this.btnSuaCH.Name = "btnSuaCH";
             this.btnSuaCH.Size = new System.Drawing.Size(127, 41);
@@ -155,7 +156,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(571, 236);
+            this.btnDelete.Location = new System.Drawing.Point(706, 236);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(127, 41);
@@ -166,7 +167,7 @@
             // 
             // btnViewDetails
             // 
-            this.btnViewDetails.Location = new System.Drawing.Point(180, 236);
+            this.btnViewDetails.Location = new System.Drawing.Point(237, 236);
             this.btnViewDetails.Margin = new System.Windows.Forms.Padding(4);
             this.btnViewDetails.Name = "btnViewDetails";
             this.btnViewDetails.Size = new System.Drawing.Size(127, 41);
@@ -177,7 +178,7 @@
             // 
             // btnInsert
             // 
-            this.btnInsert.Location = new System.Drawing.Point(436, 236);
+            this.btnInsert.Location = new System.Drawing.Point(558, 236);
             this.btnInsert.Margin = new System.Windows.Forms.Padding(4);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(127, 41);
@@ -186,12 +187,23 @@
             this.btnInsert.UseVisualStyleBackColor = true;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
+            // btnExport
+            // 
+            this.btnExport.Location = new System.Drawing.Point(616, 297);
+            this.btnExport.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(167, 65);
+            this.btnExport.TabIndex = 5;
+            this.btnExport.Text = "Xuất danh sách câu hỏi";
+            this.btnExport.UseVisualStyleBackColor = true;
+            // 
             // GV_QLCauHoi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(922, 375);
+            this.Controls.Add(this.btnExport);
             this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.btnViewDetails);
             this.Controls.Add(this.btnDelete);
@@ -224,5 +236,6 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnViewDetails;
         private System.Windows.Forms.Button btnInsert;
+        private System.Windows.Forms.Button btnExport;
     }
 }
