@@ -50,6 +50,7 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Messaging" />
@@ -69,10 +70,71 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AD_FormGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AD_FormGV.Designer.cs">
+      <DependentUpon>AD_FormGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AD_FormHS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AD_FormHS.Designer.cs">
+      <DependentUpon>AD_FormHS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AD_FormND.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AD_FormND.Designer.cs">
+      <DependentUpon>AD_FormND.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AD_FormND_CapNhat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AD_FormND_CapNhat.Designer.cs">
+      <DependentUpon>AD_FormND_CapNhat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AD_FormND_Them.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AD_FormND_Them.Designer.cs">
+      <DependentUpon>AD_FormND_Them.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AD_FormQLHT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AD_FormQLHT.Designer.cs">
+      <DependentUpon>AD_FormQLHT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AD_FormQLND.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AD_FormQLND.Designer.cs">
+      <DependentUpon>AD_FormQLND.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AD_FormSL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AD_FormSL.Designer.cs">
+      <DependentUpon>AD_FormSL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AD_FormTL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AD_FormTL.Designer.cs">
+      <DependentUpon>AD_FormTL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckConnect.cs" />
     <Compile Include="cryportBangDiem.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>cryportBangDiem.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cryportDanhSachTS.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cryportDanhSachTS.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="frmAdmin.cs">
@@ -165,6 +227,96 @@
     <Compile Include="frmHS_ThongTinSinhVien.Designer.cs">
       <DependentUpon>frmHS_ThongTinSinhVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="GV_ChiTietCauHoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GV_ChiTietCauHoi.Designer.cs">
+      <DependentUpon>GV_ChiTietCauHoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GV_InDSTS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GV_InDSTS.Designer.cs">
+      <DependentUpon>GV_InDSTS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GV_QLCauHoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GV_QLCauHoi.Designer.cs">
+      <DependentUpon>GV_QLCauHoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GV_QLDeThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GV_QLDeThi.Designer.cs">
+      <DependentUpon>GV_QLDeThi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GV_QLHocSinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GV_QLHocSinh.Designer.cs">
+      <DependentUpon>GV_QLHocSinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GV_QLKyThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GV_QLKyThi.Designer.cs">
+      <DependentUpon>GV_QLKyThi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GV_QLKyThiThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GV_QLKyThiThu.Designer.cs">
+      <DependentUpon>GV_QLKyThiThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GV_SuaCauHoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GV_SuaCauHoi.Designer.cs">
+      <DependentUpon>GV_SuaCauHoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GV_SuaDeThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GV_SuaDeThi.Designer.cs">
+      <DependentUpon>GV_SuaDeThi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GV_SuaKyThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GV_SuaKyThi.Designer.cs">
+      <DependentUpon>GV_SuaKyThi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GV_SuaKyThiThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GV_SuaKyThiThu.Designer.cs">
+      <DependentUpon>GV_SuaKyThiThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GV_TaoDeThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GV_TaoDeThi.Designer.cs">
+      <DependentUpon>GV_TaoDeThi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GV_TaoKyThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GV_TaoKyThi.Designer.cs">
+      <DependentUpon>GV_TaoKyThi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GV_TaoKyThiThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GV_TaoKyThiThu.Designer.cs">
+      <DependentUpon>GV_TaoKyThiThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GV_ThongKeKyThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GV_ThongKeKyThi.Designer.cs">
+      <DependentUpon>GV_ThongKeKyThi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,9 +336,46 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AD_FormGV.resx">
+      <DependentUpon>AD_FormGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AD_FormHS.resx">
+      <DependentUpon>AD_FormHS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AD_FormND.resx">
+      <DependentUpon>AD_FormND.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AD_FormND_CapNhat.resx">
+      <DependentUpon>AD_FormND_CapNhat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AD_FormND_Them.resx">
+      <DependentUpon>AD_FormND_Them.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AD_FormQLHT.resx">
+      <DependentUpon>AD_FormQLHT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AD_FormQLND.resx">
+      <DependentUpon>AD_FormQLND.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AD_FormSL.resx">
+      <DependentUpon>AD_FormSL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AD_FormTL.resx">
+      <DependentUpon>AD_FormTL.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="cryportBangDiem.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>cryportBangDiem.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cryportDanhSachTS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cryportDanhSachTS.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdmin.resx">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGiaoVien.resx">
+      <DependentUpon>frmGiaoVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmHocSinh.resx">
       <DependentUpon>frmHocSinh.cs</DependentUpon>
@@ -226,6 +415,51 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmHS_ThongTinSinhVien.resx">
       <DependentUpon>frmHS_ThongTinSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GV_ChiTietCauHoi.resx">
+      <DependentUpon>GV_ChiTietCauHoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GV_InDSTS.resx">
+      <DependentUpon>GV_InDSTS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GV_QLCauHoi.resx">
+      <DependentUpon>GV_QLCauHoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GV_QLDeThi.resx">
+      <DependentUpon>GV_QLDeThi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GV_QLHocSinh.resx">
+      <DependentUpon>GV_QLHocSinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GV_QLKyThi.resx">
+      <DependentUpon>GV_QLKyThi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GV_QLKyThiThu.resx">
+      <DependentUpon>GV_QLKyThiThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GV_SuaCauHoi.resx">
+      <DependentUpon>GV_SuaCauHoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GV_SuaDeThi.resx">
+      <DependentUpon>GV_SuaDeThi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GV_SuaKyThi.resx">
+      <DependentUpon>GV_SuaKyThi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GV_SuaKyThiThu.resx">
+      <DependentUpon>GV_SuaKyThiThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GV_TaoDeThi.resx">
+      <DependentUpon>GV_TaoDeThi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GV_TaoKyThi.resx">
+      <DependentUpon>GV_TaoKyThi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GV_TaoKyThiThu.resx">
+      <DependentUpon>GV_TaoKyThiThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GV_ThongKeKyThi.resx">
+      <DependentUpon>GV_ThongKeKyThi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -291,6 +525,29 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\tải xuống %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_question.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -165,6 +165,7 @@
             this.radioB.TabStop = true;
             this.radioB.Text = "B";
             this.radioB.UseVisualStyleBackColor = true;
+            this.radioB.CheckedChanged += new System.EventHandler(this.radioB_CheckedChanged);
             // 
             // radioD
             // 
@@ -178,6 +179,7 @@
             this.radioD.TabStop = true;
             this.radioD.Text = "D";
             this.radioD.UseVisualStyleBackColor = true;
+            this.radioD.CheckedChanged += new System.EventHandler(this.radioD_CheckedChanged);
             // 
             // radioA
             // 
@@ -191,6 +193,7 @@
             this.radioA.TabStop = true;
             this.radioA.Text = "A";
             this.radioA.UseVisualStyleBackColor = true;
+            this.radioA.CheckedChanged += new System.EventHandler(this.radioA_CheckedChanged);
             // 
             // lblCauHoi
             // 
@@ -243,6 +246,7 @@
             this.radioC.TabStop = true;
             this.radioC.Text = "C";
             this.radioC.UseVisualStyleBackColor = true;
+            this.radioC.CheckedChanged += new System.EventHandler(this.radioC_CheckedChanged);
             // 
             // label3
             // 

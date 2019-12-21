@@ -31,7 +31,7 @@ namespace project
 
             var result = from k in db.KyThiThus
                          join dshs in db.DSHocSinhs on k.ID equals dshs.MaKiThi
-                         where dshs.ID_Account == hs
+                         where dshs.MaHS == hs
                          select new { k.ID, k.NgayThi };
             dgvThiThu.DataSource = result;
         }
@@ -43,7 +43,7 @@ namespace project
 
             var result = from k in db.KyThis
                          join dshs in db.DSHocSinhs on k.ID equals dshs.MaKiThi
-                         where dshs.ID_Account == hs
+                         where dshs.MaHS == hs
                          select new { k.ID, k.NgayThi };
             dgvThiThat.DataSource = result;
         }

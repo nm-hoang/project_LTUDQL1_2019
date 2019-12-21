@@ -222,42 +222,7 @@ namespace project
 
             }
         }
-      
-        private void radioA_CheckedChanged(object sender, EventArgs e)
-        {
-            if (SoLuongCauHoi() > 0)
-            {
-                CapNhat_DapAn(sender, e);
-                ToMauButton();
-            }
-        }
-
-        private void radioB_CheckedChanged(object sender, EventArgs e)
-        {
-            if (SoLuongCauHoi() > 0)
-            {
-                CapNhat_DapAn(sender, e);
-                ToMauButton();
-            }
-        }
-
-        private void radioC_CheckedChanged(object sender, EventArgs e)
-        {
-            if (SoLuongCauHoi() > 0)
-            {
-                CapNhat_DapAn(sender, e);
-                ToMauButton();
-            }
-        }
-
-        private void radioD_CheckedChanged(object sender, EventArgs e)
-        {
-            if (SoLuongCauHoi() > 0)
-            {
-                CapNhat_DapAn(sender, e);
-                ToMauButton();
-            }
-        }
+   
         private void ToMauButton()
         {
             for (int i = 0; i < SoLuongCauHoi(); i++)
@@ -311,7 +276,7 @@ namespace project
             else
             {
                 NopBai(sender, e);
-                btnKetThuc_Click_1(sender, e);
+               // btnKetThuc_Click_1(sender, e);
             }
         }
 
@@ -358,6 +323,42 @@ namespace project
                     timeThiThat.Stop();
                     btnNopBai_Click_1(sender, e);
                 }
+            }
+        }
+
+        private void radioA_CheckedChanged(object sender, EventArgs e)
+        {
+            if (SoLuongCauHoi() > 0)
+            {
+                CapNhat_DapAn(sender, e);
+                ToMauButton();
+            }
+        }
+
+        private void radioB_CheckedChanged(object sender, EventArgs e)
+        {
+            if (SoLuongCauHoi() > 0)
+            {
+                CapNhat_DapAn(sender, e);
+                ToMauButton();
+            }
+        }
+
+        private void radioC_CheckedChanged(object sender, EventArgs e)
+        {
+            if (SoLuongCauHoi() > 0)
+            {
+                CapNhat_DapAn(sender, e);
+                ToMauButton();
+            }
+        }
+
+        private void radioD_CheckedChanged(object sender, EventArgs e)
+        {
+            if (SoLuongCauHoi() > 0)
+            {
+                CapNhat_DapAn(sender, e);
+                ToMauButton();
             }
         }
     }

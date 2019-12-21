@@ -35,7 +35,7 @@ namespace project
                         select h.MaHS).SingleOrDefault();
             var MADE = (from kt in db.KyThis
                         join ds in db.DSHocSinhs on kt.ID equals ds.MaKiThi
-                        where ds.ID_Account == MaHS
+                        where ds.MaHS == MaHS
                         orderby kt.MaDe
                         select ds.MaKiThi).Distinct();
             cbMaKiThi.DataSource = MADE;

@@ -116,7 +116,7 @@ namespace project
                 string Pass = MaHoaPass(txtPass.Text, LayPass(UserName));
                 if (Pass != LayPass(UserName))
                 {
-                    MessageBox.Show("Mật khau bị sai");
+                    MessageBox.Show("Sai mật khẩu", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
@@ -129,17 +129,21 @@ namespace project
             }
             else if (KiemTraTaiKhoan(UserName) == false)
             {
-                MessageBox.Show("Chưa dang ki");
+                MessageBox.Show("Tài khoản chưa được đăng kí","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
             else if (LayPhanQuyen(UserName) == "GiaoVien")
             {
                 if (LayPass(UserName) != txtPass.Text)
                 {
-                    MessageBox.Show("Mat khau bị sai");
+                    MessageBox.Show("Sai mật khẩu", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
                     // MessageBox.Show("GiaoVien dang nhap");
+                    frmGiaoVien frm = new frmGiaoVien();
+                    frm.FormClosed += new FormClosedEventHandler(frm_FormClosed);
+                    this.Hide();
+                    frm.ShowDialog();
 
                 }
             }
@@ -147,10 +151,14 @@ namespace project
             {
                 if (LayPass(UserName) != txtPass.Text)
                 {
-                    MessageBox.Show("Mat khau bị sai");
+                    MessageBox.Show("Sai mật khẩu","Lỗi",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 }
                 else
                 {
+                    frmAdmin frm = new frmAdmin();
+                    frm.FormClosed += new FormClosedEventHandler(frm_FormClosed);
+                    this.Hide();
+                    frm.ShowDialog();
                     //MessageBox.Show("Admin dang nhap");
                 }
             }

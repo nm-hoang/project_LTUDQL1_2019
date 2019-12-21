@@ -40,7 +40,6 @@
             this.crytal_View_BangDiem.Location = new System.Drawing.Point(0, 0);
             this.crytal_View_BangDiem.Name = "crytal_View_BangDiem";
             this.crytal_View_BangDiem.ShowGroupTreeButton = false;
-            this.crytal_View_BangDiem.ShowLogo = false;
             this.crytal_View_BangDiem.Size = new System.Drawing.Size(751, 423);
             this.crytal_View_BangDiem.TabIndex = 0;
             this.crytal_View_BangDiem.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
