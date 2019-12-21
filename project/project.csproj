@@ -159,6 +159,12 @@
     <Compile Include="GV_TaoKyThiThu.Designer.cs">
       <DependentUpon>GV_TaoKyThiThu.cs</DependentUpon>
     </Compile>
+    <Compile Include="GV_ThongKeKyThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GV_ThongKeKyThi.Designer.cs">
+      <DependentUpon>GV_ThongKeKyThi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,6 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GV_TaoKyThiThu.resx">
       <DependentUpon>GV_TaoKyThiThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GV_ThongKeKyThi.resx">
+      <DependentUpon>GV_ThongKeKyThi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

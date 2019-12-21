@@ -21,5 +21,26 @@ namespace project
         {
 
         }
+
+        private void btnKyThi_Click(object sender, EventArgs e)
+        {
+            GV_ThongKeKyThi frm = new GV_ThongKeKyThi();
+            frm.Show();
+        }
+
+        private void btnHocSinh_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCauHoi_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

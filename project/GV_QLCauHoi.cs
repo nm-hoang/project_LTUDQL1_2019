@@ -79,6 +79,8 @@ namespace project
                 Microsoft.Office.Interop.Excel.Workbook wb = ap.Workbooks.Open(open.FileName);
 
                 //
+                List<int> errorQuestion = new List<int>();
+                int countQS = 0;
                 try
                 {
                     Microsoft.Office.Interop.Excel.Worksheet sheet = wb.Sheets[1];
@@ -87,8 +89,6 @@ namespace project
                     int row, col;
                     row = range.Rows.Count;
                     col = range.Rows.Count;
-                    List<int> errorQuestion = new List<int>();
-                    int countQS = 0;
                     for (int i = 1; i <= row; i++)
                     {
                         CauHoi ch = new CauHoi();

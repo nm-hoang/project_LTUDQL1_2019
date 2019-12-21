@@ -51,7 +51,8 @@ namespace project
 
         private void btnQLHocSinh_Click(object sender, EventArgs e)
         {
-
+            GV_QLHocSinh frm = new GV_QLHocSinh();
+            frm.Show();
         }
     }
 }
