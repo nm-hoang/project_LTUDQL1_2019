@@ -46,14 +46,13 @@
             this.header = new System.Windows.Forms.Panel();
             this.lblName = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnLichThi = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnSuaThongTin = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnKetQua = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnInBangDiem = new Bunifu.Framework.UI.BunifuThinButton2();
             this.gbThongTin.SuspendLayout();
             this.header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             this.SuspendLayout();
             // 
             // gbThongTin
@@ -73,7 +72,7 @@
             this.gbThongTin.Controls.Add(this.label1);
             this.gbThongTin.Location = new System.Drawing.Point(0, 28);
             this.gbThongTin.Name = "gbThongTin";
-            this.gbThongTin.Size = new System.Drawing.Size(722, 306);
+            this.gbThongTin.Size = new System.Drawing.Size(760, 306);
             this.gbThongTin.TabIndex = 0;
             this.gbThongTin.TabStop = false;
             this.gbThongTin.Enter += new System.EventHandler(this.gbThongTin_Enter);
@@ -213,11 +212,10 @@
             this.header.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.header.Controls.Add(this.lblName);
             this.header.Controls.Add(this.bunifuImageButton1);
-            this.header.Controls.Add(this.bunifuImageButton2);
             this.header.Dock = System.Windows.Forms.DockStyle.Top;
             this.header.Location = new System.Drawing.Point(0, 0);
             this.header.Name = "header";
-            this.header.Size = new System.Drawing.Size(722, 32);
+            this.header.Size = new System.Drawing.Size(767, 32);
             this.header.TabIndex = 25;
             // 
             // lblName
@@ -236,7 +234,7 @@
             this.bunifuImageButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
             this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(683, 3);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(728, 0);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
             this.bunifuImageButton1.Size = new System.Drawing.Size(39, 32);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -244,19 +242,6 @@
             this.bunifuImageButton1.TabStop = false;
             this.bunifuImageButton1.Zoom = 20;
             this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
-            // 
-            // bunifuImageButton2
-            // 
-            this.bunifuImageButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
-            this.bunifuImageButton2.ImageActive = null;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(789, 0);
-            this.bunifuImageButton2.Name = "bunifuImageButton2";
-            this.bunifuImageButton2.Size = new System.Drawing.Size(39, 32);
-            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton2.TabIndex = 2;
-            this.bunifuImageButton2.TabStop = false;
-            this.bunifuImageButton2.Zoom = 20;
             // 
             // btnLichThi
             // 
@@ -276,10 +261,10 @@
             this.btnLichThi.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(80)))), ((int)(((byte)(65)))));
             this.btnLichThi.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnLichThi.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnLichThi.Location = new System.Drawing.Point(509, 342);
+            this.btnLichThi.Location = new System.Drawing.Point(420, 343);
             this.btnLichThi.Margin = new System.Windows.Forms.Padding(5);
             this.btnLichThi.Name = "btnLichThi";
-            this.btnLichThi.Size = new System.Drawing.Size(181, 41);
+            this.btnLichThi.Size = new System.Drawing.Size(158, 73);
             this.btnLichThi.TabIndex = 24;
             this.btnLichThi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLichThi.Click += new System.EventHandler(this.btnLichThi_Click);
@@ -305,7 +290,7 @@
             this.btnSuaThongTin.Location = new System.Drawing.Point(41, 343);
             this.btnSuaThongTin.Margin = new System.Windows.Forms.Padding(5);
             this.btnSuaThongTin.Name = "btnSuaThongTin";
-            this.btnSuaThongTin.Size = new System.Drawing.Size(181, 41);
+            this.btnSuaThongTin.Size = new System.Drawing.Size(157, 73);
             this.btnSuaThongTin.TabIndex = 23;
             this.btnSuaThongTin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSuaThongTin.Click += new System.EventHandler(this.btnSuaThongTin_Click);
@@ -328,20 +313,47 @@
             this.btnKetQua.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(80)))), ((int)(((byte)(65)))));
             this.btnKetQua.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnKetQua.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnKetQua.Location = new System.Drawing.Point(275, 342);
+            this.btnKetQua.Location = new System.Drawing.Point(234, 343);
             this.btnKetQua.Margin = new System.Windows.Forms.Padding(5);
             this.btnKetQua.Name = "btnKetQua";
-            this.btnKetQua.Size = new System.Drawing.Size(181, 41);
+            this.btnKetQua.Size = new System.Drawing.Size(158, 74);
             this.btnKetQua.TabIndex = 22;
             this.btnKetQua.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnKetQua.Click += new System.EventHandler(this.btnKetQua_Click);
+            // 
+            // btnInBangDiem
+            // 
+            this.btnInBangDiem.ActiveBorderThickness = 1;
+            this.btnInBangDiem.ActiveCornerRadius = 20;
+            this.btnInBangDiem.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btnInBangDiem.ActiveForecolor = System.Drawing.Color.White;
+            this.btnInBangDiem.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btnInBangDiem.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnInBangDiem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnInBangDiem.BackgroundImage")));
+            this.btnInBangDiem.ButtonText = "In bảng điểm";
+            this.btnInBangDiem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInBangDiem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInBangDiem.ForeColor = System.Drawing.Color.Honeydew;
+            this.btnInBangDiem.IdleBorderThickness = 1;
+            this.btnInBangDiem.IdleCornerRadius = 20;
+            this.btnInBangDiem.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(80)))), ((int)(((byte)(65)))));
+            this.btnInBangDiem.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.btnInBangDiem.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btnInBangDiem.Location = new System.Drawing.Point(604, 342);
+            this.btnInBangDiem.Margin = new System.Windows.Forms.Padding(5);
+            this.btnInBangDiem.Name = "btnInBangDiem";
+            this.btnInBangDiem.Size = new System.Drawing.Size(156, 73);
+            this.btnInBangDiem.TabIndex = 26;
+            this.btnInBangDiem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnInBangDiem.Click += new System.EventHandler(this.btnInBangDiem_Click);
             // 
             // frmHS_ThongTinSinhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(722, 432);
+            this.ClientSize = new System.Drawing.Size(767, 446);
+            this.Controls.Add(this.btnInBangDiem);
             this.Controls.Add(this.header);
             this.Controls.Add(this.btnLichThi);
             this.Controls.Add(this.btnSuaThongTin);
@@ -356,7 +368,6 @@
             this.header.ResumeLayout(false);
             this.header.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -383,6 +394,6 @@
         private System.Windows.Forms.Panel header;
         private Bunifu.Framework.UI.BunifuCustomLabel lblName;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnInBangDiem;
     }
 }

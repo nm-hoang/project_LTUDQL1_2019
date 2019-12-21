@@ -113,6 +113,7 @@ Create table KetQuaThiThu
 	NgayThi nchar(10),
 	ID_Account nvarchar(255),
 	KyThi varchar(255),
+	TenMH varchar(255),
 )
 Create table KetQuaThi
 (
@@ -120,10 +121,11 @@ Create table KetQuaThi
 	MaHS varchar(255),
 	SoCauDung nvarchar(255),
 	SoCauSai nvarchar(255),
-	DiemThi nvarchar(255),
+	DiemThi float,
 	NgayThi nchar(10),
 	ID_Account nvarchar(255),
 	KyThi varchar(255),
+	TenMH varchar(255),
 )
 Create table DanhSachCauHoi
 (
@@ -218,16 +220,44 @@ use QLThiTracNghiem
 use QuanLiThiTracNghiem
 select * from TaiKhoan
 select * from HocSinh
+select * from KETQUATHI
+select * from MONHOC
 select * from KetQuaThiThu
 select *from KyThi
-select * from KETQUATHI
+
 select * from KETQUATHITHU
 select *from DSHocSinh
 select * from DANHSACHHOCSINH
 select * from GiaoVien
 select * from KHOILOP
+	
+select * from DANHSACHCAUHOI
+
+select * from HOCSINH
+select * from KYTHITHU
+select * from CAUHOI
+
+insert into DANHSACHCAUHOI values(13,1) 
 --delete from TaiKhoan
 delete from TAIKHOAN where ID=25
 update HOCSINH set NgaySinh = '30/09/1999' where MaHS='HS01'
 Insert into KETQUATHI values('HS01','10','12','5','30/09/1999','hs01','thithugk')
 
+select *
+from  DETHI dt ,MONHOC mh
+where dt.MaMH=mh.MaMH
+
+select * from DETHI
+select * from MONHOC
+select * from KYTHITHU
+select * from DANHSACHHOCSINH
+select * from DETHI
+select * from KYTHITHU
+select * from KETQUATHITHU
+select * from CAUHOIDONGGOP
+select * from DANHSACHCAUHOI
+select * from CAUHOI
+select * from KHOILOP
+insert into CAUHOI values('1','A','B','C','D','A',10,N'Dễ','AV10')
+
+select * from KETQUATHI kq , HOCSINH hs where hs.MaHS=kq.MaHS and kq.MaHS='HS01'

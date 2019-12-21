@@ -31,6 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHS_SuaThongTin));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtSDT = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.txtHoTen = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.dtNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,9 +42,6 @@
             this.lblName = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.txtHoTen = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.txtSDT = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.dtNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
@@ -69,6 +69,53 @@
             this.groupBox1.Size = new System.Drawing.Size(499, 314);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
+            // 
+            // txtSDT
+            // 
+            this.txtSDT.BorderColorFocused = System.Drawing.Color.Blue;
+            this.txtSDT.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtSDT.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.txtSDT.BorderThickness = 3;
+            this.txtSDT.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSDT.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtSDT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtSDT.isPassword = false;
+            this.txtSDT.Location = new System.Drawing.Point(189, 206);
+            this.txtSDT.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Size = new System.Drawing.Size(294, 44);
+            this.txtSDT.TabIndex = 14;
+            this.txtSDT.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // txtHoTen
+            // 
+            this.txtHoTen.BorderColorFocused = System.Drawing.Color.Blue;
+            this.txtHoTen.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtHoTen.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.txtHoTen.BorderThickness = 3;
+            this.txtHoTen.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtHoTen.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtHoTen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtHoTen.isPassword = false;
+            this.txtHoTen.Location = new System.Drawing.Point(189, 23);
+            this.txtHoTen.Margin = new System.Windows.Forms.Padding(4);
+            this.txtHoTen.Name = "txtHoTen";
+            this.txtHoTen.Size = new System.Drawing.Size(294, 44);
+            this.txtHoTen.TabIndex = 13;
+            this.txtHoTen.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtHoTen.OnValueChanged += new System.EventHandler(this.bunifuMetroTextbox1_OnValueChanged);
+            // 
+            // dtNgaySinh
+            // 
+            this.dtNgaySinh.CalendarMonthBackground = System.Drawing.SystemColors.ControlLight;
+            this.dtNgaySinh.CustomFormat = "dd/MM/yyyy";
+            this.dtNgaySinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtNgaySinh.Location = new System.Drawing.Point(189, 126);
+            this.dtNgaySinh.Name = "dtNgaySinh";
+            this.dtNgaySinh.Size = new System.Drawing.Size(294, 26);
+            this.dtNgaySinh.TabIndex = 12;
+            this.dtNgaySinh.Value = new System.DateTime(2019, 12, 6, 14, 21, 0, 0);
             // 
             // label4
             // 
@@ -175,53 +222,6 @@
             this.bunifuImageButton2.TabIndex = 2;
             this.bunifuImageButton2.TabStop = false;
             this.bunifuImageButton2.Zoom = 20;
-            // 
-            // txtHoTen
-            // 
-            this.txtHoTen.BorderColorFocused = System.Drawing.Color.Blue;
-            this.txtHoTen.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtHoTen.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.txtHoTen.BorderThickness = 3;
-            this.txtHoTen.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtHoTen.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtHoTen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtHoTen.isPassword = false;
-            this.txtHoTen.Location = new System.Drawing.Point(189, 23);
-            this.txtHoTen.Margin = new System.Windows.Forms.Padding(4);
-            this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.Size = new System.Drawing.Size(294, 44);
-            this.txtHoTen.TabIndex = 13;
-            this.txtHoTen.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtHoTen.OnValueChanged += new System.EventHandler(this.bunifuMetroTextbox1_OnValueChanged);
-            // 
-            // txtSDT
-            // 
-            this.txtSDT.BorderColorFocused = System.Drawing.Color.Blue;
-            this.txtSDT.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtSDT.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.txtSDT.BorderThickness = 3;
-            this.txtSDT.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSDT.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtSDT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtSDT.isPassword = false;
-            this.txtSDT.Location = new System.Drawing.Point(189, 206);
-            this.txtSDT.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(294, 44);
-            this.txtSDT.TabIndex = 14;
-            this.txtSDT.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // dtNgaySinh
-            // 
-            this.dtNgaySinh.CalendarMonthBackground = System.Drawing.SystemColors.ControlLight;
-            this.dtNgaySinh.CustomFormat = "dd/MM/yyyy";
-            this.dtNgaySinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtNgaySinh.Location = new System.Drawing.Point(189, 126);
-            this.dtNgaySinh.Name = "dtNgaySinh";
-            this.dtNgaySinh.Size = new System.Drawing.Size(294, 26);
-            this.dtNgaySinh.TabIndex = 12;
-            this.dtNgaySinh.Value = new System.DateTime(2019, 12, 6, 14, 21, 0, 0);
             // 
             // frmHS_SuaThongTin
             // 

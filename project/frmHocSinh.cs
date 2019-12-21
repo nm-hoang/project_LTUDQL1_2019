@@ -77,6 +77,20 @@ namespace project
             frm.ShowDialog();
         }
 
+        private void btnThiThu_Click(object sender, EventArgs e)
+        {
+            frmHS_ThiThu frm = new frmHS_ThiThu(username);
+            frm.FormClosed += new FormClosedEventHandler(frm_FormClosed);
+            frm.ShowDialog();
+        }
+
+        private void btnThi_Click(object sender, EventArgs e)
+        {
+            frmHS_ThiThat frm = new frmHS_ThiThat(username);
+            frm.FormClosed += new FormClosedEventHandler(frm_FormClosed);
+            frm.ShowDialog();
+        }
+
        
     }
 }

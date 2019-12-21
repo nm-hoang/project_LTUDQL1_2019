@@ -41,6 +41,7 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenMH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
@@ -49,6 +50,7 @@
             this.SoCauDung = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoCauSai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiemThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.KyThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.header.SuspendLayout();
@@ -117,12 +119,14 @@
             this.SoCauDung,
             this.SoCauSai,
             this.DiemThi,
+            this.Column1,
             this.NgayThi,
             this.KyThi});
             this.dgvThiThat.Location = new System.Drawing.Point(0, 75);
             this.dgvThiThat.Name = "dgvThiThat";
             this.dgvThiThat.Size = new System.Drawing.Size(727, 150);
             this.dgvThiThat.TabIndex = 27;
+            this.dgvThiThat.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThiThat_CellContentClick);
             // 
             // label1
             // 
@@ -143,45 +147,60 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
+            this.TenMH,
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7});
-            this.dgvThiThu.Location = new System.Drawing.Point(2, 267);
+            this.dgvThiThu.Location = new System.Drawing.Point(0, 268);
             this.dgvThiThu.Name = "dgvThiThu";
             this.dgvThiThu.Size = new System.Drawing.Size(727, 181);
             this.dgvThiThu.TabIndex = 29;
+            this.dgvThiThu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThiThu_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
             this.dataGridViewTextBoxColumn1.HeaderText = "STT";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
             // dataGridViewTextBoxColumn2
             // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "MaHS";
             this.dataGridViewTextBoxColumn2.HeaderText = "Mã học sinh";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // dataGridViewTextBoxColumn3
             // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "SoCauDung";
             this.dataGridViewTextBoxColumn3.HeaderText = "Số câu đúng";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
             // dataGridViewTextBoxColumn4
             // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "SoCauSai";
             this.dataGridViewTextBoxColumn4.HeaderText = "Số câu sai";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
             // dataGridViewTextBoxColumn5
             // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "DiemThi";
             this.dataGridViewTextBoxColumn5.HeaderText = "Điểm thi";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
+            // TenMH
+            // 
+            this.TenMH.DataPropertyName = "TenMH";
+            this.TenMH.HeaderText = "Tên môn học";
+            this.TenMH.Name = "TenMH";
+            // 
             // dataGridViewTextBoxColumn6
             // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "NgayThi";
             this.dataGridViewTextBoxColumn6.HeaderText = "Ngày thi";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
             // dataGridViewTextBoxColumn7
             // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "KyThi";
             this.dataGridViewTextBoxColumn7.HeaderText = "Kỳ thi";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             // 
@@ -224,6 +243,12 @@
             this.DiemThi.DataPropertyName = "DiemThi";
             this.DiemThi.HeaderText = "Điểm thi";
             this.DiemThi.Name = "DiemThi";
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "TenMH";
+            this.Column1.HeaderText = "Tên môn học";
+            this.Column1.Name = "Column1";
             // 
             // NgayThi
             // 
@@ -272,19 +297,21 @@
         private System.Windows.Forms.DataGridView dgvThiThat;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvThiThu;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenMH;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaHS;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoCauDung;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoCauSai;
         private System.Windows.Forms.DataGridViewTextBoxColumn DiemThi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayThi;
         private System.Windows.Forms.DataGridViewTextBoxColumn KyThi;
     }

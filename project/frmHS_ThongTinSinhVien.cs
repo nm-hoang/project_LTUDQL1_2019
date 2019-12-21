@@ -86,5 +86,13 @@ namespace project
         {
 
         }
+
+        private void btnInBangDiem_Click(object sender, EventArgs e)
+        {
+            frmHS_BangDiem frm = new frmHS_BangDiem(username);
+            frm.FormClosed += new FormClosedEventHandler(frm_FormClosed);
+            this.Hide();
+            frm.ShowDialog();
+        }
     }
 }

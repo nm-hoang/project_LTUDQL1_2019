@@ -200,6 +200,7 @@
             this.btnThiThu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThiThu.Textcolor = System.Drawing.Color.White;
             this.btnThiThu.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThiThu.Click += new System.EventHandler(this.btnThiThu_Click);
             // 
             // btnThi
             // 
@@ -234,6 +235,7 @@
             this.btnThi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThi.Textcolor = System.Drawing.Color.White;
             this.btnThi.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThi.Click += new System.EventHandler(this.btnThi_Click);
             // 
             // btnTTSV
             // 

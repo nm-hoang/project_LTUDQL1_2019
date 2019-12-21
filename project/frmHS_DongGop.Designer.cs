@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHS_DongGop));
             this.header = new System.Windows.Forms.Panel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,20 +41,29 @@
             this.txtCauB = new System.Windows.Forms.TextBox();
             this.txtCauC = new System.Windows.Forms.TextBox();
             this.txtCauD = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelCapDo = new System.Windows.Forms.Panel();
             this.rb_Kho = new System.Windows.Forms.RadioButton();
             this.rb_TrungBinh = new System.Windows.Forms.RadioButton();
             this.rb_De = new System.Windows.Forms.RadioButton();
             this.rdRatKho = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnXemDuyet = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btnDongGop = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btnChuaDuyet = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label7 = new System.Windows.Forms.Label();
             this.cbTenMonHoc = new System.Windows.Forms.ComboBox();
+            this.panelDapAnDung = new System.Windows.Forms.Panel();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lblTenMH = new System.Windows.Forms.Label();
+            this.btnChuaDuyet = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnDongGop = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnXemDuyet = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.header.SuspendLayout();
+            this.panelCapDo.SuspendLayout();
+            this.panelDapAnDung.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // header
@@ -79,20 +87,6 @@
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(151, 21);
             this.bunifuCustomLabel1.TabIndex = 7;
             this.bunifuCustomLabel1.Text = "Đóng góp câu hỏi";
-            // 
-            // bunifuImageButton1
-            // 
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(735, 0);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(39, 32);
-            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton1.TabIndex = 3;
-            this.bunifuImageButton1.TabStop = false;
-            this.bunifuImageButton1.Zoom = 20;
-            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
             // label2
             // 
@@ -184,23 +178,22 @@
             this.txtCauD.Size = new System.Drawing.Size(397, 42);
             this.txtCauD.TabIndex = 18;
             // 
-            // panel1
+            // panelCapDo
             // 
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.rb_Kho);
-            this.panel1.Controls.Add(this.rb_TrungBinh);
-            this.panel1.Controls.Add(this.rb_De);
-            this.panel1.Controls.Add(this.rdRatKho);
-            this.panel1.Location = new System.Drawing.Point(612, 100);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(97, 156);
-            this.panel1.TabIndex = 80;
+            this.panelCapDo.Controls.Add(this.rb_Kho);
+            this.panelCapDo.Controls.Add(this.rb_TrungBinh);
+            this.panelCapDo.Controls.Add(this.rb_De);
+            this.panelCapDo.Controls.Add(this.rdRatKho);
+            this.panelCapDo.Location = new System.Drawing.Point(616, 100);
+            this.panelCapDo.Name = "panelCapDo";
+            this.panelCapDo.Size = new System.Drawing.Size(97, 120);
+            this.panelCapDo.TabIndex = 80;
             // 
             // rb_Kho
             // 
             this.rb_Kho.AutoSize = true;
             this.rb_Kho.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rb_Kho.Location = new System.Drawing.Point(11, 83);
+            this.rb_Kho.Location = new System.Drawing.Point(11, 33);
             this.rb_Kho.Margin = new System.Windows.Forms.Padding(2);
             this.rb_Kho.Name = "rb_Kho";
             this.rb_Kho.Size = new System.Drawing.Size(47, 20);
@@ -213,7 +206,7 @@
             // 
             this.rb_TrungBinh.AutoSize = true;
             this.rb_TrungBinh.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rb_TrungBinh.Location = new System.Drawing.Point(11, 110);
+            this.rb_TrungBinh.Location = new System.Drawing.Point(11, 57);
             this.rb_TrungBinh.Margin = new System.Windows.Forms.Padding(2);
             this.rb_TrungBinh.Name = "rb_TrungBinh";
             this.rb_TrungBinh.Size = new System.Drawing.Size(82, 20);
@@ -226,7 +219,7 @@
             // 
             this.rb_De.AutoSize = true;
             this.rb_De.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rb_De.Location = new System.Drawing.Point(11, 134);
+            this.rb_De.Location = new System.Drawing.Point(11, 81);
             this.rb_De.Margin = new System.Windows.Forms.Padding(2);
             this.rb_De.Name = "rb_De";
             this.rb_De.Size = new System.Drawing.Size(41, 20);
@@ -239,7 +232,7 @@
             // 
             this.rdRatKho.AutoSize = true;
             this.rdRatKho.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdRatKho.Location = new System.Drawing.Point(11, 59);
+            this.rdRatKho.Location = new System.Drawing.Point(11, 9);
             this.rdRatKho.Margin = new System.Windows.Forms.Padding(2);
             this.rdRatKho.Name = "rdRatKho";
             this.rdRatKho.Size = new System.Drawing.Size(66, 20);
@@ -252,61 +245,114 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(7, 11);
+            this.label6.Location = new System.Drawing.Point(623, 76);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(67, 21);
             this.label6.TabIndex = 81;
             this.label6.Text = "Cấp độ";
             // 
-            // btnXemDuyet
+            // label7
             // 
-            this.btnXemDuyet.ActiveBorderThickness = 1;
-            this.btnXemDuyet.ActiveCornerRadius = 20;
-            this.btnXemDuyet.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.btnXemDuyet.ActiveForecolor = System.Drawing.Color.White;
-            this.btnXemDuyet.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnXemDuyet.BackColor = System.Drawing.SystemColors.Control;
-            this.btnXemDuyet.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnXemDuyet.BackgroundImage")));
-            this.btnXemDuyet.ButtonText = "Xem câu hỏi đã được duyệt";
-            this.btnXemDuyet.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnXemDuyet.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXemDuyet.ForeColor = System.Drawing.Color.Honeydew;
-            this.btnXemDuyet.IdleBorderThickness = 1;
-            this.btnXemDuyet.IdleCornerRadius = 20;
-            this.btnXemDuyet.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(80)))), ((int)(((byte)(65)))));
-            this.btnXemDuyet.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.btnXemDuyet.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnXemDuyet.Location = new System.Drawing.Point(616, 292);
-            this.btnXemDuyet.Margin = new System.Windows.Forms.Padding(5);
-            this.btnXemDuyet.Name = "btnXemDuyet";
-            this.btnXemDuyet.Size = new System.Drawing.Size(147, 59);
-            this.btnXemDuyet.TabIndex = 81;
-            this.btnXemDuyet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(44, 49);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(108, 21);
+            this.label7.TabIndex = 84;
+            this.label7.Text = "Mã môn học";
             // 
-            // btnDongGop
+            // cbTenMonHoc
             // 
-            this.btnDongGop.ActiveBorderThickness = 1;
-            this.btnDongGop.ActiveCornerRadius = 20;
-            this.btnDongGop.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.btnDongGop.ActiveForecolor = System.Drawing.Color.White;
-            this.btnDongGop.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnDongGop.BackColor = System.Drawing.SystemColors.Control;
-            this.btnDongGop.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDongGop.BackgroundImage")));
-            this.btnDongGop.ButtonText = "Đóng góp câu hỏi";
-            this.btnDongGop.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDongGop.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDongGop.ForeColor = System.Drawing.Color.Honeydew;
-            this.btnDongGop.IdleBorderThickness = 1;
-            this.btnDongGop.IdleCornerRadius = 20;
-            this.btnDongGop.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(80)))), ((int)(((byte)(65)))));
-            this.btnDongGop.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.btnDongGop.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnDongGop.Location = new System.Drawing.Point(293, 465);
-            this.btnDongGop.Margin = new System.Windows.Forms.Padding(5);
-            this.btnDongGop.Name = "btnDongGop";
-            this.btnDongGop.Size = new System.Drawing.Size(181, 41);
-            this.btnDongGop.TabIndex = 82;
-            this.btnDongGop.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.cbTenMonHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTenMonHoc.FormattingEnabled = true;
+            this.cbTenMonHoc.Location = new System.Drawing.Point(184, 42);
+            this.cbTenMonHoc.Name = "cbTenMonHoc";
+            this.cbTenMonHoc.Size = new System.Drawing.Size(159, 28);
+            this.cbTenMonHoc.TabIndex = 85;
+            this.cbTenMonHoc.SelectedIndexChanged += new System.EventHandler(this.cbTenMonHoc_SelectedIndexChanged);
+            // 
+            // panelDapAnDung
+            // 
+            this.panelDapAnDung.Controls.Add(this.radioButton1);
+            this.panelDapAnDung.Controls.Add(this.radioButton2);
+            this.panelDapAnDung.Controls.Add(this.radioButton3);
+            this.panelDapAnDung.Controls.Add(this.radioButton4);
+            this.panelDapAnDung.Location = new System.Drawing.Point(184, 435);
+            this.panelDapAnDung.Name = "panelDapAnDung";
+            this.panelDapAnDung.Size = new System.Drawing.Size(397, 76);
+            this.panelDapAnDung.TabIndex = 86;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.Location = new System.Drawing.Point(114, 28);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(32, 20);
+            this.radioButton1.TabIndex = 74;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "B";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton2.Location = new System.Drawing.Point(182, 28);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(35, 20);
+            this.radioButton2.TabIndex = 73;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "C";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton3.Location = new System.Drawing.Point(277, 28);
+            this.radioButton3.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(34, 20);
+            this.radioButton3.TabIndex = 72;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "D";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton4
+            // 
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton4.Location = new System.Drawing.Point(30, 28);
+            this.radioButton4.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(33, 20);
+            this.radioButton4.TabIndex = 71;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.Text = "A";
+            this.radioButton4.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(42, 463);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(90, 21);
+            this.label8.TabIndex = 81;
+            this.label8.Text = "Câu đúng";
+            // 
+            // lblTenMH
+            // 
+            this.lblTenMH.AutoSize = true;
+            this.lblTenMH.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenMH.Location = new System.Drawing.Point(349, 44);
+            this.lblTenMH.Name = "lblTenMH";
+            this.lblTenMH.Size = new System.Drawing.Size(81, 21);
+            this.lblTenMH.TabIndex = 87;
+            this.lblTenMH.Text = "lblTenMH";
             // 
             // btnChuaDuyet
             // 
@@ -332,38 +378,90 @@
             this.btnChuaDuyet.Size = new System.Drawing.Size(147, 57);
             this.btnChuaDuyet.TabIndex = 83;
             this.btnChuaDuyet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnChuaDuyet.Click += new System.EventHandler(this.btnChuaDuyet_Click);
             // 
-            // label7
+            // btnDongGop
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(44, 49);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(110, 21);
-            this.label7.TabIndex = 84;
-            this.label7.Text = "Tên môn học";
+            this.btnDongGop.ActiveBorderThickness = 1;
+            this.btnDongGop.ActiveCornerRadius = 20;
+            this.btnDongGop.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btnDongGop.ActiveForecolor = System.Drawing.Color.White;
+            this.btnDongGop.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btnDongGop.BackColor = System.Drawing.SystemColors.Control;
+            this.btnDongGop.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDongGop.BackgroundImage")));
+            this.btnDongGop.ButtonText = "Đóng góp câu hỏi";
+            this.btnDongGop.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDongGop.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDongGop.ForeColor = System.Drawing.Color.Honeydew;
+            this.btnDongGop.IdleBorderThickness = 1;
+            this.btnDongGop.IdleCornerRadius = 20;
+            this.btnDongGop.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(80)))), ((int)(((byte)(65)))));
+            this.btnDongGop.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.btnDongGop.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btnDongGop.Location = new System.Drawing.Point(295, 519);
+            this.btnDongGop.Margin = new System.Windows.Forms.Padding(5);
+            this.btnDongGop.Name = "btnDongGop";
+            this.btnDongGop.Size = new System.Drawing.Size(181, 41);
+            this.btnDongGop.TabIndex = 82;
+            this.btnDongGop.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnDongGop.Click += new System.EventHandler(this.btnDongGop_Click);
             // 
-            // cbTenMonHoc
+            // btnXemDuyet
             // 
-            this.cbTenMonHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbTenMonHoc.FormattingEnabled = true;
-            this.cbTenMonHoc.Location = new System.Drawing.Point(184, 42);
-            this.cbTenMonHoc.Name = "cbTenMonHoc";
-            this.cbTenMonHoc.Size = new System.Drawing.Size(159, 28);
-            this.cbTenMonHoc.TabIndex = 85;
+            this.btnXemDuyet.ActiveBorderThickness = 1;
+            this.btnXemDuyet.ActiveCornerRadius = 20;
+            this.btnXemDuyet.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btnXemDuyet.ActiveForecolor = System.Drawing.Color.White;
+            this.btnXemDuyet.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btnXemDuyet.BackColor = System.Drawing.SystemColors.Control;
+            this.btnXemDuyet.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnXemDuyet.BackgroundImage")));
+            this.btnXemDuyet.ButtonText = "Xem câu hỏi đã được duyệt";
+            this.btnXemDuyet.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXemDuyet.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXemDuyet.ForeColor = System.Drawing.Color.Honeydew;
+            this.btnXemDuyet.IdleBorderThickness = 1;
+            this.btnXemDuyet.IdleCornerRadius = 20;
+            this.btnXemDuyet.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(80)))), ((int)(((byte)(65)))));
+            this.btnXemDuyet.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.btnXemDuyet.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btnXemDuyet.Location = new System.Drawing.Point(616, 292);
+            this.btnXemDuyet.Margin = new System.Windows.Forms.Padding(5);
+            this.btnXemDuyet.Name = "btnXemDuyet";
+            this.btnXemDuyet.Size = new System.Drawing.Size(147, 59);
+            this.btnXemDuyet.TabIndex = 81;
+            this.btnXemDuyet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnXemDuyet.Click += new System.EventHandler(this.btnXemDuyet_Click);
+            // 
+            // bunifuImageButton1
+            // 
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.Location = new System.Drawing.Point(735, 0);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Size = new System.Drawing.Size(39, 32);
+            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton1.TabIndex = 3;
+            this.bunifuImageButton1.TabStop = false;
+            this.bunifuImageButton1.Zoom = 20;
+            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
             // frmHS_DongGop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(774, 507);
+            this.ClientSize = new System.Drawing.Size(774, 574);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lblTenMH);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.panelDapAnDung);
             this.Controls.Add(this.cbTenMonHoc);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnChuaDuyet);
             this.Controls.Add(this.btnDongGop);
             this.Controls.Add(this.btnXemDuyet);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelCapDo);
             this.Controls.Add(this.txtCauD);
             this.Controls.Add(this.txtCauC);
             this.Controls.Add(this.txtCauB);
@@ -382,9 +480,11 @@
             this.Load += new System.EventHandler(this.frmHS_DongGop_Load);
             this.header.ResumeLayout(false);
             this.header.PerformLayout();
+            this.panelCapDo.ResumeLayout(false);
+            this.panelCapDo.PerformLayout();
+            this.panelDapAnDung.ResumeLayout(false);
+            this.panelDapAnDung.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -405,7 +505,7 @@
         private System.Windows.Forms.TextBox txtCauB;
         private System.Windows.Forms.TextBox txtCauC;
         private System.Windows.Forms.TextBox txtCauD;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelCapDo;
         private System.Windows.Forms.RadioButton rb_Kho;
         private System.Windows.Forms.RadioButton rb_TrungBinh;
         private System.Windows.Forms.RadioButton rb_De;
@@ -416,5 +516,12 @@
         private Bunifu.Framework.UI.BunifuThinButton2 btnChuaDuyet;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cbTenMonHoc;
+        private System.Windows.Forms.Panel panelDapAnDung;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblTenMH;
     }
 }

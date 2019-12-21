@@ -34,7 +34,7 @@ namespace project
                       select h).SingleOrDefault();
             var result = from kq in db.KetQuaThis
                          where kq.MaHS == hs.MaHS
-                         select new { kq.ID, kq.MaHS, kq.SoCauDung, kq.SoCauSai, kq.DiemThi, kq.NgayThi, kq.KyThi };
+                         select new { kq.ID, kq.MaHS, kq.SoCauDung, kq.SoCauSai, kq.DiemThi, kq.NgayThi, kq.KyThi,kq.TenMH };
             dgvThiThat.DataSource = result;
 
         }
@@ -47,7 +47,7 @@ namespace project
                       select h).SingleOrDefault();
             var result = from kq in db.KetQuaThiThus
                          where kq.MaHS == hs.MaHS
-                         select new { kq.ID, kq.MaHS, kq.SoCauDung, kq.SoCauSai, kq.DiemThi, kq.NgayThi, kq.KyThi };
+                         select new { kq.ID, kq.MaHS, kq.SoCauDung, kq.SoCauSai, kq.DiemThi, kq.NgayThi, kq.KyThi,kq.TenMH };
             dgvThiThu.DataSource = result;
 
         }
@@ -60,6 +60,16 @@ namespace project
         {
             ThongTinThiThat();
             ThongTinThu();
+        }
+
+        private void dgvThiThu_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgvThiThat_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
