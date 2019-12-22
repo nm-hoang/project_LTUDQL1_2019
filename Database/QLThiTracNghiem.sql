@@ -261,3 +261,34 @@ select * from KHOILOP
 insert into CAUHOI values('1','A','B','C','D','A',10,N'Dễ','AV10')
 
 select * from KETQUATHI kq , HOCSINH hs where hs.MaHS=kq.MaHS and kq.MaHS='HS01'
+
+Create proc sp_tkms 
+@MaDG varchar(10), @Nam int
+As
+Begin
+	Select dg.MaDG,dg.Ten,qspms.MaDS,qspms.TienPhat
+	from DocGia dg, PMS pms, QS_PMS qspms
+	where dg.MaDG=pms.Ma_DG and pms.MaPhieu_PMS=qspms.MaPhieu_PMS and dg.MaDG=@MaDG and @Nam = Year(pms.NgayMuon)
+End
+
+exec sp_tkms 'DG03',2019
+
+--Danh sách thí sinh
+ALter proc sp_DSTS
+@ID varchar(255)
+as
+Begin
+		select ds.MaKiThi, hs.MaHS,hs.HoTen,hs.MaLop,hs.MaKhoi,hs.DienThoai,dt.TenDeThi,kt.ID,kt.NgayThi
+		from DSHocSinh ds, KyThi kt , HocSinh hs ,DeThi dt
+		WHERE kt.ID=ds.MaKiThi and hs.MaHS=ds.MaHS and kt.ID = @ID and dt.ID=kt.MaDe
+End
+exec sp_DSTS '1215'
+--Danh sách kết quả thi
+ALter proc sp_KQ
+@ID varchar(255)
+as
+Begin
+	SELECT * from KyThi kt, KetQuaThi kq,HocSinh hs,DeThi dt where kt.ID=kq.KyThi and  kq.MaHS=hs.MaHS and kt.ID=@ID and dt.ID=kt.MaDe
+End
+
+exec sp_KQ '1215'

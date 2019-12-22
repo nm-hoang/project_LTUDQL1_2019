@@ -45,6 +45,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnDSTS = new System.Windows.Forms.Button();
+            this.btnKetQua = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKyThi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThiSinh)).BeginInit();
             this.SuspendLayout();
@@ -201,21 +202,36 @@
             // 
             // btnDSTS
             // 
+            this.btnDSTS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnDSTS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDSTS.ForeColor = System.Drawing.Color.Black;
-            this.btnDSTS.Location = new System.Drawing.Point(528, 381);
+            this.btnDSTS.Location = new System.Drawing.Point(418, 381);
             this.btnDSTS.Name = "btnDSTS";
             this.btnDSTS.Size = new System.Drawing.Size(170, 35);
             this.btnDSTS.TabIndex = 18;
             this.btnDSTS.Text = "In danh sách thí sinh";
-            this.btnDSTS.UseVisualStyleBackColor = true;
+            this.btnDSTS.UseVisualStyleBackColor = false;
             this.btnDSTS.Click += new System.EventHandler(this.btnDSTS_Click);
+            // 
+            // btnKetQua
+            // 
+            this.btnKetQua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnKetQua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKetQua.ForeColor = System.Drawing.Color.Black;
+            this.btnKetQua.Location = new System.Drawing.Point(603, 381);
+            this.btnKetQua.Name = "btnKetQua";
+            this.btnKetQua.Size = new System.Drawing.Size(170, 35);
+            this.btnKetQua.TabIndex = 19;
+            this.btnKetQua.Text = "In kết quả kì thi";
+            this.btnKetQua.UseVisualStyleBackColor = false;
+            this.btnKetQua.Click += new System.EventHandler(this.btnKetQua_Click);
             // 
             // GV_QLKyThi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(811, 426);
+            this.Controls.Add(this.btnKetQua);
             this.Controls.Add(this.btnDSTS);
             this.Controls.Add(this.dgvKyThi);
             this.Controls.Add(this.dgvThiSinh);
@@ -255,5 +271,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnDSTS;
+        private System.Windows.Forms.Button btnKetQua;
     }
 }

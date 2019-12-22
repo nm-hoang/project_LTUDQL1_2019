@@ -275,7 +275,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(232, -4);
+            this.label1.Location = new System.Drawing.Point(241, -4);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(122, 29);
             this.label1.TabIndex = 37;
@@ -318,6 +318,7 @@
             this.btnKetThuc.Size = new System.Drawing.Size(132, 43);
             this.btnKetThuc.TabIndex = 46;
             this.btnKetThuc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnKetThuc.Visible = false;
             this.btnKetThuc.Click += new System.EventHandler(this.btnKetThuc_Click_1);
             // 
             // btnNopBai

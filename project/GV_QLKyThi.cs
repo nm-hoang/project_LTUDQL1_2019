@@ -108,5 +108,11 @@ namespace project
             GV_InDSTS frm = new GV_InDSTS();
             frm.ShowDialog();
         }
+
+        private void btnKetQua_Click(object sender, EventArgs e)
+        {
+            GV_InKQ frm = new GV_InKQ();
+            frm.ShowDialog();
+        }
     }
 }

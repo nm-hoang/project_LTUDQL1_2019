@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Globalization;
 namespace project
 {
     public partial class frmHS_ThiThat : Form
@@ -65,12 +65,39 @@ namespace project
 
         private void btnLamBai_Click(object sender, EventArgs e)
         {
+            var result = db.KetQuaThis.Any(p => p.KyThi == cbMaKiThi.Text);
+            string NgayThi1 = (from kt in db.KyThis
+                         where kt.ID == cbMaKiThi.Text
+                         select kt.NgayThi).SingleOrDefault().ToString();
+            string Ngayhientai1 = DateTime.Now.ToString("dd/MM/yyyy");
+            DateTime NgayThi = DateTime.ParseExact(NgayThi1, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+            DateTime NgayHienTai = DateTime.ParseExact(Ngayhientai1, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+            TimeSpan tinhngay = NgayHienTai - NgayThi;
+            int resultTinhNgay = tinhngay.Days;
             if (cbMaKiThi.Text.ToString() == string.Empty)
             {
-                MessageBox.Show("Bạn chưa được giáo viên cho thi thử", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Bạn chưa có kì thi", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 panel2.Controls.Clear();
                 panel2.Visible = true;
 
+            }
+            else if(resultTinhNgay > 0)
+            {
+                MessageBox.Show("Đã qua ngày thi "+ NgayThi1, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                panel2.Controls.Clear();
+                panel2.Visible = true;
+            }
+            else if(resultTinhNgay < 0 )
+            {
+                MessageBox.Show("Chưa tới ngày thi " + NgayThi1, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                panel2.Controls.Clear();
+                panel2.Visible = true;
+            }
+            else if(result)
+            {
+                MessageBox.Show("Bạn đã thi rồi", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                panel2.Controls.Clear();
+                panel2.Visible = true;
             }
             else
             {

@@ -14,10 +14,10 @@ using Microsoft.Reporting.WinForms;
 using System.Data.SqlClient;
 namespace project
 {
-    public partial class GV_InDSTS : Form
+    public partial class GV_InKQ : Form
     {
         QLThiTracNghiemDataContext db = new QLThiTracNghiemDataContext();
-        public GV_InDSTS()
+        public GV_InKQ()
         {
             InitializeComponent();
         }
@@ -31,7 +31,7 @@ namespace project
             SqlConnection conn = new SqlConnection(connString);
             return conn;
         }
-        private void GV_InDSTS_Load(object sender, EventArgs e)
+        private void GV_InKQ_Load(object sender, EventArgs e)
         {
             var result = from i in db.KyThis
                          select i.ID;
@@ -41,10 +41,18 @@ namespace project
 
         private void btnIn_Click(object sender, EventArgs e)
         {
+            var DSTS = (from ds in db.DSHocSinhs where ds.MaKiThi == cbMaKyThi.Text select ds.MaHS).Count();
+            var KQ = (from kq in db.KetQuaThis where kq.KyThi == cbMaKyThi.Text select kq.MaHS).Count();
+            if (KQ < DSTS)
+            {
+                MessageBox.Show("Kì thi chưa hoàn thành", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning); ;
+            }
+            else
+            {
                 SqlConnection cn = getconnect();
                 cn.Open();
                 SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = "sp_DSTS";
+                cmd.CommandText = "sp_KQ";
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Connection = cn;
                 cmd.Parameters.Add(new SqlParameter("@ID", cbMaKyThi.Text));
@@ -54,7 +62,7 @@ namespace project
                 dap.Fill(ds);
                 //Thiết lập báo cáo
                 rptView.ProcessingMode = ProcessingMode.Local;
-                rptView.LocalReport.ReportPath = @"C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\rptDSTS.rdlc";
+                rptView.LocalReport.ReportPath = @"C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\rptKetQua.rdlc";
                 ReportDataSource rds = new ReportDataSource();
                 rds.Name = "DataSet1";
                 rds.Value = ds.Tables[0];
@@ -62,6 +70,8 @@ namespace project
                 rptView.LocalReport.DataSources.Clear();
                 rptView.LocalReport.DataSources.Add(rds);
                 rptView.RefreshReport();
-        }
+            }
+            }
+           
     }
 }

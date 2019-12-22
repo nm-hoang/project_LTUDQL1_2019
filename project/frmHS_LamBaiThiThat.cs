@@ -276,7 +276,7 @@ namespace project
             else
             {
                 NopBai(sender, e);
-               // btnKetThuc_Click_1(sender, e);
+                btnKetThuc_Click_1(sender, e);
             }
         }
 
