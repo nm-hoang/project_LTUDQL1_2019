@@ -21,7 +21,9 @@ namespace project
 
         private void GV_SuaCauHoi_Load(object sender, EventArgs e)
         {
-            cbKhoi.DataSource = (from k in db.KhoiLops select k.MaKhoi);
+            BindingSource KhoiLop = new BindingSource();
+            KhoiLop.DataSource = (from k in db.KhoiLops select k.MaKhoi);
+            cbKhoi.DataSource = KhoiLop;
             cbMaMH.DataSource = (from mh in db.MonHocs select mh.MaMH);
             List<String> Dokho = new List<string> {"Dể", "Trung bình", "Khó" };
             List<String> DapAn = new List<string> {"A", "B", "C", "D"};

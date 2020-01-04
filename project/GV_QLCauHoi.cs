@@ -17,6 +17,7 @@ namespace project
         public GV_QLCauHoi()
         {
             InitializeComponent();
+
         }
 
         private void GV_QLCauHoi_Load(object sender, EventArgs e)
@@ -26,9 +27,18 @@ namespace project
 
         public void LoadQuestions()
         {
+            var CauHoi = db.CauHois.Select(ch =>new
+            {
+                ch.ID,ch.CauHoi1, ch.DapAn_A, ch.DapAn_B, ch.DapAn_C,ch.DapAn_D,
+                                       ch.DapAnDung,ch.Khoi,ch.DoKho,ch.MaMH}).ToList();
+            BindingSource bsCauHoi = new BindingSource();
+            bsCauHoi.DataSource = CauHoi;
             dgvCauHoi.Rows.Clear();
-            dgvCauHoi.DataSource = (from ch in db.CauHois select new {ch.ID,ch.CauHoi1, ch.DapAn_A, ch.DapAn_B, ch.DapAn_C,ch.DapAn_D,
-                                        ch.DapAnDung,ch.Khoi,ch.DoKho,ch.MaMH} );
+            dgvCauHoi.DataSource = bsCauHoi;
+
+
+            //dgvCauHoi.DataSource = (from ch in db.CauHois select new {ch.ID,ch.CauHoi1, ch.DapAn_A, ch.DapAn_B, ch.DapAn_C,ch.DapAn_D,
+                                  //      ch.DapAnDung,ch.Khoi,ch.DoKho,ch.MaMH} );
         }
 
         private void btnSuaCH_Click(object sender, EventArgs e)
