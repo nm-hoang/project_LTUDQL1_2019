@@ -22,5 +22,22 @@ namespace project
             GV_ThongKeKyThi frm = new GV_ThongKeKyThi();
             frm.Show();
         }
+
+        private void GV_QLHocSinh_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHocSinh_Click(object sender, EventArgs e)
+        {
+            GV_ThongKeKQHocSinh frm = new GV_ThongKeKQHocSinh();
+            frm.ShowDialog();
+        }
+
+        private void btnCauHoi_Click(object sender, EventArgs e)
+        {
+            GV_ThongKeCauHoi frm = new GV_ThongKeCauHoi();
+            frm.ShowDialog();
+        }
     }
 }

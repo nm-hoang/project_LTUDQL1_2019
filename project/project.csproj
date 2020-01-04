@@ -303,6 +303,18 @@
     <Compile Include="GV_TaoKyThiThu.Designer.cs">
       <DependentUpon>GV_TaoKyThiThu.cs</DependentUpon>
     </Compile>
+    <Compile Include="GV_ThongKeCauHoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GV_ThongKeCauHoi.Designer.cs">
+      <DependentUpon>GV_ThongKeCauHoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GV_ThongKeKQHocSinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GV_ThongKeKQHocSinh.Designer.cs">
+      <DependentUpon>GV_ThongKeKQHocSinh.cs</DependentUpon>
+    </Compile>
     <Compile Include="GV_ThongKeKyThi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -464,6 +476,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GV_TaoKyThiThu.resx">
       <DependentUpon>GV_TaoKyThiThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GV_ThongKeCauHoi.resx">
+      <DependentUpon>GV_ThongKeCauHoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GV_ThongKeKQHocSinh.resx">
+      <DependentUpon>GV_ThongKeKQHocSinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GV_ThongKeKyThi.resx">
       <DependentUpon>GV_ThongKeKyThi.cs</DependentUpon>

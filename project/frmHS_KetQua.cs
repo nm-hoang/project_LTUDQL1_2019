@@ -71,5 +71,10 @@ namespace project
         {
 
         }
+
+        private void header_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

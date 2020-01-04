@@ -34,6 +34,14 @@
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
             this.dgvThiThat = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaHS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoCauDung = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoCauSai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiemThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KyThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvThiThu = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,14 +53,6 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaHS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoCauDung = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoCauSai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiemThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.KyThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
@@ -71,6 +71,7 @@
             this.header.Name = "header";
             this.header.Size = new System.Drawing.Size(729, 32);
             this.header.TabIndex = 26;
+            this.header.Paint += new System.Windows.Forms.PaintEventHandler(this.header_Paint);
             // 
             // lblName
             // 
@@ -127,6 +128,54 @@
             this.dgvThiThat.Size = new System.Drawing.Size(727, 150);
             this.dgvThiThat.TabIndex = 27;
             this.dgvThiThat.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThiThat_CellContentClick);
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "STT";
+            this.ID.Name = "ID";
+            // 
+            // MaHS
+            // 
+            this.MaHS.DataPropertyName = "MaHS";
+            this.MaHS.HeaderText = "Mã học sinh";
+            this.MaHS.Name = "MaHS";
+            // 
+            // SoCauDung
+            // 
+            this.SoCauDung.DataPropertyName = "SoCauDung";
+            this.SoCauDung.HeaderText = "Số câu đúng";
+            this.SoCauDung.Name = "SoCauDung";
+            // 
+            // SoCauSai
+            // 
+            this.SoCauSai.DataPropertyName = "SoCauSai";
+            this.SoCauSai.HeaderText = "Số câu sai";
+            this.SoCauSai.Name = "SoCauSai";
+            // 
+            // DiemThi
+            // 
+            this.DiemThi.DataPropertyName = "DiemThi";
+            this.DiemThi.HeaderText = "Điểm thi";
+            this.DiemThi.Name = "DiemThi";
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "TenMH";
+            this.Column1.HeaderText = "Tên môn học";
+            this.Column1.Name = "Column1";
+            // 
+            // NgayThi
+            // 
+            this.NgayThi.DataPropertyName = "NgayThi";
+            this.NgayThi.HeaderText = "Ngày thi";
+            this.NgayThi.Name = "NgayThi";
+            // 
+            // KyThi
+            // 
+            this.KyThi.DataPropertyName = "KyThi";
+            this.KyThi.HeaderText = "Kỳ thi";
+            this.KyThi.Name = "KyThi";
             // 
             // label1
             // 
@@ -213,54 +262,6 @@
             this.label2.Size = new System.Drawing.Size(115, 19);
             this.label2.TabIndex = 30;
             this.label2.Text = "Kết quả thi thử";
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "STT";
-            this.ID.Name = "ID";
-            // 
-            // MaHS
-            // 
-            this.MaHS.DataPropertyName = "MaHS";
-            this.MaHS.HeaderText = "Mã học sinh";
-            this.MaHS.Name = "MaHS";
-            // 
-            // SoCauDung
-            // 
-            this.SoCauDung.DataPropertyName = "SoCauDung";
-            this.SoCauDung.HeaderText = "Số câu đúng";
-            this.SoCauDung.Name = "SoCauDung";
-            // 
-            // SoCauSai
-            // 
-            this.SoCauSai.DataPropertyName = "SoCauSai";
-            this.SoCauSai.HeaderText = "Số câu sai";
-            this.SoCauSai.Name = "SoCauSai";
-            // 
-            // DiemThi
-            // 
-            this.DiemThi.DataPropertyName = "DiemThi";
-            this.DiemThi.HeaderText = "Điểm thi";
-            this.DiemThi.Name = "DiemThi";
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "TenMH";
-            this.Column1.HeaderText = "Tên môn học";
-            this.Column1.Name = "Column1";
-            // 
-            // NgayThi
-            // 
-            this.NgayThi.DataPropertyName = "NgayThi";
-            this.NgayThi.HeaderText = "Ngày thi";
-            this.NgayThi.Name = "NgayThi";
-            // 
-            // KyThi
-            // 
-            this.KyThi.DataPropertyName = "KyThi";
-            this.KyThi.HeaderText = "Kỳ thi";
-            this.KyThi.Name = "KyThi";
             // 
             // frmHS_KetQua
             // 

@@ -214,7 +214,7 @@
             this.btnInsert.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(80)))), ((int)(((byte)(65)))));
             this.btnInsert.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnInsert.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnInsert.Location = new System.Drawing.Point(264, 250);
+            this.btnInsert.Location = new System.Drawing.Point(290, 275);
             this.btnInsert.Margin = new System.Windows.Forms.Padding(5);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(181, 41);
@@ -246,6 +246,7 @@
             this.btnExport.Size = new System.Drawing.Size(208, 41);
             this.btnExport.TabIndex = 32;
             this.btnExport.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // btnDelete
             // 
@@ -265,7 +266,7 @@
             this.btnDelete.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(80)))), ((int)(((byte)(65)))));
             this.btnDelete.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnDelete.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnDelete.Location = new System.Drawing.Point(264, 301);
+            this.btnDelete.Location = new System.Drawing.Point(14, 352);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(5);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(208, 41);
@@ -277,7 +278,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(753, 387);
+            this.ClientSize = new System.Drawing.Size(753, 404);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnExport);
             this.Controls.Add(this.btnInsert);

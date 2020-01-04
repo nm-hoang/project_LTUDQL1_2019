@@ -61,14 +61,6 @@
       <Association Name="MonHoc_DeThi" Member="MonHoc" ThisKey="MaMH" OtherKey="MaMH" Type="MonHoc" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.GiaoVien" Member="GiaoViens">
-    <Type Name="GiaoVien">
-      <Column Name="MaGV" Type="System.String" DbType="VarChar(255) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="HoTen" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="NgaySinh" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
-      <Column Name="DienThoai" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.DSHocSinh" Member="DSHocSinhs">
     <Type Name="DSHocSinh">
       <Column Name="MaKiThi" Type="System.String" DbType="VarChar(255) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -77,6 +69,14 @@
       <Association Name="DSHocSinh_KetQuaThi" Member="KetQuaThis" ThisKey="MaKiThi,MaHS" OtherKey="KyThi,MaHS" Type="KetQuaThi" />
       <Association Name="DSHocSinh_KetQuaThiThu" Member="KetQuaThiThus" ThisKey="MaKiThi,MaHS" OtherKey="KyThi,MaHS" Type="KetQuaThiThu" />
       <Association Name="HocSinh_DSHocSinh" Member="HocSinh" ThisKey="MaHS" OtherKey="MaHS" Type="HocSinh" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GiaoVien" Member="GiaoViens">
+    <Type Name="GiaoVien">
+      <Column Name="MaGV" Type="System.String" DbType="VarChar(255) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="DienThoai" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.HocSinh" Member="HocSinhs">

@@ -45,12 +45,12 @@ namespace project
     partial void InsertDeThi(DeThi instance);
     partial void UpdateDeThi(DeThi instance);
     partial void DeleteDeThi(DeThi instance);
-    partial void InsertGiaoVien(GiaoVien instance);
-    partial void UpdateGiaoVien(GiaoVien instance);
-    partial void DeleteGiaoVien(GiaoVien instance);
     partial void InsertDSHocSinh(DSHocSinh instance);
     partial void UpdateDSHocSinh(DSHocSinh instance);
     partial void DeleteDSHocSinh(DSHocSinh instance);
+    partial void InsertGiaoVien(GiaoVien instance);
+    partial void UpdateGiaoVien(GiaoVien instance);
+    partial void DeleteGiaoVien(GiaoVien instance);
     partial void InsertHocSinh(HocSinh instance);
     partial void UpdateHocSinh(HocSinh instance);
     partial void DeleteHocSinh(HocSinh instance);
@@ -150,19 +150,19 @@ namespace project
 			}
 		}
 		
-		public System.Data.Linq.Table<GiaoVien> GiaoViens
-		{
-			get
-			{
-				return this.GetTable<GiaoVien>();
-			}
-		}
-		
 		public System.Data.Linq.Table<DSHocSinh> DSHocSinhs
 		{
 			get
 			{
 				return this.GetTable<DSHocSinh>();
+			}
+		}
+		
+		public System.Data.Linq.Table<GiaoVien> GiaoViens
+		{
+			get
+			{
+				return this.GetTable<GiaoVien>();
 			}
 		}
 		
@@ -1561,140 +1561,6 @@ namespace project
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.GiaoVien")]
-	public partial class GiaoVien : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private string _MaGV;
-		
-		private string _HoTen;
-		
-		private string _NgaySinh;
-		
-		private string _DienThoai;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnMaGVChanging(string value);
-    partial void OnMaGVChanged();
-    partial void OnHoTenChanging(string value);
-    partial void OnHoTenChanged();
-    partial void OnNgaySinhChanging(string value);
-    partial void OnNgaySinhChanged();
-    partial void OnDienThoaiChanging(string value);
-    partial void OnDienThoaiChanged();
-    #endregion
-		
-		public GiaoVien()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaGV", DbType="VarChar(255) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string MaGV
-		{
-			get
-			{
-				return this._MaGV;
-			}
-			set
-			{
-				if ((this._MaGV != value))
-				{
-					this.OnMaGVChanging(value);
-					this.SendPropertyChanging();
-					this._MaGV = value;
-					this.SendPropertyChanged("MaGV");
-					this.OnMaGVChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HoTen", DbType="NVarChar(255)")]
-		public string HoTen
-		{
-			get
-			{
-				return this._HoTen;
-			}
-			set
-			{
-				if ((this._HoTen != value))
-				{
-					this.OnHoTenChanging(value);
-					this.SendPropertyChanging();
-					this._HoTen = value;
-					this.SendPropertyChanged("HoTen");
-					this.OnHoTenChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgaySinh", DbType="NChar(10)")]
-		public string NgaySinh
-		{
-			get
-			{
-				return this._NgaySinh;
-			}
-			set
-			{
-				if ((this._NgaySinh != value))
-				{
-					this.OnNgaySinhChanging(value);
-					this.SendPropertyChanging();
-					this._NgaySinh = value;
-					this.SendPropertyChanged("NgaySinh");
-					this.OnNgaySinhChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DienThoai", DbType="NVarChar(255)")]
-		public string DienThoai
-		{
-			get
-			{
-				return this._DienThoai;
-			}
-			set
-			{
-				if ((this._DienThoai != value))
-				{
-					this.OnDienThoaiChanging(value);
-					this.SendPropertyChanging();
-					this._DienThoai = value;
-					this.SendPropertyChanged("DienThoai");
-					this.OnDienThoaiChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.DSHocSinh")]
 	public partial class DSHocSinh : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -1899,6 +1765,140 @@ namespace project
 		{
 			this.SendPropertyChanging();
 			entity.DSHocSinh = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.GiaoVien")]
+	public partial class GiaoVien : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _MaGV;
+		
+		private string _HoTen;
+		
+		private string _NgaySinh;
+		
+		private string _DienThoai;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnMaGVChanging(string value);
+    partial void OnMaGVChanged();
+    partial void OnHoTenChanging(string value);
+    partial void OnHoTenChanged();
+    partial void OnNgaySinhChanging(string value);
+    partial void OnNgaySinhChanged();
+    partial void OnDienThoaiChanging(string value);
+    partial void OnDienThoaiChanged();
+    #endregion
+		
+		public GiaoVien()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaGV", DbType="VarChar(255) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string MaGV
+		{
+			get
+			{
+				return this._MaGV;
+			}
+			set
+			{
+				if ((this._MaGV != value))
+				{
+					this.OnMaGVChanging(value);
+					this.SendPropertyChanging();
+					this._MaGV = value;
+					this.SendPropertyChanged("MaGV");
+					this.OnMaGVChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HoTen", DbType="NVarChar(255)")]
+		public string HoTen
+		{
+			get
+			{
+				return this._HoTen;
+			}
+			set
+			{
+				if ((this._HoTen != value))
+				{
+					this.OnHoTenChanging(value);
+					this.SendPropertyChanging();
+					this._HoTen = value;
+					this.SendPropertyChanged("HoTen");
+					this.OnHoTenChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgaySinh", DbType="NChar(10)")]
+		public string NgaySinh
+		{
+			get
+			{
+				return this._NgaySinh;
+			}
+			set
+			{
+				if ((this._NgaySinh != value))
+				{
+					this.OnNgaySinhChanging(value);
+					this.SendPropertyChanging();
+					this._NgaySinh = value;
+					this.SendPropertyChanged("NgaySinh");
+					this.OnNgaySinhChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DienThoai", DbType="NVarChar(255)")]
+		public string DienThoai
+		{
+			get
+			{
+				return this._DienThoai;
+			}
+			set
+			{
+				if ((this._DienThoai != value))
+				{
+					this.OnDienThoaiChanging(value);
+					this.SendPropertyChanging();
+					this._DienThoai = value;
+					this.SendPropertyChanged("DienThoai");
+					this.OnDienThoaiChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
 		}
 	}
 	

@@ -62,10 +62,15 @@ namespace project
         {
             LayMaKiThi();
         }
-
+        private int DemSoLanThi()
+        {
+            var result = (from i in db.KetQuaThis
+                          where cbMaKiThi.Text.ToString() == i.KyThi
+                          select i.KyThi).Count();
+            return result;
+        }
         private void btnLamBai_Click(object sender, EventArgs e)
         {
-            var result = db.KetQuaThis.Any(p => p.KyThi == cbMaKiThi.Text);
             string NgayThi1 = (from kt in db.KyThis
                          where kt.ID == cbMaKiThi.Text
                          select kt.NgayThi).SingleOrDefault().ToString();
@@ -93,7 +98,7 @@ namespace project
                 panel2.Controls.Clear();
                 panel2.Visible = true;
             }
-            else if(result)
+            else if(DemSoLanThi() != 0)
             {
                 MessageBox.Show("Bạn đã thi rồi", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 panel2.Controls.Clear();

@@ -43,6 +43,7 @@
             this.btnCauHoi.TabIndex = 7;
             this.btnCauHoi.Text = "Thống kê câu hỏi";
             this.btnCauHoi.UseVisualStyleBackColor = true;
+            this.btnCauHoi.Click += new System.EventHandler(this.btnCauHoi_Click);
             // 
             // btnHocSinh
             // 
@@ -53,6 +54,7 @@
             this.btnHocSinh.TabIndex = 6;
             this.btnHocSinh.Text = "Thống kê học sinh";
             this.btnHocSinh.UseVisualStyleBackColor = true;
+            this.btnHocSinh.Click += new System.EventHandler(this.btnHocSinh_Click);
             // 
             // btnKyThi
             // 
@@ -86,6 +88,7 @@
             this.Controls.Add(this.label1);
             this.Name = "GV_QLHocSinh";
             this.Text = "GV_QLHocSinh";
+            this.Load += new System.EventHandler(this.GV_QLHocSinh_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

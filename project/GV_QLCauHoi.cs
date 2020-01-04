@@ -133,5 +133,71 @@ namespace project
                 MessageBox.Show("Lỗi chọn tập tin", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog fsave = new SaveFileDialog();
+            fsave.Filter = "EXCEL FILE|*.xls;*.xlsx;*.xlsm";
+            fsave.ShowDialog();
+            if (fsave.FileName != "")
+            {
+                string path = fsave.FileName;
+                Microsoft.Office.Interop.Excel.Application app = new Microsoft.Office.Interop.Excel.Application();
+                Microsoft.Office.Interop.Excel.Workbook wb = app.Workbooks.Add(Type.Missing);
+                Microsoft.Office.Interop.Excel._Worksheet sheet = null;
+                try
+                {
+                    sheet = wb.ActiveSheet;
+                    sheet.Name = "DSCH";
+                    sheet.Range[sheet.Cells[1, 1], sheet.Cells[1, dgvCauHoi.Columns.Count]].Merge();
+                    sheet.Cells[1, 1].Value = "Danh Sách Câu Hỏi";
+                    sheet.Cells[1, 1].HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+                    sheet.Cells[1, 1].Font.Size = 20;
+                    sheet.Cells[1, 1].Borders.Weight = Microsoft.Office.Interop.Excel.XlBorderWeight.xlThin;
+
+                    //create head
+                    for (int i = 1; i <= dgvCauHoi.Columns.Count; i++)
+                    {
+                        sheet.Cells[2, i] = dgvCauHoi.Columns[i - 1].HeaderText;
+                        sheet.Cells[2, i].HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+                        sheet.Cells[2, i].Font.Bold = true;
+                        sheet.Cells[2, i].Borders.Weight = Microsoft.Office.Interop.Excel.XlBorderWeight.xlThin;
+                    }
+                    // create data
+                    int CountHS = dgvCauHoi.Rows.Count;
+                    for (int i = 1; i <= dgvCauHoi.Rows.Count; i++)
+                    {
+                        sheet.Cells[i + 2, 1] = dgvCauHoi.Rows[i - 1].Cells[0].Value.ToString();
+                        sheet.Cells[i + 2, 1].Borders.Weight = Microsoft.Office.Interop.Excel.XlBorderWeight.xlThin;
+                        for (int j = 2; j <= dgvCauHoi.Columns.Count; j++)
+                        {
+                            try
+                            {
+                                sheet.Cells[i + 2, j] = "'" + dgvCauHoi.Rows[i - 1].Cells[j - 1].Value.ToString();
+                                sheet.Cells[i + 2, 1].Borders.Weight = Excel.XlBorderWeight.xlThin;
+                            }
+                            catch (Exception ex)
+                            {
+                                sheet.Cells[i + 2, j] = "";
+                                sheet.Cells[i + 2, 1].Borders.Weight = Excel.XlBorderWeight.xlThin;
+                            }
+                        }
+                    }
+                    //save data
+                    wb.SaveAs(fsave.FileName);
+                    MessageBox.Show("Xuất thành công " + CountHS.ToString() + " câu hỏi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    wb = null;
+                    app.Quit();
+                }
+            }
+        }
     }
 }
