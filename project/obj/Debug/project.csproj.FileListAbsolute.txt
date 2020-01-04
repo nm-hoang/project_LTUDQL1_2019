@@ -21,6 +21,7 @@ C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.AD_FormTL.
 C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.frmAdmin.resources
 C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.frmGiaoVien.resources
 C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.frmHocSinh.resources
+C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.frmHS_BangDiem.resources
 C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.frmHS_CauHoiChuaDuyet.resources
 C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.frmHS_CauHoiDaDuyet.resources
 C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.frmHS_DongGop.resources
@@ -34,6 +35,7 @@ C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.frmHS_ThiT
 C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.frmHS_ThongTinSinhVien.resources
 C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.GV_ChiTietCauHoi.resources
 C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.GV_InDSTS.resources
+C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.GV_InKQ.resources
 C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.GV_QLCauHoi.resources
 C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.GV_QLDeThi.resources
 C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.GV_QLHocSinh.resources
@@ -46,6 +48,8 @@ C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.GV_SuaKyTh
 C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.GV_TaoDeThi.resources
 C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.GV_TaoKyThi.resources
 C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.GV_TaoKyThiThu.resources
+C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.GV_ThongKeCauHoi.resources
+C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.GV_ThongKeKQHocSinh.resources
 C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.GV_ThongKeKyThi.resources
 C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.frmLogin.resources
 C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.Properties.Resources.resources
@@ -55,7 +59,3 @@ C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\RdlCompile.cache
 C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\RdlCompile.compiled
 C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.exe
 C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.pdb
-C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.GV_InKQ.resources
-C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.frmHS_BangDiem.resources
-C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.GV_ThongKeKQHocSinh.resources
-C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.GV_ThongKeCauHoi.resources

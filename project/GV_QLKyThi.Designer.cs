@@ -34,9 +34,6 @@
             this.MaDe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SuDung = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvThiSinh = new System.Windows.Forms.DataGridView();
-            this.MaKiThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaHS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID_Account = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
@@ -46,6 +43,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnDSTS = new System.Windows.Forms.Button();
             this.btnKetQua = new System.Windows.Forms.Button();
+            this.MaKiThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaHS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKyThi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThiSinh)).BeginInit();
             this.SuspendLayout();
@@ -97,30 +97,12 @@
             this.dgvThiSinh.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaKiThi,
             this.MaHS,
-            this.ID_Account});
+            this.HoTen});
             this.dgvThiSinh.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
             this.dgvThiSinh.Location = new System.Drawing.Point(418, 79);
             this.dgvThiSinh.Name = "dgvThiSinh";
             this.dgvThiSinh.Size = new System.Drawing.Size(381, 279);
             this.dgvThiSinh.TabIndex = 10;
-            // 
-            // MaKiThi
-            // 
-            this.MaKiThi.DataPropertyName = "MaKiThi";
-            this.MaKiThi.HeaderText = "Mã Kỳ thi";
-            this.MaKiThi.Name = "MaKiThi";
-            // 
-            // MaHS
-            // 
-            this.MaHS.DataPropertyName = "MaHS";
-            this.MaHS.HeaderText = "Mã học sinh";
-            this.MaHS.Name = "MaHS";
-            // 
-            // ID_Account
-            // 
-            this.ID_Account.DataPropertyName = "ID_Account";
-            this.ID_Account.HeaderText = "Id tài khoản";
-            this.ID_Account.Name = "ID_Account";
             // 
             // btnDelete
             // 
@@ -226,6 +208,24 @@
             this.btnKetQua.UseVisualStyleBackColor = false;
             this.btnKetQua.Click += new System.EventHandler(this.btnKetQua_Click);
             // 
+            // MaKiThi
+            // 
+            this.MaKiThi.DataPropertyName = "MaKiThi";
+            this.MaKiThi.HeaderText = "Mã Kỳ thi";
+            this.MaKiThi.Name = "MaKiThi";
+            // 
+            // MaHS
+            // 
+            this.MaHS.DataPropertyName = "MaHS";
+            this.MaHS.HeaderText = "Mã học sinh";
+            this.MaHS.Name = "MaHS";
+            // 
+            // HoTen
+            // 
+            this.HoTen.DataPropertyName = "HoTen";
+            this.HoTen.HeaderText = "Họ tên";
+            this.HoTen.Name = "HoTen";
+            // 
             // GV_QLKyThi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -260,9 +260,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MaDe;
         private System.Windows.Forms.DataGridViewTextBoxColumn SuDung;
         private System.Windows.Forms.DataGridView dgvThiSinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaKiThi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaHS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Account;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnRefresh;
@@ -272,5 +269,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnDSTS;
         private System.Windows.Forms.Button btnKetQua;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaKiThi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaHS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HoTen;
     }
 }

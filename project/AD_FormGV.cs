@@ -29,7 +29,6 @@ namespace project
         }
         private void LoadDSGV()
         {
-            db.DeferredLoadingEnabled = false;
             dataGV.DataSource = from gv in db.GiaoViens select new { gv.MaGV, gv.HoTen, gv.NgaySinh, gv.DienThoai };
             db.SubmitChanges();
         }
@@ -70,7 +69,26 @@ namespace project
             }
             return i;
         }
-
+        public int ThemGV(string MaGV, string HoTen, string NgaySinh, string DienThoai)
+        {
+            int rs = 0;
+                GiaoVien gv = new GiaoVien();
+                gv.MaGV = MaGV;
+                gv.HoTen = HoTen;
+                gv.NgaySinh = NgaySinh;
+                gv.DienThoai = DienThoai;
+                db.GiaoViens.InsertOnSubmit(gv);
+                try
+                {
+                    db.SubmitChanges();
+                    rs = 1;
+                }
+                catch (Exception e)
+                {
+                    rs = 0;
+                }
+            return rs;
+    }
         private void btnNhap_Click(object sender, EventArgs e)
         {
             // openfile
@@ -91,36 +109,27 @@ namespace project
                     ///read
                     int rows = range.Rows.Count;
                     int cols = range.Columns.Count;
-                    //read head
-                    // readdata
                     int CountGV = 0;
-                    for (int i = 2; i <= rows; i++)
+                    for (int i = 1; i <= rows; i++)
                     {
                         string MaGV = range.Cells[i, 1].Value.ToString();
                         string HoTen = range.Cells[i, 2].Value.ToString();
                         var DateNgaySinh = range.Cells[i, 3].Value.Date;
                         string NgaySinh = DateNgaySinh.ToString("dd/MM/yyyy");
                         string DienThoai = range.Cells[i, 4].Value.ToString();
-                        if (NhapGiaoVien(MaGV, HoTen, NgaySinh, DienThoai) == 1)
-                        {
-                            CountGV++;
-                        }
+                        ThemGV(MaGV, HoTen, NgaySinh, DienThoai);
+                        CountGV++;
                     }
-                    // end thread plz wait
-                    //
-
-                    MessageBox.Show("Import thành công " + CountGV.ToString() + " Giáo Viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Thêm thành công " + CountGV.ToString() + " giáo viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoadDSGV();
 
                 }
                 catch (Exception ex)
                 {
-                    //MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                wb.Save();
-                wb.Close(true);
+                wb.Close(0);
                 app.Quit();
-                System.Runtime.InteropServices.Marshal.ReleaseComObject(app);
             }
             else
             {
@@ -180,7 +189,7 @@ namespace project
                     //save data
                     wb.SaveAs(fsave.FileName);
                     wb.Close();
-                    MessageBox.Show("Export thành công " + CountGV.ToString() + " Giáo viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Xuất thành công " + CountGV.ToString() + " giáo viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoadDSGV();
                 }
                 catch (Exception ex)

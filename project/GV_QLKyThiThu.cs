@@ -92,8 +92,9 @@ namespace project
             string id = dgvKyThi.CurrentRow.Cells["ID"].Value.ToString();
 
             dgvThiSinh.DataSource = (from ts in db.DSHocSinhs
+                                     join hs in db.HocSinhs on ts.MaHS equals hs.MaHS
                                      where ts.MaKiThi == id
-                                     select new { ts.MaKiThi, ts.MaHS, ts.ID_Account });
+                                     select new { ts.MaKiThi, ts.MaHS, hs.HoTen });
             db.SubmitChanges();
         }
 

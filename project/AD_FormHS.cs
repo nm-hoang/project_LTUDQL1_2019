@@ -68,7 +68,6 @@ namespace project
 
         public void LoadDSHS()
         {
-            db.DeferredLoadingEnabled = false;
             dataGV.DataSource = from hs in db.HocSinhs select new { hs.MaHS, hs.HoTen, hs.NgaySinh, hs.MaLop, hs.MaKhoi, hs.DienThoai };
             db.SubmitChanges();
         }
@@ -77,7 +76,7 @@ namespace project
         {
             LoadDSHS();
         }
-        public int NhapHocSinh(string MaHS, string HoTen, string NgaySinh, string MaLop, int MaKhoi, string DienThoai)
+        public int ThemHocSinh(string MaHS, string HoTen, string NgaySinh, string MaLop, int MaKhoi, string DienThoai)
         {
             int i = 0;
             var hs = new HocSinh();
@@ -109,7 +108,6 @@ namespace project
             // xu li
             if (fopen.FileName != "")
             {
-
                 string path = fopen.FileName;
                 Excel.Application app = new Excel.Application();
                 Excel.Workbook wb = app.Workbooks.Open(fopen.FileName);
@@ -121,12 +119,9 @@ namespace project
                     ///read
                     int rows = range.Rows.Count;
                     int cols = range.Columns.Count;
-                    //read head
-                    // readdata
-                    int Dem = 0;
-                    for (int i = 2; i <= rows; i++)
+                    int CountGV = 0;
+                    for (int i = 1; i <= rows; i++)
                     {
-
                         string MaHS = range.Cells[i, 1].Value.ToString();
                         string HoTen = range.Cells[i, 2].Value.ToString();
                         var DateNgaySinh = range.Cells[i, 3].Value.Date;
@@ -134,26 +129,19 @@ namespace project
                         string MaLop = range.Cells[i, 4].Value.ToString();
                         int MaKhoi = int.Parse(range.Cells[i, 5].Value.ToString());
                         string DienThoai = range.Cells[i, 6].Value.ToString();
-                        if (NhapHocSinh(MaHS, HoTen, NgaySinh, MaLop, MaKhoi, DienThoai) == 1)
-                        {
-                            Dem++;
-                        }
+                        ThemHocSinh(MaHS, HoTen, NgaySinh,MaLop,MaKhoi, DienThoai);
+                        CountGV++;
                     }
-                    MessageBox.Show("Import thành công " + Dem.ToString() + " Học Sinh", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Thêm thành công " + CountGV.ToString() + "học sinh", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoadDSHS();
 
                 }
                 catch (Exception ex)
                 {
-                    //MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                finally
-                {
-                    wb.Save();
-                    wb.Close(true);
-                    app.Quit();
-                    System.Runtime.InteropServices.Marshal.ReleaseComObject(app);
-                }
+                wb.Close(0);
+                app.Quit();
             }
             else
             {

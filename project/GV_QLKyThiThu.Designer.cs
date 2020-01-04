@@ -36,14 +36,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvThiSinh = new System.Windows.Forms.DataGridView();
-            this.MaKiThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaHS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID_Account = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvKyThi = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaDe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SuDung = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaKiThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaHS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThiSinh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKyThi)).BeginInit();
             this.SuspendLayout();
@@ -133,30 +133,12 @@
             this.dgvThiSinh.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaKiThi,
             this.MaHS,
-            this.ID_Account});
+            this.HoTen});
             this.dgvThiSinh.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
             this.dgvThiSinh.Location = new System.Drawing.Point(458, 99);
             this.dgvThiSinh.Name = "dgvThiSinh";
             this.dgvThiSinh.Size = new System.Drawing.Size(381, 279);
             this.dgvThiSinh.TabIndex = 19;
-            // 
-            // MaKiThi
-            // 
-            this.MaKiThi.DataPropertyName = "MaKiThi";
-            this.MaKiThi.HeaderText = "Mã Kỳ thi";
-            this.MaKiThi.Name = "MaKiThi";
-            // 
-            // MaHS
-            // 
-            this.MaHS.DataPropertyName = "MaHS";
-            this.MaHS.HeaderText = "Mã học sinh";
-            this.MaHS.Name = "MaHS";
-            // 
-            // ID_Account
-            // 
-            this.ID_Account.DataPropertyName = "ID_Account";
-            this.ID_Account.HeaderText = "Id tài khoản";
-            this.ID_Account.Name = "ID_Account";
             // 
             // dgvKyThi
             // 
@@ -198,6 +180,24 @@
             this.SuDung.HeaderText = "Sử dụng";
             this.SuDung.Name = "SuDung";
             // 
+            // MaKiThi
+            // 
+            this.MaKiThi.DataPropertyName = "MaKiThi";
+            this.MaKiThi.HeaderText = "Mã Kỳ thi";
+            this.MaKiThi.Name = "MaKiThi";
+            // 
+            // MaHS
+            // 
+            this.MaHS.DataPropertyName = "MaHS";
+            this.MaHS.HeaderText = "Mã học sinh";
+            this.MaHS.Name = "MaHS";
+            // 
+            // HoTen
+            // 
+            this.HoTen.DataPropertyName = "HoTen";
+            this.HoTen.HeaderText = "Họ tên";
+            this.HoTen.Name = "HoTen";
+            // 
             // GV_QLKyThiThu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -232,13 +232,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvThiSinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaKiThi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaHS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Account;
         private System.Windows.Forms.DataGridView dgvKyThi;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayThi;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaDe;
         private System.Windows.Forms.DataGridViewTextBoxColumn SuDung;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaKiThi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaHS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HoTen;
     }
 }

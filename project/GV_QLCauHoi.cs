@@ -66,15 +66,16 @@ namespace project
             OpenFileDialog open = new OpenFileDialog();
             open.ShowDialog();
 
-            if (open.FileName != "")
+            if (open.FileName != null)
             {
 
                 string path = open.FileName;
                 Microsoft.Office.Interop.Excel.Application ap = new Microsoft.Office.Interop.Excel.Application();
                 Microsoft.Office.Interop.Excel.Workbook wb = ap.Workbooks.Open(open.FileName);
+
+                //
                 List<int> errorQuestion = new List<int>();
                 int countQS = 0;
-                //
                 try
                 {
                     Microsoft.Office.Interop.Excel.Worksheet sheet = wb.Sheets[1];
@@ -83,7 +84,6 @@ namespace project
                     int row, col;
                     row = range.Rows.Count;
                     col = range.Rows.Count;
-                   
                     for (int i = 1; i <= row; i++)
                     {
                         CauHoi ch = new CauHoi();
@@ -115,18 +115,19 @@ namespace project
                 {
 
                 }
-                MessageBox.Show("Thêm thành công : " + countQS + " câu");
-                if (errorQuestion.Count() > 0)
-                {
-                    StringBuilder build = new StringBuilder();
-                    foreach (int i in errorQuestion)
+                    MessageBox.Show("Thêm thành công : " + countQS + " câu");
+                    LoadQuestions();
+                    if (errorQuestion.Count() > 0)
                     {
-                        build.Append(i.ToString()).AppendLine();
+                        StringBuilder build = new StringBuilder();
+                        foreach (int i in errorQuestion)
+                        {
+                            build.Append(i.ToString()).AppendLine();
+                        }
+
+                        MessageBox.Show("Lỗi thêm câu hỏi ở câu " + build.ToString());
+
                     }
-
-                    MessageBox.Show("Lỗi thêm câu hỏi ở câu " + build.ToString());
-
-                }
             }
             else
             {
