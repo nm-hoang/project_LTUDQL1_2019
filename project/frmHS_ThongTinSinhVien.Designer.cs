@@ -217,6 +217,7 @@
             this.header.Name = "header";
             this.header.Size = new System.Drawing.Size(767, 32);
             this.header.TabIndex = 25;
+            this.header.Paint += new System.Windows.Forms.PaintEventHandler(this.header_Paint);
             // 
             // lblName
             // 

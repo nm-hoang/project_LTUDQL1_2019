@@ -12,7 +12,6 @@ C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.csprojReso
 C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.AD_FormGV.resources
 C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.AD_FormHS.resources
 C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.AD_FormND.resources
-C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.AD_FormND_CapNhat.resources
 C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.AD_FormND_Them.resources
 C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.AD_FormQLHT.resources
 C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.AD_FormQLND.resources

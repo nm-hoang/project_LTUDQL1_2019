@@ -35,7 +35,8 @@ namespace project
             var re = new Regex(reStr);
             if (!re.IsMatch(StrInput))
             {
-                MessageBox.Show("Password a-z, 0-9 và tối thiểu 3 kí tự", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                errorProvider.SetError(control, "Password a-z, 0-9 và tối thiểu 3 kí tự");
+               // MessageBox.Show("Password a-z, 0-9 và tối thiểu 3 kí tự", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtRePass.ResetText();
                 txtRePass.Focus();
             }
@@ -49,7 +50,8 @@ namespace project
             var re = new Regex(reStr);
             if (!re.IsMatch(StrInput))
             {
-                MessageBox.Show("Password a-z, 0-9 và tối thiểu 3 kí tự","Lỗi",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                errorProvider.SetError(control, "Password a-z, 0-9 và tối thiểu 3 kí tự");
+                //MessageBox.Show("Password a-z, 0-9 và tối thiểu 3 kí tự","Lỗi",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 txtPass.ResetText();
                 txtPass.Focus();
             }
@@ -64,7 +66,8 @@ namespace project
             var re = new Regex(reStr);
             if(!re.IsMatch(StrInput))
             {
-                MessageBox.Show("Không nhập kí tự hoa, khoảng trắng và kí tự đặc biệt","Lỗi",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                errorProvider.SetError(control, "Không nhập kí tự hoa, khoảng trắng và kí tự đặc biệt");
+                //MessageBox.Show("Không nhập kí tự hoa, khoảng trắng và kí tự đặc biệt","Lỗi",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 txtUserName.ResetText();
                 txtUserName.Focus();
             }

@@ -86,12 +86,6 @@
     <Compile Include="AD_FormND.Designer.cs">
       <DependentUpon>AD_FormND.cs</DependentUpon>
     </Compile>
-    <Compile Include="AD_FormND_CapNhat.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AD_FormND_CapNhat.Designer.cs">
-      <DependentUpon>AD_FormND_CapNhat.cs</DependentUpon>
-    </Compile>
     <Compile Include="AD_FormND_Them.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -368,9 +362,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AD_FormND.resx">
       <DependentUpon>AD_FormND.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AD_FormND_CapNhat.resx">
-      <DependentUpon>AD_FormND_CapNhat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AD_FormND_Them.resx">
       <DependentUpon>AD_FormND_Them.cs</DependentUpon>

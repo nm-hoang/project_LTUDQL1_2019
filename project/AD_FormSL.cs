@@ -129,7 +129,7 @@ namespace project
                     SqlCommand cmd3 = new SqlCommand(sql3, con);
                     cmd3.ExecuteNonQuery();
                     // s.Speak("Database Restored successfully");
-                    MessageBox.Show("Database Restored successfully", "Restore Database successs", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Database Restored thành công", "Restore Database successs", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     btnRT.Enabled = false;
 
 

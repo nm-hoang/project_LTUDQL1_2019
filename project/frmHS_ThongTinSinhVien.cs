@@ -94,5 +94,10 @@ namespace project
             this.Hide();
             frm.ShowDialog();
         }
+
+        private void header_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

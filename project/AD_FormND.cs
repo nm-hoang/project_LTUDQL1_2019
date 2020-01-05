@@ -28,6 +28,7 @@ namespace project
         private void AD_FormND_Load(object sender, EventArgs e)
         {
             LoadDS();
+           
         }
 
         private void cbLoaiND_SelectedIndexChanged(object sender, EventArgs e)
@@ -41,11 +42,33 @@ namespace project
         {
             dataGV.DataSource = from tk in db.TaiKhoans where tk.Type == LoaiND select tk;
             db.SubmitChanges();
+            //Databiding
+            txtID.DataBindings.Clear();
+            txtID.DataBindings.Add("Text", dataGV.DataSource, "ID");
+            txtTaiKhoan.DataBindings.Clear();
+            txtTaiKhoan.DataBindings.Add("Text", dataGV.DataSource, "ID_Account");
+            txtMatKhau.DataBindings.Clear();
+            txtMatKhau.DataBindings.Add("Text", dataGV.DataSource, "PassWord");
+            txtLoaiND.DataBindings.Clear();
+            txtLoaiND.DataBindings.Add("Text", dataGV.DataSource, "Type");
+            txtIDND.DataBindings.Clear();
+            txtIDND.DataBindings.Add("Text", dataGV.DataSource, "ID_User");
         }
         public void LoadDS()
         {
             dataGV.DataSource = from tk in db.TaiKhoans select tk;
             db.SubmitChanges();
+            //Databiding
+            txtID.DataBindings.Clear();
+            txtID.DataBindings.Add("Text", dataGV.DataSource, "ID");
+            txtTaiKhoan.DataBindings.Clear();
+            txtTaiKhoan.DataBindings.Add("Text", dataGV.DataSource, "ID_Account");
+            txtMatKhau.DataBindings.Clear();
+            txtMatKhau.DataBindings.Add("Text", dataGV.DataSource, "PassWord");
+            txtLoaiND.DataBindings.Clear();
+            txtLoaiND.DataBindings.Add("Text", dataGV.DataSource, "Type");
+            txtIDND.DataBindings.Clear();
+            txtIDND.DataBindings.Add("Text", dataGV.DataSource, "ID_User");
         }
         private void frmClosed(object sender, FormClosedEventArgs e)
         {
@@ -61,16 +84,29 @@ namespace project
 
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
-            int i = dataGV.CurrentCell.RowIndex;
-            int ID = int.Parse(dataGV.Rows[i].Cells[0].Value.ToString());
-            string ID_Account = dataGV.Rows[i].Cells[1].Value.ToString();
-            string PassWord = dataGV.Rows[i].Cells[2].Value.ToString();
-            string Type = dataGV.Rows[i].Cells[3].Value.ToString();
-            string ID_User = dataGV.Rows[i].Cells[4].Value.ToString();
 
-            AD_FormND_CapNhat frm = new AD_FormND_CapNhat(ID, ID_Account, PassWord, Type, ID_User);
-            frm.FormClosed += new FormClosedEventHandler(frmClosed);
-            frm.Show();
+                TaiKhoan taikhoan = (from tk in db.TaiKhoans where tk.ID_Account == txtTaiKhoan.Text select tk).SingleOrDefault();
+                taikhoan.PassWord = txtMatKhau.Text;
+                try
+                {
+                    db.SubmitChanges();
+                    MessageBox.Show("Cập nhật thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch
+                {
+                    MessageBox.Show("Cập nhật thất bại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+            //int i = dataGV.CurrentCell.RowIndex;
+            //int ID = int.Parse(dataGV.Rows[i].Cells[0].Value.ToString());
+            //string ID_Account = dataGV.Rows[i].Cells[1].Value.ToString();
+            //string PassWord = dataGV.Rows[i].Cells[2].Value.ToString();
+            //string Type = dataGV.Rows[i].Cells[3].Value.ToString();
+            //string ID_User = dataGV.Rows[i].Cells[4].Value.ToString();
+
+            //AD_FormND_CapNhat frm = new AD_FormND_CapNhat(ID, ID_Account, PassWord, Type, ID_User);
+            //frm.FormClosed += new FormClosedEventHandler(frmClosed);
+            //frm.Show();
         }
 
         private void btnLoadDS_Click(object sender, EventArgs e)
@@ -113,6 +149,11 @@ namespace project
                 // i = 0;
             }
             return i;
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

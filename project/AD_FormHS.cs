@@ -106,7 +106,7 @@ namespace project
             fopen.Filter = "EXCEL FILE|*.xls;*.xlsx;*.xlsm";
             fopen.ShowDialog();
             // xu li
-            if (fopen.FileName != "")
+            if (fopen.FileName != null)
             {
                 string path = fopen.FileName;
                 Excel.Application app = new Excel.Application();
@@ -154,7 +154,7 @@ namespace project
             SaveFileDialog fsave = new SaveFileDialog();
             fsave.Filter = "EXCEL FILE|*.xls;*.xlsx;*.xlsm";
             fsave.ShowDialog();
-            if (fsave.FileName != "")
+            if (fsave.FileName != null)
             {
                 string path = fsave.FileName;
                 Excel.Application app = new Excel.Application();

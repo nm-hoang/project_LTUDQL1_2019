@@ -40,7 +40,7 @@
             this.pnFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnFooter.Location = new System.Drawing.Point(0, 74);
             this.pnFooter.Name = "pnFooter";
-            this.pnFooter.Size = new System.Drawing.Size(1151, 351);
+            this.pnFooter.Size = new System.Drawing.Size(1151, 568);
             this.pnFooter.TabIndex = 4;
             // 
             // btnQLND
@@ -78,7 +78,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1151, 425);
+            this.ClientSize = new System.Drawing.Size(1151, 642);
             this.Controls.Add(this.pnFooter);
             this.Controls.Add(this.pnHeader);
             this.Name = "frmAdmin";

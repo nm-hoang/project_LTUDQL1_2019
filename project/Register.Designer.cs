@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegister));
             this.lblName = new System.Windows.Forms.Label();
             this.header = new System.Windows.Forms.Panel();
@@ -45,9 +46,11 @@
             this.txtPass = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.txtRePass = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.btnRegister = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // lblName
@@ -260,6 +263,10 @@
             this.btnRegister.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
             // frmRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -286,6 +293,7 @@
             this.header.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -309,5 +317,6 @@
         private Bunifu.Framework.UI.BunifuMetroTextbox txtPass;
         private Bunifu.Framework.UI.BunifuMetroTextbox txtRePass;
         private Bunifu.Framework.UI.BunifuThinButton2 btnRegister;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

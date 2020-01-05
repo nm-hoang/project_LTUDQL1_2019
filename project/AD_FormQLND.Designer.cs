@@ -48,7 +48,7 @@
             this.pnBody.Controls.Add(this.label1);
             this.pnBody.Location = new System.Drawing.Point(132, -3);
             this.pnBody.Name = "pnBody";
-            this.pnBody.Size = new System.Drawing.Size(1017, 399);
+            this.pnBody.Size = new System.Drawing.Size(1017, 520);
             this.pnBody.TabIndex = 4;
             // 
             // label1
@@ -117,7 +117,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1151, 392);
+            this.ClientSize = new System.Drawing.Size(1151, 529);
             this.Controls.Add(this.pnBody);
             this.Controls.Add(this.pnMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
