@@ -64,11 +64,11 @@ namespace project
             string connectionString;
             if (txtUName.Text != "" && txtPassWord.Text != "")
             {
-                connectionString = string.Format("Data Source={0};Initial Catalog={1};Integrated Security=True;User ID ={2};Password={3}", cbSV.Text, cbDB.Text, txtUName.Text, txtPassWord.Text);
+                connectionString = string.Format("Data Source={0};Initial Catalog={1};User ID ={2};Password={3}", cbSV.Text, cbDB.Text, txtUName.Text, txtPassWord.Text);
             }
             else
             {
-                connectionString = string.Format("Data Source={0};Initial Catalog={1};Integrated Security=True", cbSV.Text, cbDB.Text);
+                connectionString = string.Format("Data Source={0};Initial Catalog={1}", cbSV.Text, cbDB.Text);
             }
             try
             {

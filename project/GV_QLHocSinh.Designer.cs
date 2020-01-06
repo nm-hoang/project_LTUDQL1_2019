@@ -52,7 +52,7 @@
             this.btnHocSinh.Name = "btnHocSinh";
             this.btnHocSinh.Size = new System.Drawing.Size(161, 67);
             this.btnHocSinh.TabIndex = 6;
-            this.btnHocSinh.Text = "Thống kê học sinh";
+            this.btnHocSinh.Text = "Kết quả học sinh";
             this.btnHocSinh.UseVisualStyleBackColor = true;
             this.btnHocSinh.Click += new System.EventHandler(this.btnHocSinh_Click);
             // 

@@ -31,7 +31,26 @@ namespace project
                          join hs in db.HocSinhs on kq.MaHS equals hs.MaHS
                          where kq.KyThi == cbMaKyThi.Text
                          select new {hs.MaHS,hs.HoTen,hs.MaLop,hs.MaKhoi,hs.NgaySinh,kq.DiemThi};
+
             dgv.DataSource = result;
+            var tendethi = (from i in db.DeThis
+                             join j in db.KyThis on i.ID equals j.MaDe
+                             where cbMaKyThi.Text == j.ID
+                             select i.TenDeThi).SingleOrDefault();
+            lblTenDeThi.Text = tendethi.ToString();
+            var kithi = (from i in db.KyThis
+                         where i.ID == cbMaKyThi.Text
+                         select i).SingleOrDefault();
+            var tenmonhoc = (from i in db.DeThis
+                             join j in db.MonHocs on i.MaMH equals j.MaMH
+                             where kithi.MaDe == i.ID
+                             select j.TenMH).SingleOrDefault();
+            lblMonHoc.Text = tenmonhoc.ToString();
+        }
+
+        private void lblMonHoc_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

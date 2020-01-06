@@ -44,6 +44,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.cbKyThi = new System.Windows.Forms.ComboBox();
+            this.btnPrint = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKyThi)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,7 +56,7 @@
             this.ID});
             this.dgvKyThi.Location = new System.Drawing.Point(447, 116);
             this.dgvKyThi.Name = "dgvKyThi";
-            this.dgvKyThi.Size = new System.Drawing.Size(561, 305);
+            this.dgvKyThi.Size = new System.Drawing.Size(564, 305);
             this.dgvKyThi.TabIndex = 40;
             this.dgvKyThi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKyThi_CellClick);
             // 
@@ -211,11 +212,22 @@
             this.cbKyThi.TabIndex = 41;
             this.cbKyThi.SelectedIndexChanged += new System.EventHandler(this.cbKyThi_SelectedIndexChanged);
             // 
+            // btnPrint
+            // 
+            this.btnPrint.Location = new System.Drawing.Point(469, 79);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(75, 23);
+            this.btnPrint.TabIndex = 42;
+            this.btnPrint.Text = "IN";
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
             // GV_ThongKeKyThi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1023, 436);
+            this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.dgvKyThi);
             this.Controls.Add(this.txtKem);
             this.Controls.Add(this.txtYeu);
@@ -258,5 +270,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cbKyThi;
+        private System.Windows.Forms.Button btnPrint;
     }
 }

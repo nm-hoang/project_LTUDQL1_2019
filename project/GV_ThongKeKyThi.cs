@@ -12,6 +12,7 @@ namespace project
 {
     public partial class GV_ThongKeKyThi : Form
     {
+        public string id;
         public QLThiTracNghiemDataContext db = new QLThiTracNghiemDataContext();    
         public GV_ThongKeKyThi()
         {
@@ -22,10 +23,13 @@ namespace project
         {
             List<string> temp = new List<string> { "Kỳ thi", "Kỳ thi thử/ Ôn tập" };
             cbKyThi.DataSource = temp;
+            btnPrint.Enabled = false;
+            
         }
 
         private void cbKyThi_SelectedIndexChanged(object sender, EventArgs e)
         {
+          
             if (cbKyThi.Text == "Kỳ thi thử/ Ôn tập")
             {
                 dgvKyThi.DataSource = (from k in db.KyThiThus select new { k.ID, k.NgayThi, k.MaDe });
@@ -36,10 +40,12 @@ namespace project
                 dgvKyThi.DataSource = (from k in db.KyThis select new { k.ID, k.NgayThi, k.MaDe });
  
             }
+            
         }
 
         private void dgvKyThi_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            btnPrint.Enabled = true;
             int XuatSac = 0, Gioi = 0, Kha = 0, TB = 0, Yeu = 0, Kem = 0;
             List<string> DiemThi = new List<string>();
             string KyThi = dgvKyThi.CurrentRow.Cells["ID"].Value.ToString();
@@ -87,6 +93,23 @@ namespace project
             txtTB.Text = TB.ToString();
             txtYeu.Text = Yeu.ToString();
             txtKem.Text = Kem.ToString();
+        
+            id = dgvKyThi.CurrentRow.Cells["ID"].Value.ToString();
+           // MessageBox.Show(id);
+        }
+        
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            if(cbKyThi.Text == "Kỳ thi thử/ Ôn tập")
+            {
+                GV_InThongKeKyThi frm = new GV_InThongKeKyThi(id, "0");
+                frm.ShowDialog();
+            }
+            if (cbKyThi.Text == "Kỳ thi")
+            {
+                GV_InThongKeKyThi frm = new GV_InThongKeKyThi(id, "1");
+                frm.ShowDialog();
+            }
         }
     }
 }

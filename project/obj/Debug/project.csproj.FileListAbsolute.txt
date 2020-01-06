@@ -58,3 +58,5 @@ C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\RdlCompile.cache
 C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\RdlCompile.compiled
 C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.exe
 C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.pdb
+C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.GV_INThongKeCauHoi.resources
+C:\Users\Focus\Desktop\project_LTUDQL1_2019\project\obj\Debug\project.GV_InThongKeKyThi.resources

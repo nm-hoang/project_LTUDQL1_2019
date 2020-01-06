@@ -37,6 +37,7 @@
             this.Khoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DoKho = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaMH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnIN = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -116,11 +117,24 @@
             this.MaMH.HeaderText = "Mã môn học";
             this.MaMH.Name = "MaMH";
             // 
+            // btnIN
+            // 
+            this.btnIN.BackColor = System.Drawing.Color.Lime;
+            this.btnIN.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIN.Location = new System.Drawing.Point(660, 55);
+            this.btnIN.Name = "btnIN";
+            this.btnIN.Size = new System.Drawing.Size(75, 28);
+            this.btnIN.TabIndex = 8;
+            this.btnIN.Text = "IN";
+            this.btnIN.UseVisualStyleBackColor = false;
+            this.btnIN.Click += new System.EventHandler(this.btnIN_Click);
+            // 
             // GV_ThongKeCauHoi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(760, 351);
+            this.Controls.Add(this.btnIN);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbMaKyThi);
@@ -145,5 +159,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Khoi;
         private System.Windows.Forms.DataGridViewTextBoxColumn DoKho;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaMH;
+        private System.Windows.Forms.Button btnIN;
     }
 }

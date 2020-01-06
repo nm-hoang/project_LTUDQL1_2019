@@ -39,7 +39,14 @@ namespace project
                             select new {  i.ID,i.CauHoi1,i.Khoi,i.DoKho,i.MaMH};
 
             dgv.DataSource = laycauhoi;
+            
+        }
 
+        private void btnIN_Click(object sender, EventArgs e)
+        {
+            string makithi = cbMaKyThi.Text;
+            GV_INThongKeCauHoi frm = new GV_INThongKeCauHoi(makithi);
+            frm.ShowDialog();
         }
     }
 }

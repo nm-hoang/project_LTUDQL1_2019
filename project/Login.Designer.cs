@@ -177,7 +177,7 @@
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(370, 44);
             this.txtUserName.TabIndex = 8;
-            this.txtUserName.Text = "ad01";
+            this.txtUserName.Text = "gv01";
             this.txtUserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtUserName.OnValueChanged += new System.EventHandler(this.txtUserName_OnValueChanged);
             // 
